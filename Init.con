@@ -1,0 +1,10 @@
+rem ** gameLogic hasn't been initialized yet **
+
+
+
+rem ** Intro Movies **
+bf2Engine.playMovie mods\bf2\Movies\EA.bik 1
+bf2Engine.playMovie mods\bf2\Movies\dice.bik 1
+bf2Engine.playMovie mods\bf2\Movies\legal.bik 1
+bf2Engine.playMovie mods\bf2\Movies\intro.bik 0
+bf2Engine.playMovie mods\bf2\Movies\welcome.bik 0

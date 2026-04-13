@@ -1,0 +1,8 @@
+# BF2Editor logs
+Logs
+
+# BF2Editor packaging output
+*.zip
+
+# Created by JetBrains IDEs
+.idea

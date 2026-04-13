@@ -1,0 +1,12 @@
+rem *** Put non level specific initializations here ***
+
+
+rem *** Load multiplayer free camera here
+run Common/FreeCamera/Object.con
+
+gameLogic.setDefaultNumberOfTickets 1 250
+gameLogic.setDefaultNumberOfTickets 2 250
+
+gameLogic.enableVoHelp 1
+gameLogic.supplyDropHeight 50
+gameLogic.supplyDropNumSecsToLive 300
