@@ -1,10 +1,10 @@
 <mod>
-	<title> boomfield </title>
+	<title> Boomfield </title>
 	<desc> The Boomfield Battlefield 2 mod strives to increase realism while optimising fun. </desc>
 	<url> http://www.eagames.com/official/battlefield/battlefield2/us/home.jsp </url>
 	<logo> mod.jpg </logo>
 	<icon> mod_icon.jpg </icon>
-	<music> common/sound/menu/music/menu_music.ogg </music>
+	<music>  </music>
 	<version> 0.1 </version>
 	<default_soldier_template> us_light_soldier </default_soldier_template>
 	<default_soldier_kit_template> us_specops </default_soldier_kit_template>
