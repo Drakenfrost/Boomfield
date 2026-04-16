@@ -1,45 +1,48 @@
-rem *** Generated with Bf2Editor.exe [created: 2005/3/21 14:16]
+rem *** Generated with Bf2Editor.exe [created: 2005/4/5 15:44]
+GeometryTemplate.setMaterialReflectionScale 0 0 0 0.35
 GeometryTemplate.setMaterialReflectionScale 0 0 1 2
 GeometryTemplate.setMaterialReflectionScale 1 0 0 2
-GeometryTemplate.setMaterialReflectionScale 1 0 1 0.25
 GeometryTemplate.setMaterialReflectionScale 1 1 0 2
-GeometryTemplate.setMaterialReflectionScale 1 1 1 0.25
+GeometryTemplate.setSpecularStaticGloss 0 0 0 0.15
 GeometryTemplate.compressVertexData 1
 GeometryTemplate.maxTextureRepeat 16
-ObjectTemplate.activeSafe GenericFireArm ussni_m95_barret
-ObjectTemplate.creator NFE-2:nfe
+ObjectTemplate.activeSafe GenericFireArm rurif_dragunov
+ObjectTemplate.creator MBA-1:mba
 ObjectTemplate.modifiedByUser dsu
 ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
 rem ---BeginComp:WeaponHud ---
 ObjectTemplate.createComponent WeaponHud
-ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\USSNI_M95_Barret.tga
-ObjectTemplate.weaponHud.altWeaponIcon Ingame\Weapons\Icons\Hud\USSNI_M95_Barret_mini.tga
-ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\USSNI_M95_Barret.tga
-ObjectTemplate.weaponHud.hudName "KILLMESSAGE_WEAPON_barret95"
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\RURIF_Dragunov.tga
+ObjectTemplate.weaponHud.altWeaponIcon Ingame\Weapons\Icons\Hud\RURIF_Dragunov_mini.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\RURIF_Dragunov.tga
+ObjectTemplate.weaponHud.hudName "KILLMESSAGE_WEAPON_dragunov"
 ObjectTemplate.weaponHud.guiIndex 0
 ObjectTemplate.weaponHud.altGuiIndex 52
+ObjectTemplate.weaponHud.maxVisualDeviation 50
+ObjectTemplate.weaponHud.minVisualDeviation 5
 rem ---EndComp ---
 rem ---BeginComp:SingleFireComp ---
 ObjectTemplate.createComponent SingleFireComp
 ObjectTemplate.fire.addFireRate 0
 ObjectTemplate.fire.fireInCameraDof 1
-ObjectTemplate.fire.busyUntilButtonRelease 1
 rem ---EndComp ---
 rem ---BeginComp:DefaultAmmoComp ---
 ObjectTemplate.createComponent DefaultAmmoComp
-ObjectTemplate.ammo.magSize 5
-ObjectTemplate.ammo.nrOfMags 5
-ObjectTemplate.ammo.reloadTime 6
+ObjectTemplate.ammo.magSize 10
+ObjectTemplate.ammo.nrOfMags 6
+ObjectTemplate.ammo.reloadTime 4
+ObjectTemplate.ammo.reloadWithoutPlayer 1
 rem ---EndComp ---
 rem ---BeginComp:SoldierBasedRecoilComp ---
 ObjectTemplate.createComponent SoldierBasedRecoilComp
 ObjectTemplate.recoil.hasRecoilForce 1
-ObjectTemplate.recoil.recoilForceUp CRD_UNIFORM/5.2/4/0
-ObjectTemplate.recoil.recoilForceLeftRight CRD_UNIFORM/-1/1/0
+ObjectTemplate.recoil.recoilForceUp CRD_UNIFORM/6/4.5/0
+ObjectTemplate.recoil.recoilForceLeftRight CRD_UNIFORM/3.4/-3.4/0
 ObjectTemplate.recoil.zoomModifier 0.25
-ObjectTemplate.recoil.recoilGraphFrameCount 14
-ObjectTemplate.recoil.recoilGraphExponent 7
-ObjectTemplate.recoil.recoilGraphTotalMovement 0.1
+ObjectTemplate.recoil.recoilGraphFrameCount 2
+ObjectTemplate.recoil.recoilGraphExponent 6
+ObjectTemplate.recoil.recoilGraphTotalMovement 4
 rem ---EndComp ---
 rem ---BeginComp:SoldierDeviationComp ---
 ObjectTemplate.createComponent SoldierDeviationComp
@@ -58,51 +61,58 @@ ObjectTemplate.createComponent DefaultSoundComp
 rem ---EndComp ---
 rem ---BeginComp:DefaultAnimationComp ---
 ObjectTemplate.createComponent DefaultAnimationComp
-ObjectTemplate.animation.useShiftAnimation 1
-ObjectTemplate.animation.shiftDelay 1.8
 rem ---EndComp ---
 rem ---BeginComp:DefaultZoomComp ---
 ObjectTemplate.createComponent DefaultZoomComp
-ObjectTemplate.zoom.zoomDelay 0.15
+ObjectTemplate.zoom.zoomDelay 0.18
 ObjectTemplate.zoom.zoomLod 1
 ObjectTemplate.zoom.addZoomFactor 0
-ObjectTemplate.zoom.addZoomFactor 0.05
-ObjectTemplate.zoom.changeFovDelay 0.1
-ObjectTemplate.zoom.zoomOutAfterFire 1
+ObjectTemplate.zoom.addZoomFactor 0.1
+ObjectTemplate.zoom.changeFovDelay 0.15
 ObjectTemplate.zoom.disableMuzzleWhenZoomed 0
 rem ---EndComp ---
-ObjectTemplate.geometry ussni_m95_barret
-ObjectTemplate.setCollisionMesh ussni_m95_barret
-ObjectTemplate.mapMaterial 0 Collision_material 68
+ObjectTemplate.geometry rurif_dragunov
+ObjectTemplate.setCollisionMesh rurif_dragunov
+ObjectTemplate.mapMaterial 0 Collision_Material 68
 ObjectTemplate.hasMobilePhysics 0
 ObjectTemplate.hasCollisionPhysics 1
 ObjectTemplate.physicsType Mesh
-ObjectTemplate.aiTemplate usrif_barret
+ObjectTemplate.aiTemplate ChSni_Duragonov
 rem -------------------------------------
-ObjectTemplate.addTemplate S_ussni_m95_barret_Fire1P
-ObjectTemplate.addTemplate S_ussni_m95_barret_Fire1P_Outdoor
-ObjectTemplate.addTemplate S_ussni_m95_barret_Fire3P
-ObjectTemplate.addTemplate S_ussni_m95_barret_BoltClick
-ObjectTemplate.addTemplate S_ussni_m95_barret_TriggerClick
-ObjectTemplate.addTemplate S_ussni_m95_barret_SwitchFireRate
-ObjectTemplate.addTemplate S_ussni_m95_barret_Reload1P
-ObjectTemplate.addTemplate S_ussni_m95_barret_Reload3P
-ObjectTemplate.addTemplate S_ussni_m95_barret_Deploy1P
-ObjectTemplate.addTemplate S_ussni_m95_barret_Deploy3P
-ObjectTemplate.addTemplate S_ussni_m95_barret_Zoom
-ObjectTemplate.addTemplate e_muzz_kord
-ObjectTemplate.setPosition 0.00342608/0.00878209/0.808916
-ObjectTemplate.addTemplate e_shellejection_m82a1
-ObjectTemplate.setPosition 0.0187211/0.0153116/-0.238272
+ObjectTemplate.addTemplate S_rurif_dragunov_Fire1P
+ObjectTemplate.setPosition 0/0.00869279/0.432095
+ObjectTemplate.addTemplate S_rurif_dragunov_Fire1P_Outdoor
+ObjectTemplate.setPosition 0/0.00877658/0.431594
+ObjectTemplate.addTemplate S_rurif_dragunov_Fire3P
+ObjectTemplate.setPosition 0/-1.97887e-005/0.67157
+ObjectTemplate.addTemplate S_rurif_dragunov_BoltClick
+ObjectTemplate.addTemplate S_rurif_dragunov_TriggerClick
+ObjectTemplate.setPosition 0/-0.0419104/-0.169042
+ObjectTemplate.addTemplate S_rurif_dragunov_SwitchFireRate
+ObjectTemplate.addTemplate S_rurif_dragunov_Reload1P
+ObjectTemplate.setPosition 0/-0.00366077/-0.0369914
+ObjectTemplate.addTemplate S_rurif_dragunov_Reload3P
+ObjectTemplate.setPosition 0/0/-0.0382311
+ObjectTemplate.addTemplate S_rurif_dragunov_Deploy1P
+ObjectTemplate.setPosition 0/0/-0.0447858
+ObjectTemplate.addTemplate S_rurif_dragunov_Deploy3P
+ObjectTemplate.setPosition 0/0/-0.0497777
+ObjectTemplate.addTemplate S_rurif_dragunov_Zoom
+ObjectTemplate.setPosition 0/0.0197366/-0.149191
+ObjectTemplate.addTemplate e_shellejection_556
+ObjectTemplate.setPosition 0/0.0175554/-0.0216403
+ObjectTemplate.addTemplate e_muzz_g36
+ObjectTemplate.setPosition 0/0.01/0.737454
+ObjectTemplate.setRotation 0/0/45
 rem -------------------------------------
-ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USSNI_M95_Barret/AnimationSystem1p.inc
-ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USSNI_M95_Barret/AnimationSystem3p.inc
-ObjectTemplate.projectileTemplate USSNI_M95_Barret_Projectile
-ObjectTemplate.velocity 500
+ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/RURIF_Dragunov/AnimationSystem1p.inc
+ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/RURIF_Dragunov/AnimationSystem3p.inc
+ObjectTemplate.projectileTemplate rurif_dragunov_Projectile
+ObjectTemplate.velocity 400
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1
 
-ObjectTemplate.create GenericProjectile USSNI_M95_Barret_Projectile
+ObjectTemplate.create GenericProjectile rurif_dragunov_Projectile
 ObjectTemplate.modifiedByUser dsu
 ObjectTemplate.createNotInGrid 1
 ObjectTemplate.createdInEditor 1
@@ -111,6 +121,10 @@ ObjectTemplate.createComponent DefaultCollisionComp
 rem ---EndComp ---
 rem ---BeginComp:DefaultDetonationComp ---
 ObjectTemplate.createComponent DefaultDetonationComp
+ObjectTemplate.detonation.explosionMaterial 70
+ObjectTemplate.detonation.explosionRadius 0
+ObjectTemplate.detonation.explosionForce 0
+ObjectTemplate.detonation.explosionDamage 0
 rem ---EndComp ---
 rem ---BeginComp:DefaultProjSoundComp ---
 ObjectTemplate.createComponent DefaultProjSoundComp
@@ -128,12 +142,12 @@ ObjectTemplate.hasMobilePhysics 1
 ObjectTemplate.hasCollisionPhysics 1
 ObjectTemplate.physicsType Point
 ObjectTemplate.collisionGroups 8
-ObjectTemplate.material 39
+ObjectTemplate.material 38
 rem -------------------------------------
-ObjectTemplate.addTemplate S_USSNI_M95_Barret_Projectile_Looping
+ObjectTemplate.addTemplate S_rurif_dragunov_Projectile_Looping
 rem -------------------------------------
 ObjectTemplate.timeToLive CRD_NONE/1/0/0
-ObjectTemplate.material 39
+ObjectTemplate.material 38
 ObjectTemplate.tracerScaler 30
 ObjectTemplate.maxTracerScaler 30
 ObjectTemplate.minTracerScaler 1
@@ -142,37 +156,26 @@ ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 0
 ObjectTemplate.hasOnTimeEffect 1
 ObjectTemplate.minDamage 10
-ObjectTemplate.damage 200
+ObjectTemplate.damage 90
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Fire1P
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Fire1P
 ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/ussni_m95_barret/sounds/barrett_1p_fire.wav"
+ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_dragunov/sounds/dragunov_fire_1p_outdoor.wav"
 ObjectTemplate.loopCount 0
 ObjectTemplate.is3dSound 0
 ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.95
+ObjectTemplate.volume 0.8
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
 ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
-ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.95/1/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+ObjectTemplate.position 0/0.00877658/0.431594
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Fire1P_Outdoor
-ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/ussni_m95_barret/sounds/barrett_1p_fire.wav"
-ObjectTemplate.loopCount 0
-ObjectTemplate.is3dSound 0
-ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.95
-ObjectTemplate.pitch 1
-ObjectTemplate.pan 0.5
-ObjectTemplate.reverbLevel 1
-ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
-ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.95/1/
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Fire3P
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Fire3P
 ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/ussni_m95_barret/sounds/barrett_3p_fire.wav"
+ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_dragunov/sounds/dragunov_fire_3p.wav"
 ObjectTemplate.loopCount 0
 ObjectTemplate.is3dSound 1
 ObjectTemplate.stopType 1
@@ -180,23 +183,24 @@ ObjectTemplate.volume 1
 ObjectTemplate.pitch 1
 ObjectTemplate.reverbLevel 1
 ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
-ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.95/1/
-ObjectTemplate.minDistance 5
-ObjectTemplate.halfVolumeDistance 20
-ObjectTemplate.soundRadius 0.5
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+ObjectTemplate.position 0/-1.97887e-005/0.67157
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 10
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_BoltClick
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_BoltClick
 ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type95/sounds/type95_bolt_click.wav"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_gp30/sounds/gp30_bolt_click.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 0
 ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.6
+ObjectTemplate.volume 0.8
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
-ObjectTemplate.reverbLevel 0.5
+ObjectTemplate.reverbLevel 1
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_TriggerClick
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_TriggerClick
 ObjectTemplate.modifiedByUser dsu
 ObjectTemplate.soundFilename "objects/weapons/handheld/uspis_92fs/sounds/mono/trigger_click.wav"
 ObjectTemplate.loopCount 1
@@ -206,13 +210,14 @@ ObjectTemplate.volume 0.5
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/-0.0419104/-0.169042
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_SwitchFireRate
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_SwitchFireRate
 ObjectTemplate.modifiedByUser dsu
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Reload1P
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Reload1P
 ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/ussni_m95_barret/sounds/barrett_1p_reload.wav,objects/weapons/handheld/ussni_m95_barret/sounds/barrett_shift_1p.wav"
+ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_dragunov/sounds/dragunov_reload_1p3p.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 0
 ObjectTemplate.stopType 1
@@ -220,43 +225,47 @@ ObjectTemplate.volume 0.75
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/-0.00366077/-0.0369914
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Reload3P
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Reload3P
 ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/ussni_m95_barret/sounds/barrett_1p_reload.wav,objects/weapons/handheld/ussni_m95_barret/sounds/barrett_shift_1p.wav"
+ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_dragunov/sounds/dragunov_reload_1p3p.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 1
 ObjectTemplate.stopType 1
 ObjectTemplate.volume 0.75
 ObjectTemplate.pitch 1
 ObjectTemplate.reverbLevel 1
-ObjectTemplate.minDistance 0.5
-ObjectTemplate.halfVolumeDistance 2
-
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Deploy1P
-ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/ussni_m95_barret/sounds/barrett_deploy.wav"
-ObjectTemplate.loopCount 1
-ObjectTemplate.is3dSound 0
-ObjectTemplate.stopType 0
-ObjectTemplate.volume 0.6
-ObjectTemplate.pitch 1
-ObjectTemplate.pan 0.5
-ObjectTemplate.reverbLevel 1
-
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Deploy3P
-ObjectTemplate.modifiedByUser dsu
-ObjectTemplate.soundFilename "objects/weapons/handheld/ussni_m95_barret/sounds/barrett_deploy.wav"
-ObjectTemplate.loopCount 1
-ObjectTemplate.is3dSound 1
-ObjectTemplate.stopType 0
-ObjectTemplate.volume 0.6
-ObjectTemplate.pitch 1
-ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/0/-0.0382311
 ObjectTemplate.minDistance 0.5
 ObjectTemplate.halfVolumeDistance 1
 
-ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Zoom
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Deploy1P
+ObjectTemplate.modifiedByUser dsu
+ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_dragunov/sounds/dragunov_deploy_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.8
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/0/-0.0447858
+
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Deploy3P
+ObjectTemplate.modifiedByUser dsu
+ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_dragunov/sounds/dragunov_deploy_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.8
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/0/-0.0497777
+ObjectTemplate.minDistance 0.5
+ObjectTemplate.halfVolumeDistance 1
+
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Zoom
 ObjectTemplate.modifiedByUser dsu
 ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_bizon/sounds/zoom_generic.wav"
 ObjectTemplate.loopCount 1
@@ -266,7 +275,8 @@ ObjectTemplate.volume 0.5
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/0.0197366/-0.149191
 
-ObjectTemplate.activeSafe Sound S_USSNI_M95_Barret_Projectile_Looping
+ObjectTemplate.activeSafe Sound S_rurif_dragunov_Projectile_Looping
 ObjectTemplate.modifiedByUser dsu
 
