@@ -1,18 +1,17 @@
-rem *** Generated with Bf2Editor.exe [created: 2005/3/24 14:57]
-GeometryTemplate.setMaterialReflectionScale 0 0 0 0.4
+rem *** Generated with Bf2Editor.exe [created: 2005/3/4 16:5]
 GeometryTemplate.compressVertexData 1
-GeometryTemplate.maxTextureRepeat 16
-ObjectTemplate.activeSafe GenericFireArm usrif_mp5_a3
+GeometryTemplate.maxTextureRepeat 8
+ObjectTemplate.activeSafe GenericFireArm chrif_type85
 ObjectTemplate.creator MBA-1:mba
-ObjectTemplate.modifiedByUser nfe
+ObjectTemplate.modifiedByUser fli
 ObjectTemplate.saveInSeparateFile 1
 ObjectTemplate.castsDynamicShadow 1
 rem ---BeginComp:WeaponHud ---
 ObjectTemplate.createComponent WeaponHud
-ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\USRIF_MP5_A3.tga
-ObjectTemplate.weaponHud.altWeaponIcon Ingame\Weapons\Icons\Hud\USRIF_MP5_A3_mini.tga
-ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\USRIF_MP5_A3.tga
-ObjectTemplate.weaponHud.hudName "KILLMESSAGE_WEAPON_mp5"
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\CHRIF_type85.tga
+ObjectTemplate.weaponHud.altWeaponIcon Ingame\Weapons\Icons\Hud\CHRIF_type85_mini.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\CHRIF_type85.tga
+ObjectTemplate.weaponHud.hudName "KILLMESSAGE_WEAPON_type85"
 ObjectTemplate.weaponHud.guiIndex 4
 ObjectTemplate.weaponHud.altGuiIndex 52
 ObjectTemplate.weaponHud.deviationFactor 5
@@ -24,7 +23,6 @@ rem ---BeginComp:SingleFireComp ---
 ObjectTemplate.createComponent SingleFireComp
 ObjectTemplate.fire.roundsPerMinute 900
 ObjectTemplate.fire.addFireRate 2
-ObjectTemplate.fire.addFireRate 0
 ObjectTemplate.fire.fireInCameraDof 1
 rem ---EndComp ---
 rem ---BeginComp:DefaultAmmoComp ---
@@ -32,22 +30,17 @@ ObjectTemplate.createComponent DefaultAmmoComp
 ObjectTemplate.ammo.ammoType 1
 ObjectTemplate.ammo.nrOfMags 6
 ObjectTemplate.ammo.magSize 30
-ObjectTemplate.ammo.reloadTime 4.25
+ObjectTemplate.ammo.reloadTime 3.4
 rem ---EndComp ---
 rem ---BeginComp:SoldierBasedRecoilComp ---
 ObjectTemplate.createComponent SoldierBasedRecoilComp
 ObjectTemplate.recoil.hasRecoilForce 1
 ObjectTemplate.recoil.recoilForceUp CRD_UNIFORM/0.4/0.6/0
-ObjectTemplate.recoil.recoilForceLeftRight CRD_UNIFORM/-0.4/0.4/0
+ObjectTemplate.recoil.recoilForceLeftRight CRD_UNIFORM/-0.25/0.25/0
 ObjectTemplate.recoil.zoomModifier 0.7
 ObjectTemplate.recoil.recoilGraphFrameCount 7
 ObjectTemplate.recoil.recoilGraphExponent 6
 ObjectTemplate.recoil.recoilGraphTotalMovement 0.5
-rem ---EndComp ---
-rem ---BeginComp:HelpHud ---
-ObjectTemplate.createComponent HelpHud
-ObjectTemplate.HelpHud.helpStringKey "HUD_HELP_WEAPON_HANDHELD_SUBMACHINEGUN_CONTROLS_toggleFireModes"
-ObjectTemplate.HelpHud.helpSoundKey "HUD_HELP_WEAPON_HANDHELD_SUBMACHINEGUN_CONTROLS_toggleFireModes"
 rem ---EndComp ---
 rem ---BeginComp:SoldierDeviationComp ---
 ObjectTemplate.createComponent SoldierDeviationComp
@@ -69,45 +62,46 @@ ObjectTemplate.createComponent DefaultAnimationComp
 rem ---EndComp ---
 rem ---BeginComp:DefaultZoomComp ---
 ObjectTemplate.createComponent DefaultZoomComp
-ObjectTemplate.zoom.zoomDelay 0.08
+ObjectTemplate.zoom.zoomDelay 0.083333
 ObjectTemplate.zoom.zoomLod 1
 ObjectTemplate.zoom.addZoomFactor 0
 ObjectTemplate.zoom.addZoomFactor 0.8
 rem ---EndComp ---
-ObjectTemplate.geometry usrif_mp5_a3
-ObjectTemplate.setCollisionMesh usrif_mp5_a3
-ObjectTemplate.mapMaterial 0 Collision_Material 68
+ObjectTemplate.geometry chrif_Type85
+ObjectTemplate.setCollisionMesh chrif_type85
+ObjectTemplate.mapMaterial 0 Collision_Material 0
 ObjectTemplate.hasMobilePhysics 0
 ObjectTemplate.hasCollisionPhysics 1
 ObjectTemplate.physicsType Point
-ObjectTemplate.aiTemplate usrif_mp5AI
+ObjectTemplate.aiTemplate ChSmg_Type85
 rem -------------------------------------
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Fire1P
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Fire1P_Outdoor
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Fire3P
-ObjectTemplate.setPosition 0/0.0192556/0.33383
-ObjectTemplate.addTemplate S_usrif_mp5_a3_BoltClick
-ObjectTemplate.addTemplate S_usrif_mp5_a3_TriggerClick
-ObjectTemplate.addTemplate S_usrif_mp5_a3_SwitchFireRate
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Reload1P
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Reload3P
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Deploy1P
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Deploy3P
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Zoom
-ObjectTemplate.addTemplate e_muzz_mp5
+ObjectTemplate.addTemplate S_chrif_type85_Fire1P
+ObjectTemplate.setPosition 0/0.0156529/0.367253
+ObjectTemplate.addTemplate S_chrif_type85_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_chrif_type85_Fire3P
+ObjectTemplate.setPosition 0/0.0159977/0.368597
+ObjectTemplate.addTemplate S_chrif_type85_BoltClick
+ObjectTemplate.addTemplate S_chrif_type85_TriggerClick
+ObjectTemplate.addTemplate S_chrif_type85_Reload1P
+ObjectTemplate.addTemplate S_chrif_type85_Reload3P
+ObjectTemplate.addTemplate S_chrif_type85_Deploy1P
+ObjectTemplate.addTemplate S_chrif_type85_Deploy3P
+ObjectTemplate.addTemplate S_chrif_type85_Zoom
 ObjectTemplate.setPosition 0/0.0188249/0.334511
 ObjectTemplate.addTemplate e_shellejection_9mm
-ObjectTemplate.setPosition 0.0143616/0.0467484/0.0427158
+ObjectTemplate.setPosition 0.0143616/0.0227602/0.104319
+ObjectTemplate.addTemplate e_muzz_mp5
+ObjectTemplate.setPosition 0/0.0158644/0.367975
 rem -------------------------------------
-ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USRIF_MP5_A3/AnimationSystem1p.inc
-ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USRIF_MP5_A3/AnimationSystem3p.inc
-ObjectTemplate.projectileTemplate usrif_mp5_a3_Projectile
+ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/chrif_Type85/AnimationSystem1p.inc
+ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/chrif_Type85/AnimationSystem3p.inc
+ObjectTemplate.projectileTemplate chrif_Type85_Projectile
 ObjectTemplate.velocity 250
 ObjectTemplate.itemIndex 3
-ObjectTemplate.delayToUse 0.6
+ObjectTemplate.delayToUse 1.1
 
-ObjectTemplate.create GenericProjectile usrif_mp5_a3_Projectile
-ObjectTemplate.modifiedByUser nfe
+ObjectTemplate.create GenericProjectile chrif_Type85_Projectile
+ObjectTemplate.modifiedByUser fli
 ObjectTemplate.createNotInGrid 1
 ObjectTemplate.createdInEditor 1
 rem ---BeginComp:DefaultCollisionComp ---
@@ -124,8 +118,6 @@ ObjectTemplate.createComponent DefaultRicochetComp
 rem ---EndComp ---
 rem ---BeginComp:DefaultPenetrateComp ---
 ObjectTemplate.createComponent DefaultPenetrateComp
-ObjectTemplate.penetrate.allowSolidPenetration 1
-ObjectTemplate.penetrate.allowLiquidPenetration 1
 rem ---EndComp ---
 ObjectTemplate.floaterMod 0
 ObjectTemplate.hasMobilePhysics 1
@@ -134,7 +126,7 @@ ObjectTemplate.physicsType Point
 ObjectTemplate.collisionGroups 8
 ObjectTemplate.material 38
 rem -------------------------------------
-ObjectTemplate.addTemplate S_usrif_mp5_a3_Projectile_Looping
+ObjectTemplate.addTemplate S_chrif_Type85_Projectile_Looping
 rem -------------------------------------
 ObjectTemplate.timeToLive CRD_NONE/0.5/0/0
 ObjectTemplate.material 38
@@ -144,51 +136,51 @@ ObjectTemplate.minTracerScaler 1
 ObjectTemplate.tracerSizeModifier 5
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 1
-ObjectTemplate.hasOnTimeEffect 1
+ObjectTemplate.minDamage 0.2
 ObjectTemplate.damage 40
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Fire1P
-ObjectTemplate.modifiedByUser nfe
-ObjectTemplate.soundFilename "objects/weapons/handheld/usrif_mp5_a3/sounds/mp5_fire_1p.wav"
+ObjectTemplate.activeSafe Sound S_chrif_type85_Fire1P
+ObjectTemplate.modifiedByUser fli
+ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type85/sounds/type85_1p.wav"
 ObjectTemplate.loopCount 0
 ObjectTemplate.is3dSound 0
 ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.73
+ObjectTemplate.volume 0.71
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
-ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.98/1.04/
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.98/1.055/
 ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
 
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Fire3P
-ObjectTemplate.modifiedByUser nfe
-ObjectTemplate.soundFilename "objects/weapons/handheld/usrif_mp5_a3/sounds/mp5_fire_3p.wav"
+ObjectTemplate.activeSafe Sound S_chrif_type85_Fire3P
+ObjectTemplate.modifiedByUser fli
+ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type85/sounds/type85_3p.wav"
 ObjectTemplate.loopCount 0
 ObjectTemplate.is3dSound 1
 ObjectTemplate.stopType 1
 ObjectTemplate.volume 1
 ObjectTemplate.pitch 1
 ObjectTemplate.reverbLevel 1
-ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.035/
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.055/
 ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
-ObjectTemplate.position 0/0.0192556/0.33383
+ObjectTemplate.position 0/0.0159977/0.368597
 ObjectTemplate.minDistance 2
 ObjectTemplate.halfVolumeDistance 3
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_BoltClick
-ObjectTemplate.modifiedByUser nfe
+ObjectTemplate.activeSafe Sound S_chrif_type85_BoltClick
+ObjectTemplate.modifiedByUser fli
 ObjectTemplate.soundFilename "objects/weapons/handheld/uspis_92fs/sounds/mono/bolt_click.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 0
 ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.9
+ObjectTemplate.volume 0.7
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
-ObjectTemplate.reverbLevel 0.5
+ObjectTemplate.reverbLevel 1
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_TriggerClick
-ObjectTemplate.modifiedByUser nfe
+ObjectTemplate.activeSafe Sound S_chrif_type85_TriggerClick
+ObjectTemplate.modifiedByUser fli
 ObjectTemplate.soundFilename "objects/weapons/handheld/uspis_92fs/sounds/mono/trigger_click.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 0
@@ -198,65 +190,54 @@ ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_SwitchFireRate
-ObjectTemplate.modifiedByUser nfe
-ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type95/sounds/type95_firerate.wav"
+ObjectTemplate.activeSafe Sound S_chrif_type85_Reload1P
+ObjectTemplate.modifiedByUser fli
+ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type85/sounds/type85_reload_1p.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 0
 ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.5
-ObjectTemplate.pitch 1
-ObjectTemplate.pan 0.5
-ObjectTemplate.reverbLevel 0.3
-
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Reload1P
-ObjectTemplate.modifiedByUser nfe
-ObjectTemplate.soundFilename "objects/weapons/handheld/usrif_mp5_a3/sounds/mp5_reload_1p.wav"
-ObjectTemplate.loopCount 1
-ObjectTemplate.is3dSound 0
-ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.7
+ObjectTemplate.volume 0.6
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Reload3P
-ObjectTemplate.modifiedByUser nfe
-ObjectTemplate.soundFilename "objects/weapons/handheld/usrif_mp5_a3/sounds/mp5_reload_1p.wav"
+ObjectTemplate.activeSafe Sound S_chrif_type85_Reload3P
+ObjectTemplate.modifiedByUser fli
+ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type85/sounds/type85_reload_3p.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 1
 ObjectTemplate.stopType 1
-ObjectTemplate.volume 0.7
+ObjectTemplate.volume 0.6
 ObjectTemplate.pitch 1
 ObjectTemplate.reverbLevel 1
-ObjectTemplate.minDistance 0.7
-ObjectTemplate.halfVolumeDistance 1.4
+ObjectTemplate.minDistance 0.8
+ObjectTemplate.halfVolumeDistance 1.6
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Deploy1P
-ObjectTemplate.modifiedByUser nfe
-ObjectTemplate.soundFilename "objects/weapons/handheld/usrif_mp5_a3/sounds/mp5_deploy_1p.wav"
+ObjectTemplate.activeSafe Sound S_chrif_type85_Deploy1P
+ObjectTemplate.modifiedByUser fli
+ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type85/sounds/type85_deploy_1p.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 0
 ObjectTemplate.stopType 0
-ObjectTemplate.volume 0.52
+ObjectTemplate.volume 0.45
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Deploy3P
-ObjectTemplate.modifiedByUser nfe
-ObjectTemplate.soundFilename "objects/weapons/handheld/usrif_mp5_a3/sounds/mp5_deploy_3p.wav"
+ObjectTemplate.activeSafe Sound S_chrif_type85_Deploy3P
+ObjectTemplate.modifiedByUser fli
+ObjectTemplate.soundFilename "objects/weapons/handheld/chrif_type85/sounds/type85_deploy_3p.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 1
 ObjectTemplate.stopType 0
-ObjectTemplate.volume 0.5
+ObjectTemplate.volume 0.45
 ObjectTemplate.pitch 1
 ObjectTemplate.reverbLevel 1
 ObjectTemplate.minDistance 0.5
 ObjectTemplate.halfVolumeDistance 1
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Zoom
-ObjectTemplate.modifiedByUser nfe
+ObjectTemplate.activeSafe Sound S_chrif_type85_Zoom
+ObjectTemplate.modifiedByUser fli
 ObjectTemplate.soundFilename "objects/weapons/handheld/rurif_bizon/sounds/zoom_generic.wav"
 ObjectTemplate.loopCount 1
 ObjectTemplate.is3dSound 0
@@ -265,7 +246,8 @@ ObjectTemplate.volume 0.5
 ObjectTemplate.pitch 1
 ObjectTemplate.pan 0.5
 ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/0.0188249/0.334511
 
-ObjectTemplate.activeSafe Sound S_usrif_mp5_a3_Projectile_Looping
-ObjectTemplate.modifiedByUser nfe
+ObjectTemplate.activeSafe Sound S_chrif_Type85_Projectile_Looping
+ObjectTemplate.modifiedByUser fli
 
