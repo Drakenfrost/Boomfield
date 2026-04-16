@@ -48,7 +48,7 @@ ObjectTemplate.deviation.setFireDev 0.2 0.1 0.05
 ObjectTemplate.deviation.minDev 0.1
 ObjectTemplate.deviation.setTurnDev 0 0 0 0
 ObjectTemplate.deviation.setSpeedDev 1 0.2 0.2 0.1
-ObjectTemplate.deviation.setMiscDev 1 1 0.1
+ObjectTemplate.deviation.setMiscDev 1.1 1.1 0.1
 ObjectTemplate.deviation.devModStand 2
 ObjectTemplate.deviation.devModCrouch 1.5
 ObjectTemplate.deviation.devModLie 1
@@ -98,7 +98,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USRIF_G36C/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USRIF_G36C/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate G36C_Projectile
-ObjectTemplate.velocity 350
+ObjectTemplate.velocity 300
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.166
 
@@ -139,7 +139,7 @@ ObjectTemplate.tracerSizeModifier 5
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 1
 ObjectTemplate.minDamage 0.2
-ObjectTemplate.damage 60
+ObjectTemplate.damage 50
 
 ObjectTemplate.activeSafe Sound S_usrif_g36c_Fire1P
 ObjectTemplate.modifiedByUser nfe
