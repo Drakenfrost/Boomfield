@@ -48,7 +48,7 @@ ObjectTemplate.deviation.setFireDev 0.2 0.1 0.05
 ObjectTemplate.deviation.minDev 0.1
 ObjectTemplate.deviation.setTurnDev 0 0 0 0
 ObjectTemplate.deviation.setSpeedDev 1 0.2 0.2 0.1
-ObjectTemplate.deviation.setMiscDev 1 1 0.1
+ObjectTemplate.deviation.setMiscDev 1.5 1.5 0.1
 ObjectTemplate.deviation.devModStand 2
 ObjectTemplate.deviation.devModCrouch 1.5
 ObjectTemplate.deviation.devModLie 1
@@ -143,7 +143,7 @@ ObjectTemplate.tracerSizeModifier 5
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 0
 ObjectTemplate.minDamage 10
-ObjectTemplate.damage 40
+ObjectTemplate.damage 35
 ObjectTemplate.distToStartLoseDamage 100
 ObjectTemplate.distToMinDamage 200
 
