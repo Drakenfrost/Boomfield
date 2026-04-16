@@ -29,6 +29,7 @@ rem ---EndComp ---
 rem ---BeginComp:DefaultAmmoComp ---
 ObjectTemplate.createComponent DefaultAmmoComp
 ObjectTemplate.ammo.ammoType 1
+ObjectTemplate.ammo.nrOfMags 6
 ObjectTemplate.ammo.reloadTime 4.375
 rem ---EndComp ---
 rem ---BeginComp:SoldierBasedRecoilComp ---
