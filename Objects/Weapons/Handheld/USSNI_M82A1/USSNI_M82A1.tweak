@@ -99,7 +99,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USSNI_M82A1/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USSNI_M82A1/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate M82a1Projectile
-ObjectTemplate.velocity 500
+ObjectTemplate.velocity 1000
 ObjectTemplate.itemIndex 3
 
 ObjectTemplate.create GenericProjectile M82a1Projectile

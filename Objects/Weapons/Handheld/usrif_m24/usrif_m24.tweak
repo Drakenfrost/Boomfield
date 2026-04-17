@@ -112,7 +112,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USRIF_M24/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USRIF_M24/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate usrif_m24_Projectile
-ObjectTemplate.velocity 450
+ObjectTemplate.velocity 900
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.6
 

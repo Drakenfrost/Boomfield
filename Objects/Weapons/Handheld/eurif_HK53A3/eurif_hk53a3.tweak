@@ -101,7 +101,7 @@ ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/eurif_HK53A3/Animation
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/eurif_HK53A3/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate usrif_mp5_a3_Projectile
 ObjectTemplate.keepProjectiles 5
-ObjectTemplate.velocity 300
+ObjectTemplate.velocity 600
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 0.6
 

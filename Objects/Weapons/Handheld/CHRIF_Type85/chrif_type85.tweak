@@ -96,7 +96,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/chrif_Type85/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/chrif_Type85/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate chrif_Type85_Projectile
-ObjectTemplate.velocity 250
+ObjectTemplate.velocity 500
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.1
 

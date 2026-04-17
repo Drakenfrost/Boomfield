@@ -114,7 +114,7 @@ ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/eurif_hk21/AnimationSy
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/eurif_hk21/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate hk21Projectile
 ObjectTemplate.keepProjectiles 5
-ObjectTemplate.velocity 350
+ObjectTemplate.velocity 700
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.625
 ObjectTemplate.heatAddWhenFire 0.017

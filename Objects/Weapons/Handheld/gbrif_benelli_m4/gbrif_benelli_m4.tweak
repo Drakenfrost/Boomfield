@@ -106,7 +106,7 @@ ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/gbrif_benelli_m4/Anima
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/gbrif_benelli_m4/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate gbrif_benelli_m4_Projectile
 ObjectTemplate.keepProjectiles 5
-ObjectTemplate.velocity 150
+ObjectTemplate.velocity 300
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1
 

@@ -100,7 +100,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/chpis_qsz92/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/chpis_qsz92/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate chpis_qsz92_Projectile
-ObjectTemplate.velocity 200
+ObjectTemplate.velocity 400
 ObjectTemplate.itemIndex 2
 ObjectTemplate.delayToUse 0.75
 

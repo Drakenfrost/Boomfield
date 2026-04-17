@@ -100,7 +100,7 @@ ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/usrif_fnscarl/Animatio
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/usrif_fnscarl/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate usrif_fnscarl_Projectile
 ObjectTemplate.keepProjectiles 5
-ObjectTemplate.velocity 350
+ObjectTemplate.velocity 700
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.166
 

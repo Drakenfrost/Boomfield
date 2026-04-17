@@ -96,7 +96,7 @@ ObjectTemplate.animationSystem1P objects/weapons/handheld/gbrif_sa80a2_l85/Anima
 ObjectTemplate.animationSystem3P objects/weapons/handheld/gbrif_sa80a2_l85/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate gbrif_sa80a2_l85_Projectile
 ObjectTemplate.keepProjectiles 5
-ObjectTemplate.velocity 350
+ObjectTemplate.velocity 700
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1
 

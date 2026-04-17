@@ -103,7 +103,7 @@ ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/eurif_fnp90/AnimationS
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/eurif_fnp90/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate eurif_fnp90_Projectile
 ObjectTemplate.keepProjectiles 5
-ObjectTemplate.velocity 250
+ObjectTemplate.velocity 500
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.2
 

@@ -98,7 +98,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/rurrif_ak74u/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/rurrif_ak74u/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate rurrif_ak74u_Projectile
-ObjectTemplate.velocity 300
+ObjectTemplate.velocity 600
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.208
 

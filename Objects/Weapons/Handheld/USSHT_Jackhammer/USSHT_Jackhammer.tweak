@@ -100,7 +100,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USSHT_Jackhammer/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USSHT_Jackhammer/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate JackhammerProjectile
-ObjectTemplate.velocity 150
+ObjectTemplate.velocity 300
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.33
 

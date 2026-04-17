@@ -110,7 +110,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USRIF_M203/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USRIF_M203/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate USRIF_M203_Projectile
-ObjectTemplate.velocity 350
+ObjectTemplate.velocity 700
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 0.7
 

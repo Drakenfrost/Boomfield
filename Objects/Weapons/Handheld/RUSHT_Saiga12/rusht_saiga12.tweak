@@ -98,7 +98,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/RUSHT_Saiga12/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/RUSHT_Saiga12/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate rusht_saiga12_Projectile
-ObjectTemplate.velocity 150
+ObjectTemplate.velocity 300
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.2
 

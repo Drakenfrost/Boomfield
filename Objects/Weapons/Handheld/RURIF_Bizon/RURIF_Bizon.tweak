@@ -107,7 +107,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/RURIF_Bizon/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/RURIF_Bizon/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate rurif_bizon_Projectile
-ObjectTemplate.velocity 250
+ObjectTemplate.velocity 500
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 0.666
 

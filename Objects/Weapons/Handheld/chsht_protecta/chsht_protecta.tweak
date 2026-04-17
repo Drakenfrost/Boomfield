@@ -102,7 +102,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/chsht_protecta/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/chsht_protecta/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate chsht_protecta_Projectile
-ObjectTemplate.velocity 150
+ObjectTemplate.velocity 300
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 0.8
 

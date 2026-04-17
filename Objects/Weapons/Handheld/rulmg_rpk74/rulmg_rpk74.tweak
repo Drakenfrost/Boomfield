@@ -109,7 +109,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/RULMG_RPK74/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/RULMG_RPK74/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate rpk74Projectile
-ObjectTemplate.velocity 350
+ObjectTemplate.velocity 700
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.625
 ObjectTemplate.heatAddWhenFire 0.021

@@ -114,7 +114,7 @@ ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/gbrif_l96a1/AnimationS
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/gbrif_l96a1/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate gbrif_l96a1_Projectile
 ObjectTemplate.keepProjectiles 5
-ObjectTemplate.velocity 450
+ObjectTemplate.velocity 900
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.6
 

@@ -98,7 +98,7 @@ rem -------------------------------------
 ObjectTemplate.animationSystem1P Objects/Weapons/Handheld/USRIF_G36C/AnimationSystem1p.inc
 ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USRIF_G36C/AnimationSystem3p.inc
 ObjectTemplate.projectileTemplate G36C_Projectile
-ObjectTemplate.velocity 300
+ObjectTemplate.velocity 600
 ObjectTemplate.itemIndex 3
 ObjectTemplate.delayToUse 1.166
 
