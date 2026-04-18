@@ -47,7 +47,6 @@ ObjectTemplate.armor.wreckExplosionDamage 200
 ObjectTemplate.armor.wreckExplosionRadius 5
 ObjectTemplate.armor.wreckHitPoints 2500
 ObjectTemplate.armor.timeToStayAsWreck 216000
-ObjectTemplate.armor.wreckHitPoints 500
 ObjectTemplate.armor.criticalDamage 101
 ObjectTemplate.armor.addArmorEffect 0 e_vexp_AirGeneric 0/0/0 0/0/0
 ObjectTemplate.armor.addArmorEffect 0 e_vexp_f35 0/0/0 0/0/0

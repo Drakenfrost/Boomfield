@@ -188,6 +188,19 @@ Apply to the `at_predator` and `eryx`:
 
 ### Vehicles
 
+| Aircraft Type             | CH           | EU          | MEC       | US       |
+|---------------------------|--------------|-------------|-----------|----------|
+| Buggy Car                 |              |             |           |          |
+| Transport Car             |              |             |           |          |
+| Armored Personnel Carrier |              |             |           |          |
+| Anti-Air Vehicle          |              |             |           |          |
+| Tank                      |              |             |           |          |
+| Attack Helicopter         | ahe_z10      | xpak2_tiger | ahe_havoc | ahe_ah1z |
+| Transport Helicopter      |              |             |           |          |
+| Scout Helicopter          |              |             |           |          |
+| Fighter                   | air_j10      |             |           | air_f35b |
+| Bomber                    | xpak2_fantan |             | air_su39  | air_a10  |
+
 ###### Armor
 
 ```
@@ -196,16 +209,12 @@ ObjectTemplate.armor.hpLostWhileInWater 0
 ObjectTemplate.armor.hpLostWhileInDeepWater 50
 ...
 ObjectTemplate.armor.wreckHitPoints 2500
-ObjectTemplate.armor.TimeToStayAsWreck 216000
+ObjectTemplate.armor.timeToStayAsWreck 216000
 ```
 
 Set `ObjectTemplate.armor.hpLostWhileUpSideDown 100` for all helicopters.
 
 #### Attack Helicopters
-
-- ahe_ah1z
-- ahe_havoc
-- ahe_z10
 
 ###### Ammo
 
@@ -252,3 +261,5 @@ rem ---EndComp ---
 Set machine gun damage to:
 - `ObjectTemplate.damage 50` for ahe_ah1z and ahe_z10
 - `ObjectTemplate.damage 150` for ahe_havoc
+- `ObjectTemplate.damage 150` for xpak2_tiger
+
