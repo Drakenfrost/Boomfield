@@ -78,10 +78,10 @@ Where:
 
 ### Weapons
 
-### Weapon Tweaks
+#### Handheld Weapon Tweaks
 The following tweaks should be applied to each weapon.
 
-#### Damage
+###### Damage
 > Generally increase the overall weapon damage.
 
 Set damage to:
@@ -102,7 +102,7 @@ ObjectTemplate.distToStartLoseDamage 60
 ObjectTemplate.distToMinDamage 200
 ```
 
-#### Velocity
+###### Velocity
 > Generally decrease the overall projectile velocity.
 
 Set the velocities to:
@@ -115,14 +115,14 @@ Set the velocities to:
 - `ObjectTemplate.velocity 900` for bolt-action Snipers.
 - `ObjectTemplate.velocity 1000` for the USSNI_M95_Barret.
 
-#### Ammo
+###### Ammo
 Set the number of mags to:
 - `ObjectTemplate.ammo.nrOfMags 4` for pistols.
 - `ObjectTemplate.ammo.nrOfMags 6` for SMGs, Carbines, ARs, and Snipers.
 - `ObjectTemplate.ammo.nrOfMags 2` for LMGs and Rocket Launchers.
 - `ObjectTemplate.ammo.nrOfMags 5` for Grenade Launchers.
 
-#### Zoom
+###### Zoom
 Set the add zoom factor to:
 - `ObjectTemplate.zoom.addZoomFactor 0.6` for iron sights.
 - `ObjectTemplate.zoom.addZoomFactor 0.3` for normal rifle scopes.
@@ -131,7 +131,7 @@ Set the add zoom factor to:
 
 Always set `ObjectTemplate.zoom.disableMuzzleWhenZoomed 0`.
 
-#### Fire Rate
+###### Fire Rate
 Both `ObjectTemplate.fire.roundsPerMinute` and `ObjectTemplate.fire.addFireRate` need to be set based on each specific weapon.
 
 - `ObjectTemplate.fire.roundsPerMinute 600` is a safe middle ground for most full-auto weapons.
@@ -141,7 +141,7 @@ Where:
 - `ObjectTemplate.fire.addFireRate 1` means burst fire.
 - `ObjectTemplate.fire.addFireRate 2` means full-auto fire.
 
-#### Deviation
+###### Deviation
 > Generally decrease the overall deviation, thus increasing accuracy.
 
 The base deviation component except for shotguns:
@@ -166,7 +166,7 @@ rem ---EndComp ---
 - `ObjectTemplate.deviation.setMiscDev 1 1 0.1` for ARs and LMGs.
 - `ObjectTemplate.deviation.setMiscDev 0.8 0.8 0.1` for snipers.
 
-#### Tracers
+###### Tracers
 The base tracer setup:
 ```
 ObjectTemplate.tracerScaler 30
@@ -180,4 +180,75 @@ ObjectTemplate.tracerInterval 1
 Set `ObjectTemplate.tracerInterval 0` for Pistols, Shotguns, and Snipers.
 Set `ObjectTemplate.tracerInterval 1` for SMGs, Carbines, ARs, and LMGs.
 
+#### Missile Tweaks
 
+Apply to the `at_predator` and `eryx`:
+
+- `ObjectTemplate.damage 720`
+
+### Vehicles
+
+###### Armor
+
+```
+ObjectTemplate.armor.hpLostWhileUpSideDown 0
+ObjectTemplate.armor.hpLostWhileInWater 0
+ObjectTemplate.armor.hpLostWhileInDeepWater 50
+...
+ObjectTemplate.armor.wreckHitPoints 2500
+ObjectTemplate.armor.TimeToStayAsWreck 216000
+```
+
+Set `ObjectTemplate.armor.hpLostWhileUpSideDown 100` for all helicopters.
+
+#### Attack Helicopters
+
+- ahe_ah1z
+- ahe_havoc
+- ahe_z10
+
+###### Ammo
+
+Set machine gun ammo component to:
+```
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 1
+ObjectTemplate.ammo.magSize 1000
+ObjectTemplate.ammo.reloadTime 8
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+```
+
+Set `ObjectTemplate.ammo.magSize 500` for ahe_havoc.
+
+Set rocket launcher ammo component to:
+```
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 1
+ObjectTemplate.ammo.magSize 38
+ObjectTemplate.ammo.reloadTime 8
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+```
+
+Set flare ammo component to:
+```
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 5
+ObjectTemplate.ammo.magSize 12
+ObjectTemplate.ammo.minimumTimeUntilReload 5
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+```
+
+###### Damage
+
+Set machine gun damage to:
+- `ObjectTemplate.damage 50` for ahe_ah1z and ahe_z10
+- `ObjectTemplate.damage 150` for ahe_havoc
