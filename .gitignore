@@ -4,5 +4,7 @@ Logs
 # Bf2Editor package files
 *.zip
 
-# Created by JetBrains IDEs
+# User specific files
 .idea
+*.user
+Settings/Usersettings.con
