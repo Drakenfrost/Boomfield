@@ -1,24 +1,24 @@
-ObjectTemplate.create Kit US_Assault
+ObjectTemplate.create Kit MEC_Assault
 ObjectTemplate.saveInSeparateFile 1
-ObjectTemplate.networkableInfo KitInfo
 ObjectTemplate.kitType Assault
 ObjectTemplate.aiTemplate Assault
-ObjectTemplate.geometry US_Kits
-ObjectTemplate.geometry.kit 5	
+ObjectTemplate.geometry MEC_Kits
+ObjectTemplate.geometry.kit 0
 ObjectTemplate.geometry.dropGeom 15
-ObjectTemplate.setHasCollisionPhysics 1
-ObjectTemplate.dropHeadwear helmet
+ObjectTemplate.setNetworkableInfo KitInfo
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.dropHeadwear mec_helmet
 ObjectTemplate.abilityRestoreRate 0.02
 ObjectTemplate.unlockIndex 1
-ObjectTemplate.cullRadiusScale 2.4	
+ObjectTemplate.cullRadiusScale 2.4
 
 rem -------------------------------------
 ObjectTemplate.addTemplate kni_knife
-ObjectTemplate.addTemplate USPIS_92FS
-ObjectTemplate.addTemplate USRIF_M203
-ObjectTemplate.addTemplate UnlockUSAssault
-ObjectTemplate.addTemplate UnlockUSAssault2
-ObjectTemplate.addTemplate USRGL_M203
+ObjectTemplate.addTemplate RUPIS_Baghira
+ObjectTemplate.addTemplate RURIF_GP30
+ObjectTemplate.addTemplate UnlockMECAssault
+ObjectTemplate.addTemplate UnlockMECAssault2
+ObjectTemplate.addTemplate RURGL_GP30
 ObjectTemplate.addTemplate hgr_smoke
 ObjectTemplate.addTemplate ammokit
 ObjectTemplate.addTemplate ParachuteLauncher
@@ -36,7 +36,7 @@ ObjectTemplate.createComponent VehicleHud
 ObjectTemplate.vehicleHud.hudName 		"HUD_TEXT_MENU_SPAWN_KIT_ASSAULT"
 ObjectTemplate.vehicleHud.miniMapIcon		"Ingame\Kits\Icons\kit_Light_Assault_outline.tga"
 ObjectTemplate.vehicleHud.vehicleIcon		"Ingame\Kits\Icons\kit_Light_Assault.tga"
-ObjectTemplate.vehicleHud.spottedIcon 		"Ingame\Player\Icons\Minimap\mini_Soldier.dds"
+ObjectTemplate.vehicleHud.spottedIcon 			"Ingame\Player\Icons\Minimap\mini_Soldier.dds"
 ObjectTemplate.vehicleHud.abilityIcon 		"Ingame\Weapons\Icons\Hud\SpecialKitIcons\kevlarVest.tga"
 ObjectTemplate.vehicleHud.pantingSound		S_SprintBreath
 ObjectTemplate.vehicleHud.injurySound		S_Injury
@@ -49,19 +49,19 @@ ObjectTemplate.createComponent Radio
 ObjectTemplate.Radio.spottedMessage	"infantry_spotted"
 rem ---EndComp ---
 
-ObjectTemplate.create ItemContainer UnlockUSAssault
+ObjectTemplate.create ItemContainer UnlockMECAssault
 ObjectTemplate.addTemplate usrif_G3A3
-ObjectTemplate.replaceItem usrif_m203
+ObjectTemplate.replaceItem rurif_gp30
 Objecttemplate.addTemplate ushgr_m67
-ObjectTemplate.replaceItem usrgl_m203
+ObjectTemplate.replaceItem rurgl_gp30
 ObjectTemplate.unlockLevel 1
 
-ObjectTemplate.create ItemContainer UnlockUSAssault2
+ObjectTemplate.create ItemContainer UnlockMECAssault2
 ObjectTemplate.addTemplate sasrif_fn2000
-ObjectTemplate.replaceItem usrif_m203
+ObjectTemplate.replaceItem rurif_gp30
 ObjectTemplate.replaceItem usrif_G3A3
 Objecttemplate.addTemplate sasgr_fn2000
-ObjectTemplate.replaceItem usrgl_m203
+ObjectTemplate.replaceItem rurgl_gp30
 ObjectTemplate.replaceItem ushgr_m67
 ObjectTemplate.addTemplate nshgr_flashbang
 Objecttemplate.replaceItem ushgr_smoke

@@ -1,9 +1,9 @@
-ObjectTemplate.create Kit US_Assault
+ObjectTemplate.create Kit EU_Assault
 ObjectTemplate.saveInSeparateFile 1
 ObjectTemplate.networkableInfo KitInfo
 ObjectTemplate.kitType Assault
 ObjectTemplate.aiTemplate Assault
-ObjectTemplate.geometry US_Kits
+ObjectTemplate.geometry eu_kits
 ObjectTemplate.geometry.kit 5	
 ObjectTemplate.geometry.dropGeom 15
 ObjectTemplate.setHasCollisionPhysics 1
@@ -15,10 +15,10 @@ ObjectTemplate.cullRadiusScale 2.4
 rem -------------------------------------
 ObjectTemplate.addTemplate kni_knife
 ObjectTemplate.addTemplate USPIS_92FS
-ObjectTemplate.addTemplate USRIF_M203
+ObjectTemplate.addTemplate gbrif_sa80a2_l85
 ObjectTemplate.addTemplate UnlockUSAssault
 ObjectTemplate.addTemplate UnlockUSAssault2
-ObjectTemplate.addTemplate USRGL_M203
+ObjectTemplate.addTemplate gbgr_sa80a2_l85
 ObjectTemplate.addTemplate hgr_smoke
 ObjectTemplate.addTemplate ammokit
 ObjectTemplate.addTemplate ParachuteLauncher
@@ -51,17 +51,17 @@ rem ---EndComp ---
 
 ObjectTemplate.create ItemContainer UnlockUSAssault
 ObjectTemplate.addTemplate usrif_G3A3
-ObjectTemplate.replaceItem usrif_m203
+ObjectTemplate.replaceItem gbrif_sa80a2_l85
 Objecttemplate.addTemplate ushgr_m67
-ObjectTemplate.replaceItem usrgl_m203
+ObjectTemplate.replaceItem gbgr_sa80a2_l85
 ObjectTemplate.unlockLevel 1
 
 ObjectTemplate.create ItemContainer UnlockUSAssault2
 ObjectTemplate.addTemplate sasrif_fn2000
-ObjectTemplate.replaceItem usrif_m203
+ObjectTemplate.replaceItem gbrif_sa80a2_l85
 ObjectTemplate.replaceItem usrif_G3A3
 Objecttemplate.addTemplate sasgr_fn2000
-ObjectTemplate.replaceItem usrgl_m203
+ObjectTemplate.replaceItem gbgr_sa80a2_l85
 ObjectTemplate.replaceItem ushgr_m67
 ObjectTemplate.addTemplate nshgr_flashbang
 Objecttemplate.replaceItem ushgr_smoke

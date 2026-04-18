@@ -34,68 +34,49 @@ How to change things:
 Set `ObjectTemplate.armor.TimeToStayAsWreck 216000` for all soldiers.
 > This may affect performance with a full server. Test with as many players/bots as possible.
 
+### Kits
+Weapon indexes should be changed to accomodate the following kit loadouts:
+
+| Class          | 1     | 2       | 3       | 4          | 5     | 6       | 7        | 8 | 9         |
+|----------------|-------|---------|---------|------------|-------|---------|----------|---|-----------|
+| *Spec. Forces* | Knife | Pistol+ | Carbine | Frag       | Flash | Medkit  | C4       | - | Parachute |
+| *Sniper*       | Knife | Pistol+ | Sniper  | Frag       | Flash | Medkit  | Claymore | - | Parachute |
+| *Assault*      | Knife | Pistol  | AR+     | Grenade L. | Smoke | Ammo    | -        | - | Parachute |
+| *Support*      | Knife | Pistol  | LMG     | Frag       | Smoke | Ammo    | -        | - | Parachute |
+| *Engineer*     | Knife | Pistol+ | Shotgun | Frag       | Smoke | AT Mine | Wrench   | - | Parachute |
+| *Medic*        | Knife | Pistol  | AR      | Frag       | Smoke | Medkit  | Defib.   | - | Parachute |
+| *Anti-Tank*    | Knife | Pistol  | SMG     | Rocket L.  | Smoke | AT Mine | -        | - | Parachute |
+
+Where:
+
+| Item       | CH                   | EU                  | MEC                    | US                   |
+|------------|----------------------|---------------------|------------------------|----------------------|
+| Knife      | kni_knife            | kni_knife           | kni_knife              | kni_knife            |
+| Pistol     | chpis_qsz92          | USPIS_92FS          | RUPIS_Baghira          | USPIS_92FS           |
+| Pistol+    | chpis_qsz92_silencer | USPIS_92FS_silencer | RUPIS_Baghira_silencer | USPIS_92FS_silencer  |
+| Carbine    | chrif_type95         | eurif_hk53a3        | rurrif_ak74u           | USRIF_M4             |
+| SMG        | chrif_type85         | eurif_fnp90         | RURIF_Bizon            | USRIF_MP5_A3         |
+| AR         | RURIF_AK47           | eurif_famas         | RURIF_AK101            | usrif_m16a2          |
+| AR+        | RURIF_GP25           | gbrif_sa80a2_l85    | RURIF_GP30             | USRIF_M203           |
+| LMG        | chlmg_type95         | eurif_hk21          | RULMG_RPK74            | USLMG_M249SAW        |
+| Sniper     | chsni_type88         | gbrif_l96a1         | rurif_Dragunov         | USRIF_M24            |
+| Shotgun    | chsht_Norinco982     | gbrif_benelli_m4    | RUSHT_saiga12          | usrif_remington11-87 |
+| Grenade L. | RURGL_GP25           | gbgr_sa80a2_l85     | RURGL_GP30             | USRGL_M203           |
+| Rocket L.  | CHAT_ERYX            | CHAT_ERYX           | USATP_Predator         | USATP_Predator       |
+| Frag       | USHGR_M67            | USHGR_M67           | USHGR_M67              | USHGR_M67            |
+| Flash      | nshgr_flashbang      | nshgr_flashbang     | nshgr_flashbang        | nshgr_flashbang      |
+| Smoke      | hgr_smoke            | hgr_smoke           | hgr_smoke              | hgr_smoke            |
+| Claymore   | USMIN_Claymore       | USMIN_Claymore      | USMIN_Claymore         | USMIN_Claymore       |
+| AT Mine    | at_mine              | at_mine             | at_mine                | at_mine              |
+| C4         | c4_explosives        | c4_explosives       | c4_explosives          | c4_explosives        |
+| Wrench     | wrench               | wrench              | wrench                 | wrench               |
+| Defib.     | defibrillator        | defibrillator       | defibrillator          | defibrillator        |
+| Ammo       | ammokit              | ammokit             | ammokit                | ammokit              |
+| Medkit     | medikit              | medikit             | medikit                | medikit              |
+| Parachute  | ParachuteLauncher    | ParachuteLauncher   | ParachuteLauncher      | ParachuteLauncher    |
+
+
 ### Weapons
-
-#### Weapon Categories
-Definitions of weapon categories refered to in the following sections:
-
-###### Pistol
-- chpis_qsz92
-- chpis_qsz92_silencer
-- rupis_baghira
-- rupis_baghira_silencer
-- USPIS_92FS
-- uspis_92fs_silencer
-###### SMG
-- CHRIF_Type85
-- eurif_fnp90*
-- RURIF_Bizon
-- USRIF_MP5_A3
-###### Carbine
-- chrif_type95
-- eurif_HK53A3
-- rurrif_ak74u
-- usrif_g36c*
-- USRIF_M4
-###### AR
-- eurif_famas
-- gbrif_sa80a2_l85
-- RURIF_AK47
-- RURIF_AK101
-- RURIF_GP25
-- RURIF_GP30
-- usrif_fnscarl
-- USRIF_G3A3*
-- usrif_m16a2
-- USRIF_M203
-- usrif_sa80*
-###### LMG
-- chlmg_type95
-- eurif_hk21
-- RULMG_PKM*
-- rulmg_rpk74
-- USLMG_M249SAW
-###### Sniper
-- chsni_type88
-- gbrif_l96a1
-- rurif_dragunov
-- usrif_m24
-- USSNI_M95_Barret*
-###### Shotgun
-- chsht_norinco982
-- chsht_protecta*
-- gbrif_benelli_m4
-- RUSHT_Saiga12
-- usrif_remington11-87
-- USSHT_Jackhammer
-###### Grenade Launcher
-- gbgr_sa80a2_l85
-- RURGL_GP25
-- RURGL_GP30
-- USRGL_M203
-###### Rocket Launcher
-- CHAT_ERYX
-- USATP_predator
 
 ### Weapon Tweaks
 The following tweaks should be applied to each weapon.
