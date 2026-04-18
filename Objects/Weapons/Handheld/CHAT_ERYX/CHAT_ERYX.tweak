@@ -34,7 +34,7 @@ rem ---EndComp ---
 rem ---BeginComp:DefaultAmmoComp ---
 ObjectTemplate.createComponent DefaultAmmoComp
 ObjectTemplate.ammo.ammoType 1
-ObjectTemplate.ammo.nrOfMags 6
+ObjectTemplate.ammo.nrOfMags 2
 ObjectTemplate.ammo.magSize 1
 ObjectTemplate.ammo.reloadTime 4.65
 ObjectTemplate.ammo.minimumTimeUntilReload 0.2
