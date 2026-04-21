@@ -1,8 +1,8 @@
 # BF2Editor logs
 Logs
 
-# Bf2Editor package files
-*.zip
+# Bf2Editor package files (include Levels/*/*.zip)
+/*.zip
 
 # User specific files
 .idea
