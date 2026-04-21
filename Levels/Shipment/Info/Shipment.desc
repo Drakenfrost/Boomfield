@@ -1,0 +1,19 @@
+<map>
+	<name> Shipment </name>
+	<briefing locid="This map is a recreation of Shipment off of the game CoD4. Hope you enjoy the map.
+Map made by Drifterboy
+SP done by imtheheadhunter "></briefing>
+	<music> common/sound/menu/music/load_MEC_music.ogg </music>
+	<modes>
+		<mode type="gpm_cq">
+			<maptype ai="1" players="16" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault"></maptype>
+		</mode>
+		<mode type="gpm_coop">
+			<maptype ai="1" players="16" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault"></maptype>
+		</mode>
+		<mode type="sp1">
+			<maptype ai="1" players="16" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault"></maptype>
+		</mode>
+
+	</modes>
+</map>

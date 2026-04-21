@@ -1,0 +1,11 @@
+<map>
+	<name> Attack at Sea </name>
+	<briefing locid="LT.SpAwN and SGT.Nezumi and their crew were out on carrier manuevers when they were attacked by terrorist forces,goodluck mercs this is going to be a tough one..">map description for modders maps not localized (english only)</briefing>
+	<music> common/sound/menu/music/load_CH_music.ogg </music>
+	<modes>
+		<mode type="gpm_cq">
+			<maptype ai="1" players="16" type="doubleassault" locid="Mercenaries, Leave no man alive,leave no man behind.....For updates and custom maps visit Dies-World.com...Hayabusa custom co-op maps">Unlocalized test for this mode on this map</maptype>
+			
+		</mode>
+	</modes>
+</map>
