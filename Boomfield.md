@@ -49,31 +49,36 @@ Weapon indexes should be changed to accomodate the following kit loadouts:
 
 Where:
 
-| Item       | CH                   | EU                  | MEC                    | US                   |
-|------------|----------------------|---------------------|------------------------|----------------------|
-| Knife      | kni_knife            | kni_knife           | kni_knife              | kni_knife            |
-| Pistol     | chpis_qsz92          | USPIS_92FS          | RUPIS_Baghira          | USPIS_92FS           |
-| Pistol+    | chpis_qsz92_silencer | USPIS_92FS_silencer | RUPIS_Baghira_silencer | USPIS_92FS_silencer  |
-| Carbine    | chrif_type95         | eurif_hk53a3        | rurrif_ak74u           | USRIF_M4             |
-| SMG        | chrif_type85         | eurif_fnp90         | RURIF_Bizon            | USRIF_MP5_A3         |
-| AR         | RURIF_AK47           | eurif_famas         | RURIF_AK101            | usrif_m16a2          |
-| AR+        | RURIF_GP25           | gbrif_sa80a2_l85    | RURIF_GP30             | USRIF_M203           |
-| LMG        | chlmg_type95         | eurif_hk21          | RULMG_RPK74            | USLMG_M249SAW        |
-| Sniper     | chsni_type88         | gbrif_l96a1         | rurif_Dragunov         | USRIF_M24            |
-| Shotgun    | chsht_Norinco982     | gbrif_benelli_m4    | RUSHT_saiga12          | usrif_remington11-87 |
-| Grenade L. | RURGL_GP25           | gbgr_sa80a2_l85     | RURGL_GP30             | USRGL_M203           |
-| Rocket L.  | CHAT_ERYX            | CHAT_ERYX           | USATP_Predator         | USATP_Predator       |
-| Frag       | USHGR_M67            | USHGR_M67           | USHGR_M67              | USHGR_M67            |
-| Flash      | nshgr_flashbang      | nshgr_flashbang     | nshgr_flashbang        | nshgr_flashbang      |
-| Smoke      | hgr_smoke            | hgr_smoke           | hgr_smoke              | hgr_smoke            |
-| Claymore   | USMIN_Claymore       | USMIN_Claymore      | USMIN_Claymore         | USMIN_Claymore       |
-| AT Mine    | at_mine              | at_mine             | at_mine                | at_mine              |
-| C4         | c4_explosives        | c4_explosives       | c4_explosives          | c4_explosives        |
-| Wrench     | wrench               | wrench              | wrench                 | wrench               |
-| Defib.     | defibrillator        | defibrillator       | defibrillator          | defibrillator        |
-| Ammo       | ammokit              | ammokit             | ammokit                | ammokit              |
-| Medkit     | medikit              | medikit             | medikit                | medikit              |
-| Parachute  | ParachuteLauncher    | ParachuteLauncher   | ParachuteLauncher      | ParachuteLauncher    |
+| Item         | CH                      | EU                       | MEC                    | US                       |
+|--------------|-------------------------|--------------------------|------------------------|--------------------------|
+| Knife        | kni_knife               | kni_knife                | kni_knife              | kni_knife                |
+| Pistol       | chpis_qsz92             | USPIS_92FS               | RUPIS_Baghira          | USPIS_92FS               |
+| Pistol+      | chpis_qsz92_silencer    | USPIS_92FS_silencer      | RUPIS_Baghira_silencer | USPIS_92FS_silencer      |
+| Carbine      | chrif_type95            | eurif_hk53a3             | rurrif_ak74u           | USRIF_M4                 |
+| SMG          | chrif_type85            | eurif_fnp90              | RURIF_Bizon            | USRIF_MP5_A3             |
+| AR           | RURIF_AK47              | eurif_famas              | RURIF_AK101            | usrif_m16a2              |
+| AR+          | RURIF_GP25              | gbrif_sa80a2_l85         | RURIF_GP30             | USRIF_M203               |
+| LMG          | chlmg_type95            | eurif_hk21               | RULMG_RPK74            | USLMG_M249SAW            |
+| Sniper       | chsni_type88            | gbrif_l96a1              | rurif_Dragunov         | USRIF_M24                |
+| Shotgun      | chsht_Norinco982        | gbrif_benelli_m4         | RUSHT_saiga12          | usrif_remington11-87     |
+| Grenade L.   | RURGL_GP25              | gbgr_sa80a2_l85          | RURGL_GP30             | USRGL_M203               |
+| Rocket L.    | CHAT_ERYX               | CHAT_ERYX                | USATP_Predator         | USATP_Predator           |
+| Frag         | USHGR_M67               | USHGR_M67                | USHGR_M67              | USHGR_M67                |
+| Flash        | nshgr_flashbang         | nshgr_flashbang          | nshgr_flashbang        | nshgr_flashbang          |
+| Smoke        | hgr_smoke               | hgr_smoke                | hgr_smoke              | hgr_smoke                |
+| Claymore     | USMIN_Claymore          | USMIN_Claymore           | USMIN_Claymore         | USMIN_Claymore           |
+| AT Mine      | at_mine                 | at_mine                  | at_mine                | at_mine                  |
+| C4           | c4_explosives           | c4_explosives            | c4_explosives          | c4_explosives            |
+| Wrench       | wrench                  | wrench                   | wrench                 | wrench                   |
+| Defib.       | defibrillator           | defibrillator            | defibrillator          | defibrillator            |
+| Ammo         | ammokit                 | ammokit                  | ammokit                | ammokit                  |
+| Medkit       | medikit                 | medikit                  | medikit                | medikit                  |
+| Parachute    | ParachuteLauncher       | ParachuteLauncher        | ParachuteLauncher      | ParachuteLauncher        |
+| Artillery    | ars_d30                 | USART_LW155              | ars_d30                | USART_LW155              |
+| S. Rocket L. | ats_hj8                 | ats_tow                  | ats_hj8                | ats_tow                  |
+| S. SAM       | Igla_Djigit             | usaas_stinger            | Igla_Djigit            | usaas_stinger            |
+| S. LMG       | chlmg_type95_stationary | uslmg_m249saw_stationary | rulmg_rpk74_stationary | uslmg_m249saw_stationary |
+| S. HMG       | chhmg_type85            | HMG_M2HB / HMG_M134      | CHHMG_KORD             | HMG_M2HB / HMG_M134      |
 
 
 ### Weapons
@@ -116,11 +121,27 @@ Set the velocities to:
 - `ObjectTemplate.velocity 1000` for the USSNI_M95_Barret.
 
 ###### Ammo
+Set for 
+```
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 6
+ObjectTemplate.ammo.magSize 30
+ObjectTemplate.ammo.reloadTime 5
+ObjectTemplate.ammo.autoReload 1
+rem ---EndComp ---
+```
+
 Set the number of mags to:
 - `ObjectTemplate.ammo.nrOfMags 4` for pistols.
 - `ObjectTemplate.ammo.nrOfMags 6` for SMGs, Carbines, ARs, and Snipers.
 - `ObjectTemplate.ammo.nrOfMags 2` for LMGs and Rocket Launchers.
 - `ObjectTemplate.ammo.nrOfMags 5` for Grenade Launchers.
+
+Stationary:
+- `ObjectTemplate.ammo.nrOfMags 11` for aas_phalanx and S. Rocket L.s.
+
+Set mag sizes to the realistic weapon magazine capacity.
 
 ###### Zoom
 Set the add zoom factor to:
@@ -179,6 +200,9 @@ ObjectTemplate.tracerInterval 1
 
 Set `ObjectTemplate.tracerInterval 0` for Pistols, Shotguns, and Snipers.
 Set `ObjectTemplate.tracerInterval 1` for SMGs, Carbines, ARs, and LMGs.
+
+Set `ObjectTemplate.tracerTemplate p_tracer_g` for all weapons except ?.
+Set `ObjectTemplate.minTracerScaler 10` for Coaxial guns.
 
 #### Missile Tweaks
 
