@@ -22,7 +22,7 @@ ObjectTemplate.mass 100
 ObjectTemplate.hasCollisionPhysics 1
 ObjectTemplate.hasResponsePhysics 1
 ObjectTemplate.SprintRecoverTime 17
-ObjectTemplate.SprintDissipationTime 10
+ObjectTemplate.SprintDissipationTime 20
 ObjectTemplate.SprintLimit 0.05
 ObjectTemplate.SprintLossAtJump 0.15
 rem ObjectTemplate.Grip 20
@@ -32,7 +32,7 @@ ObjectTemplate.createComponent Armor
 ObjectTemplate.armor.maxHitPoints 100
 ObjectTemplate.armor.hitPoints 100
 ObjectTemplate.armor.defaultMaterial 24
-ObjectTemplate.armor.wreckhitpoints 320
+ObjectTemplate.armor.wreckhitpoints 500
 ObjectTemplate.armor.explosionForceMod 25
 ObjectTemplate.armor.explosionForceMax 1000
 ObjectTemplate.armor.TimeToStayAsWreck 216000

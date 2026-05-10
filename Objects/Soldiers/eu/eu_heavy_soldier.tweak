@@ -20,7 +20,7 @@ ObjectTemplate.mass 100
 ObjectTemplate.hasCollisionPhysics 1
 ObjectTemplate.hasResponsePhysics 1
 ObjectTemplate.SprintRecoverTime 20
-ObjectTemplate.SprintDissipationTime 8
+ObjectTemplate.SprintDissipationTime 16
 ObjectTemplate.SprintLimit 0.05
 ObjectTemplate.SprintLossAtJump 0.2
 rem ObjectTemplate.Grip 20
@@ -29,7 +29,7 @@ rem ---BeginComp:Armor ---
 ObjectTemplate.createComponent Armor
 ObjectTemplate.armor.maxHitPoints 100
 ObjectTemplate.armor.hitPoints 100
-ObjectTemplate.armor.wreckhitpoints 320
+ObjectTemplate.armor.wreckhitpoints 500
 ObjectTemplate.armor.defaultMaterial 24
 ObjectTemplate.armor.explosionForceMod 25
 ObjectTemplate.armor.explosionForceMax 1000
