@@ -19,8 +19,10 @@ ObjectTemplate.addTemplate gbrif_sa80a2_l85
 ObjectTemplate.addTemplate UnlockUSAssault
 ObjectTemplate.addTemplate UnlockUSAssault2
 ObjectTemplate.addTemplate gbgr_sa80a2_l85
-ObjectTemplate.addTemplate hgr_smoke
+ObjectTemplate.addTemplate sasrif_teargas
 ObjectTemplate.addTemplate ammokit
+ObjectTemplate.addTemplate nsrif_grapplinghook
+ObjectTemplate.addTemplate gasmask
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

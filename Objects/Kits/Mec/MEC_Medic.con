@@ -23,6 +23,7 @@ ObjectTemplate.addTemplate USHGR_M67
 ObjectTemplate.addTemplate hgr_smoke
 ObjectTemplate.addTemplate medikit
 ObjectTemplate.addTemplate defibrillator
+ObjectTemplate.addTemplate gasmask
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

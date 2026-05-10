@@ -19,8 +19,10 @@ ObjectTemplate.addTemplate RURIF_GP30
 ObjectTemplate.addTemplate UnlockMECAssault
 ObjectTemplate.addTemplate UnlockMECAssault2
 ObjectTemplate.addTemplate RURGL_GP30
-ObjectTemplate.addTemplate hgr_smoke
+ObjectTemplate.addTemplate sasrif_teargas
 ObjectTemplate.addTemplate ammokit
+ObjectTemplate.addTemplate nsrif_grapplinghook
+ObjectTemplate.addTemplate gasmask
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

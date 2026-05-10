@@ -6,3 +6,7 @@ fileManager.mountArchive Booster_server.zip Objects
 fileManager.mountArchive mods/bf2/Objects_server.zip Objects
 fileManager.mountArchive mods/bf2/Menu_server.zip Menu
 fileManager.mountArchive mods/bf2/Common_server.zip Common
+
+fileManager.mountArchive mods/xpack/Objects_server.zip Objects
+fileManager.mountArchive mods/xpack/Menu_server.zip Menu
+fileManager.mountArchive mods/xpack/Common_server.zip Common

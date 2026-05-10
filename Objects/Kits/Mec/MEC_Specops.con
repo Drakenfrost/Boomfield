@@ -16,10 +16,11 @@ ObjectTemplate.addTemplate RUPIS_Baghira_silencer
 ObjectTemplate.addTemplate rurrif_ak74u
 ObjectTemplate.addTemplate UnlockMECSpecops
 ObjectTemplate.addTemplate UnlockMECSpecops2
-ObjectTemplate.addTemplate USHGR_M67
+ObjectTemplate.addTemplate c4_explosives
 ObjectTemplate.addTemplate nshgr_flashbang
 ObjectTemplate.addTemplate medikit
-ObjectTemplate.addTemplate c4_explosives
+ObjectTemplate.addTemplate nsrif_crossbow
+ObjectTemplate.addTemplate nightvisiongoggles
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

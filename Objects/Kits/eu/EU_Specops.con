@@ -16,10 +16,11 @@ ObjectTemplate.addTemplate USPIS_92FS_silencer
 ObjectTemplate.addTemplate eurif_hk53a3
 ObjectTemplate.addTemplate UnlockUSSpecops
 ObjectTemplate.addTemplate UnlockUSSpecops2
-ObjectTemplate.addTemplate USHGR_M67
+ObjectTemplate.addTemplate c4_explosives
 ObjectTemplate.addTemplate nshgr_flashbang
 ObjectTemplate.addTemplate medikit
-ObjectTemplate.addTemplate c4_explosives
+ObjectTemplate.addTemplate nsrif_crossbow
+ObjectTemplate.addTemplate nightvisiongoggles
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

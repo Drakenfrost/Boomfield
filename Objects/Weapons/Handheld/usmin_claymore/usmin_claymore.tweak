@@ -78,7 +78,7 @@ ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/USMIN_Claymore/Animati
 ObjectTemplate.projectileTemplate usmin_claymore_Projectile
 ObjectTemplate.keepProjectiles 30
 ObjectTemplate.velocity 5
-ObjectTemplate.itemIndex 7
+ObjectTemplate.itemIndex 4
 ObjectTemplate.delayToUse 1
 
 GeometryTemplate.compressVertexData 1

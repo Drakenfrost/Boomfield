@@ -17,10 +17,11 @@ ObjectTemplate.addTemplate USPIS_92FS_silencer
 ObjectTemplate.addTemplate USRIF_M24
 ObjectTemplate.addTemplate UnlockUSSniper
 ObjectTemplate.addTemplate UnlockUSSniper2
-ObjectTemplate.addTemplate USHGR_M67
+ObjectTemplate.addTemplate USMIN_Claymore
 ObjectTemplate.addTemplate nshgr_flashbang
 ObjectTemplate.addTemplate medikit
-ObjectTemplate.addTemplate USMIN_Claymore
+ObjectTemplate.addTemplate nsrif_grapplinghook
+ObjectTemplate.addTemplate nightvisiongoggles
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

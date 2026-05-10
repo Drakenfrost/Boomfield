@@ -15,9 +15,10 @@ ObjectTemplate.addTemplate RUPIS_Baghira
 ObjectTemplate.addTemplate RURIF_Bizon
 ObjectTemplate.addTemplate UnlockMECAT
 ObjectTemplate.addTemplate UnlockMECAT2
-ObjectTemplate.addTemplate CHAT_ERYX
+ObjectTemplate.addTemplate insgr_rpg
 ObjectTemplate.addTemplate hgr_smoke
 ObjectTemplate.addTemplate at_mine
+ObjectTemplate.addTemplate gasmask
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

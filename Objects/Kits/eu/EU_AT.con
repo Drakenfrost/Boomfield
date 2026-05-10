@@ -18,6 +18,7 @@ ObjectTemplate.addTemplate UnlockUSAT
 ObjectTemplate.addTemplate USATP_Predator
 ObjectTemplate.addTemplate hgr_smoke
 ObjectTemplate.addTemplate at_mine
+ObjectTemplate.addTemplate gasmask
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

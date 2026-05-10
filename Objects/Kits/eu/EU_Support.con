@@ -23,6 +23,8 @@ ObjectTemplate.addTemplate UnlockUSSupport2
 ObjectTemplate.addTemplate USHGR_M67
 ObjectTemplate.addTemplate hgr_smoke
 ObjectTemplate.addTemplate ammokit
+ObjectTemplate.addTemplate nsrif_grapplinghook
+ObjectTemplate.addTemplate gasmask
 ObjectTemplate.addTemplate ParachuteLauncher
 rem -------------------------------------
 

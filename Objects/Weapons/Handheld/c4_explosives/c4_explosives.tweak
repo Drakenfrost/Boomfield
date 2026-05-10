@@ -72,7 +72,7 @@ ObjectTemplate.animationSystem3P Objects/Weapons/Handheld/C4_Explosives/Animatio
 ObjectTemplate.projectileTemplate c4_explosives_Projectile
 ObjectTemplate.keepProjectiles 3
 ObjectTemplate.velocity 5
-ObjectTemplate.itemIndex 7
+ObjectTemplate.itemIndex 4
 
 GeometryTemplate.compressVertexData 1
 GeometryTemplate.maxTextureRepeat 16
