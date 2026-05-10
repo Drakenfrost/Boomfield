@@ -1,16 +1,26 @@
 <map gsid="105">
 	<name> Songhua Stalemate </name>
-	<briefing locid="LOADINGSCREEN_MAPDESCRIPTION_songhuastalemate">map description for modders maps not localized (english only)</briefing>
+	<briefing locid="Newly formed Active Component brigades of the US Marines advance from the Russian plains into the territories of the People’s Republic of China where rapidly deployed Chinese forces mass to counter the assault. The stalemated situation along the Songhua River has deteriorated into reciprocal assaults by both sides, each seeking to capture this vital transportation artery. Stakes are high in this double assault that involves control of a main gateway to Southern Manchuria.">map description for modders maps not localized (english only)</briefing>
 	<music> common/sound/menu/music/load_CH_music.ogg </music>
 	<modes>
+		<mode type="gpm_coop">
+			<maptype ai="1" players="16" type="assault" locid="GAMEMODE_DESCRIPTION_assault">Unlocalized test for this mode on this map</maptype>
+			<maptype ai="1" players="32" type="assault" locid="GAMEMODE_DESCRIPTION_assault">Unlocalized test for this mode on this map</maptype>
+			<maptype ai="1" players="64" type="assault" locid="GAMEMODE_DESCRIPTION_assault">Unlocalized test for this mode on this map</maptype>
+		</mode>
 		<mode type="gpm_cq">
 			<maptype ai="1" players="16" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
-			<maptype players="32" type="headon" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
-			<maptype players="64" type="headon" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
+			<maptype ai="1" players="32" type="headon" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
+			<maptype ai="1" players="64" type="headon" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
 		</mode>
-		<mode type="gpm_coop">
-			<maptype ai="1" players="16" type="doubleassault" locid="GAMEMODE_DESCRIPTION_COOP_doubleassault">Unlocalized test for this mode on this map</maptype>
-			
+		<mode type="sp1">
+			<maptype ai="1" players="16" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
+		</mode>
+		<mode type="sp2">
+			<maptype ai="1" players="32" type="headon" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
+		</mode>
+		<mode type="sp3">
+			<maptype ai="1" players="64" type="headon" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
 		</mode>
 	</modes>
 </map>

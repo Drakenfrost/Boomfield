@@ -1,0 +1,11 @@
+<map>
+	<name> kubra_dam AI </name>
+	<briefing locid="LOADINGSCREEN_MAPDESCRIPTION_zatarwetlands">map description for modders maps not localized (english only)</briefing>
+	<modes>
+		<mode type="conquest">
+			<maptype players="16" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
+			<maptype players="32" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
+			<maptype players="64" type="doubleassault" locid="GAMEMODE_DESCRIPTION_doubleassault">Unlocalized test for this mode on this map</maptype>
+		</mode>
+	</modes>
+</map>

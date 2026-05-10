@@ -9,14 +9,31 @@ It also features other change aimed at either increasing realism or improving qu
 - Increased overall scope zoom distance.
 - Added tracer rounds to all weapons.
 - Adjusted magazine counts.
+- Increased dead body lifetime.
+- Made vehicle wrecks stay longer.
+- Limited ammo on stationary and vehicle-mounted weapons.
 
 ### Pending
+- Added 32 and 64 player bot support to maps:
+  - Dalian Plant
+  - Daqing Oilfields
+  - Dragon Valley
+  - Fushe Pass
+  - Gulf Of Oman
+  - Kubra Dam
+  - Mashtuur City
+  - Operation Clean Sweep
+  - Road To Jalalabad
+  - Sharqi Peninsula
+  - Songua Stalemate
+  - Strike At Karkand
+  - Wake Island 2007
+  - Zatar Wetlands
 
 ### Proposed
-- Increase dead body lifetime.
-- Limit ammo on stationary and vehicle-mounted weapons.
+
 - Make vehicles stronger and not destroy themselves.
-- Make vehicle wrecks stay longer.- Add custom maps
+- Add custom maps
   - Attack at Sea
   - Dogfighting
   - Shipment
