@@ -143,8 +143,10 @@ ObjectTemplate.tracerSizeModifier 5
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 0
 ObjectTemplate.hasOnTimeEffect 1
-ObjectTemplate.minDamage 10
-ObjectTemplate.damage 90
+ObjectTemplate.minDamage 100
+ObjectTemplate.damage 105
+ObjectTemplate.distToStartLoseDamage 300
+ObjectTemplate.distToMinDamage 600
 
 ObjectTemplate.activeSafe Sound S_chsni_type88_Fire1P
 ObjectTemplate.modifiedByUser dsu

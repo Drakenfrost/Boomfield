@@ -157,8 +157,10 @@ ObjectTemplate.tracerSizeModifier 5
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 0
 ObjectTemplate.hasOnTimeEffect 1
-ObjectTemplate.minDamage 10
-ObjectTemplate.damage 120
+ObjectTemplate.minDamage 133
+ObjectTemplate.damage 140
+ObjectTemplate.distToStartLoseDamage 300
+ObjectTemplate.distToMinDamage 600
 
 ObjectTemplate.activeSafe Sound S_gbrif_l96a1_Fire1P
 ObjectTemplate.modifiedByUser "daveke"

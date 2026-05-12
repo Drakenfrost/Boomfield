@@ -138,8 +138,8 @@ ObjectTemplate.minTracerScaler 1
 ObjectTemplate.tracerSizeModifier 5
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 0
-ObjectTemplate.minDamage 0.2
-ObjectTemplate.damage 120
+ObjectTemplate.minDamage 133
+ObjectTemplate.damage 140
 ObjectTemplate.distToStartLoseDamage 300
 ObjectTemplate.distToMinDamage 600
 

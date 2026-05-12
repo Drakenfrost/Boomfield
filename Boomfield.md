@@ -1,6 +1,6 @@
 # Boomfield battlefield 2 Mod
 Boomfield tweaks the effectiveness of weapons, vehicles, and equipment to encourage a more methodical approach to gunfights and objectives.  
-It also features other change aimed at either increasing realism or improving quality of life features.
+It also features other changes aimed at either increasing realism or improving quality of life features.
 
 ## Changes
 - Added more equipment to each kit.
@@ -38,6 +38,9 @@ It also features other change aimed at either increasing realism or improving qu
   - Dogfighting
   - Shipment
 
+### Known Issues
+- MEC modded to use RPG-7 but the character model still shows the eryx on its back.
+
 ## Modding Guide
 How to change things:
 1. Copy the object's files out of the `Objects_server.zip` folder in the base bf2 or xpack mod folder into the respective folder in your mod.
@@ -46,8 +49,48 @@ How to change things:
 
 ## How to make Boomfield
 
+Include `ServerArchives.con`:
+```
+fileManager.mountArchive Objects_server.zip Objects
+fileManager.mountArchive Menu_server.zip Menu
+fileManager.mountArchive Common_server.zip Common
+fileManager.mountArchive Booster_server.zip Objects
+
+fileManager.mountArchive mods/bf2/Objects_server.zip Objects
+fileManager.mountArchive mods/bf2/Menu_server.zip Menu
+fileManager.mountArchive mods/bf2/Common_server.zip Common
+
+fileManager.mountArchive mods/xpack/Objects_server.zip Objects
+fileManager.mountArchive mods/xpack/Menu_server.zip Menu
+fileManager.mountArchive mods/xpack/Common_server.zip Common
+```
+
+Include `ClientArchives.con`:
+```
+fileManager.mountArchive Objects_client.zip Objects
+fileManager.mountArchive Common_client.zip Common
+fileManager.mountArchive Menu_client.zip Menu
+fileManager.mountArchive Fonts_client.zip Fonts
+fileManager.mountArchive Booster_client.zip Objects
+
+fileManager.mountArchive mods/bf2/Objects_client.zip Objects
+fileManager.mountArchive mods/bf2/Common_client.zip Common
+fileManager.mountArchive mods/bf2/Menu_client.zip Menu
+fileManager.mountArchive mods/bf2/Fonts_client.zip Fonts
+fileManager.mountArchive mods/bf2/Shaders_client.zip Shaders
+
+fileManager.mountArchive mods/xpack/Objects_client.zip Objects
+fileManager.mountArchive mods/xpack/Common_client.zip Common
+fileManager.mountArchive mods/xpack/Menu_client.zip Menu
+fileManager.mountArchive mods/xpack/Fonts_client.zip Fonts
+```
+### Levels
+To change view distance set `GameLogic.MaximumLevelViewDistance 500` in the level `Init.con`.
+To change fog paramters set `Renderer.fogStartEndAndBase 0.00/450.00/1.00/0.50` in the level `Sky.con`.
+
 ### Soldiers
 
+Set `ObjectTemplate.armor.TimeToStayAsWreck 216000` for all soldiers.
 Set `ObjectTemplate.armor.TimeToStayAsWreck 216000` for all soldiers.
 > This may affect performance with a full server. Test with as many players/bots as possible.
 
@@ -112,22 +155,44 @@ The following tweaks should be applied to each weapon.
 > Generally increase the overall weapon damage.
 
 Set damage to:
-- `ObjectTemplate.damage 30` for shotguns.
-- `ObjectTemplate.damage 35` for pistols.
+- `ObjectTemplate.damage 30` for Shotguns.
+- `ObjectTemplate.damage 35` for Pistols.
 - `ObjectTemplate.damage 40` for SMGs.
 - `ObjectTemplate.damage 50` for Carbines.
 - `ObjectTemplate.damage 60` for ARs and LMGs.
-- `ObjectTemplate.damage 90` for semi-auto snipers.
-- `ObjectTemplate.damage 120` for bolt-action snipers.
+- `ObjectTemplate.damage 105` for semi-auto Snipers.
+- `ObjectTemplate.damage 140` for bolt-action Snipers.
 - `ObjectTemplate.damage 200` for the USSNI_M95_Barret.
 
-Set min damage to `ObjectTemplate.minDamage 10` for all weapons.
+Set min damage to:
+- `ObjectTemplate.minDamage 8` for shotguns.*
+- `ObjectTemplate.minDamage 18` for pistols.*
+- `ObjectTemplate.minDamage 20` for SMGs.*
+- `ObjectTemplate.minDamage 38` for Carbines.*
+- `ObjectTemplate.minDamage 45` for ARs and LMGs.*
+- `ObjectTemplate.minDamage 100` for semi-auto snipers.
+- `ObjectTemplate.minDamage 133` for bolt-action snipers.
+- `ObjectTemplate.minDamage 190`a for the USSNI_M95_Barret.
 
-Set damage fall-off for shotguns to:
+Formula for min damage is:
+- `0.25x damage` for Shotguns.
+- `0.5x damage` for Pistols and SMGs.
+- `0.75x damage` for Carbines, ARs and LMGs.
+- `0.95x damage` for Snipers.
+
+  Rounded up to the nearest whole number.
+
+Set damage fall-off to:
 ```
 ObjectTemplate.distToStartLoseDamage 60
 ObjectTemplate.distToMinDamage 200
 ```
+for Shotguns.
+```
+ObjectTemplate.distToStartLoseDamage 500
+ObjectTemplate.distToMinDamage 800
+```
+for Snipers.
 
 ###### Velocity
 > Generally decrease the overall projectile velocity.

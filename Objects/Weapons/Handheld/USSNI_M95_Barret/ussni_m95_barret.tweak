@@ -141,8 +141,10 @@ ObjectTemplate.tracerSizeModifier 5
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 0
 ObjectTemplate.hasOnTimeEffect 1
-ObjectTemplate.minDamage 10
+ObjectTemplate.minDamage 190
 ObjectTemplate.damage 200
+ObjectTemplate.distToStartLoseDamage 300
+ObjectTemplate.distToMinDamage 600
 
 ObjectTemplate.activeSafe Sound S_ussni_m95_barret_Fire1P
 ObjectTemplate.modifiedByUser dsu
