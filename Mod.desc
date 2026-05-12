@@ -5,7 +5,7 @@
 	<logo> mod.jpg </logo>
 	<icon> mod_icon.jpg </icon>
 	<music> Menu\MenuMusic.ogg </music>
-	<version> 0.1 </version>
+	<version> 0.2 </version>
 	<default_soldier_template> us_light_soldier </default_soldier_template>
 	<default_soldier_kit_template> us_specops </default_soldier_kit_template>
 	<editorversion> Battlefield2 </editorversion>
