@@ -35,8 +35,8 @@ ObjectTemplate.armor.defaultMaterial 24
 ObjectTemplate.armor.wreckhitpoints 500
 ObjectTemplate.armor.explosionForceMod 25
 ObjectTemplate.armor.explosionForceMax 1000
-ObjectTemplate.armor.TimeToStayAsWreck 216000
-ObjectTemplate.armor.timeToStayAfterDestroyed 216000
+ObjectTemplate.armor.TimeToStayAsWreck 7200
+ObjectTemplate.armor.timeToStayAfterDestroyed 7200
 ObjectTemplate.armor.angleMod 1
 ObjectTemplate.armor.wreckExplosionForceMod 0
 ObjectTemplate.armor.wreckExplosionForceMax 0
