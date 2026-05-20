@@ -132,16 +132,16 @@ ObjectTemplate.addTemplate S_M82a1Projectile_Looping
 rem -------------------------------------
 ObjectTemplate.timeToLive CRD_NONE/1/0/0
 ObjectTemplate.material 39
-ObjectTemplate.tracerScaler 30
-ObjectTemplate.maxTracerScaler 30
-ObjectTemplate.minTracerScaler 1
-ObjectTemplate.tracerSizeModifier 5
+ObjectTemplate.tracerScaler 40
+ObjectTemplate.minTracerScaler 30
+ObjectTemplate.maxTracerScaler 50
+ObjectTemplate.tracerSizeModifier 10
 ObjectTemplate.tracerTemplate p_tracer_g
 ObjectTemplate.tracerInterval 0
-ObjectTemplate.minDamage 133
-ObjectTemplate.damage 140
-ObjectTemplate.distToStartLoseDamage 300
-ObjectTemplate.distToMinDamage 600
+ObjectTemplate.minDamage 160
+ObjectTemplate.damage 180
+ObjectTemplate.distToStartLoseDamage 800
+ObjectTemplate.distToMinDamage 1000
 
 ObjectTemplate.activeSafe Sound S_ussni_m82a1_Fire1P
 ObjectTemplate.modifiedByUser psh
