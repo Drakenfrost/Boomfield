@@ -2,6 +2,8 @@
 Boomfield tweaks the effectiveness of weapons, vehicles, and equipment to encourage a more methodical approach to gunfights and objectives.  
 It also features other changes aimed at either increasing realism or improving quality of life features.
 
+Boomfield is created and maintained by Ryan Gray (ryanmattgray@gmail.com).
+
 ## Changes
 - Added more equipment to each kit.
 - Increased weapon accuracy by reducing bullet deviations.
@@ -12,8 +14,7 @@ It also features other changes aimed at either increasing realism or improving q
 - Increased dead body lifetime.
 - Made vehicle wrecks stay longer.
 - Limited ammo on stationary and vehicle-mounted weapons.
-
-### Pending
+- Made vehicles stronger.
 - Added 32 and 64 player bot support to maps:
   - Dalian Plant
   - Daqing Oilfields
@@ -28,18 +29,21 @@ It also features other changes aimed at either increasing realism or improving q
   - Songua Stalemate
   - Strike At Karkand
   - Wake Island 2007
-  - Zatar Wetlands
-
-### Proposed
-
-- Make vehicles stronger and not destroy themselves.
-- Add custom maps
+- Added custom maps
   - Attack at Sea
   - Dogfighting
   - Shipment
 
+### Pending
+- Nothing
+
+### Proposed
+- Whatever
+
 ### Known Issues
+- You can grapple inside of buildings that don't have an inside.
 - MEC modded to use RPG-7 but the character model still shows the eryx on its back.
+- M2 browning still plays a feeding animation when out of ammo.
 
 ## Modding Guide
 How to change things:
@@ -90,9 +94,9 @@ To change fog paramters set `Renderer.fogStartEndAndBase 0.00/450.00/1.00/0.50` 
 
 ### Soldiers
 
-Set `ObjectTemplate.armor.TimeToStayAsWreck 216000` for all soldiers.
-Set `ObjectTemplate.armor.TimeToStayAsWreck 216000` for all soldiers.
-> This may affect performance with a full server. Test with as many players/bots as possible.
+Set `ObjectTemplate.armor.TimeToStayAsWreck 7200` for all soldiers.
+Set `ObjectTemplate.armor.timeToStayAfterDestroyed 7200` for all soldiers.
+> Setting this too high has a large effect on performance.
 
 ### Kits
 Weapon indexes should be changed to accomodate the following kit loadouts:
@@ -154,58 +158,46 @@ The following tweaks should be applied to each weapon.
 ###### Damage
 > Generally increase the overall weapon damage.
 
-Set damage to:
-- `ObjectTemplate.damage 30` for Shotguns.
-- `ObjectTemplate.damage 35` for Pistols.
-- `ObjectTemplate.damage 40` for SMGs.
-- `ObjectTemplate.damage 50` for Carbines.
-- `ObjectTemplate.damage 60` for ARs and LMGs.
-- `ObjectTemplate.damage 105` for semi-auto Snipers.
-- `ObjectTemplate.damage 140` for bolt-action Snipers.
-- `ObjectTemplate.damage 200` for the USSNI_M95_Barret.
+Set `ObjectTemplate.damage` to:
+- `30` for Shotguns.
+- `35` for Pistols.
+- `40` for SMGs.
+- `50` for Carbines.
+- `60` for ARs and LMGs.
+- `140` for semi-auto Snipers.
+- `180` for bolt-action Snipers.
+- `200` for the USSNI_M95_Barret.
 
-Set min damage to:
-- `ObjectTemplate.minDamage 8` for shotguns.*
-- `ObjectTemplate.minDamage 18` for pistols.*
-- `ObjectTemplate.minDamage 20` for SMGs.*
-- `ObjectTemplate.minDamage 38` for Carbines.*
-- `ObjectTemplate.minDamage 45` for ARs and LMGs.*
-- `ObjectTemplate.minDamage 100` for semi-auto snipers.
-- `ObjectTemplate.minDamage 133` for bolt-action snipers.
-- `ObjectTemplate.minDamage 190`a for the USSNI_M95_Barret.
+Set `ObjectTemplate.minDamage` to:
+- `8` for shotguns.*
+- `18` for pistols.*
+- `20` for SMGs.*
+- `38` for Carbines.*
+- `45` for ARs and LMGs.*
+- `130` for semi-auto snipers.
+- `160` for bolt-action snipers.
+- `190`a for the USSNI_M95_Barret.
 
-Formula for min damage is:
-- `0.25x damage` for Shotguns.
-- `0.5x damage` for Pistols and SMGs.
-- `0.75x damage` for Carbines, ARs and LMGs.
-- `0.95x damage` for Snipers.
+Set `ObjectTemplate.distToStartLoseDamage` to:
+- `100` for Shotguns*
+- `600` for Snipers.
 
-  Rounded up to the nearest whole number.
-
-Set damage fall-off to:
-```
-ObjectTemplate.distToStartLoseDamage 60
-ObjectTemplate.distToMinDamage 200
-```
-for Shotguns.
-```
-ObjectTemplate.distToStartLoseDamage 500
-ObjectTemplate.distToMinDamage 800
-```
-for Snipers.
+Set `ObjectTemplate.distToMinDamage` to:
+- `200` for Shotguns.
+- `900` for Snipers.
 
 ###### Velocity
 > Generally decrease the overall projectile velocity.
 
-Set the velocities to:
-- `ObjectTemplate.velocity 300` for shotguns.
-- `ObjectTemplate.velocity 400` for pistols.
-- `ObjectTemplate.velocity 500` for SMGs.
-- `ObjectTemplate.velocity 600` for Carbines.
-- `ObjectTemplate.velocity 700` for ARs and LMGs.
-- `ObjectTemplate.velocity 800` for semi-auto Snipers.
-- `ObjectTemplate.velocity 900` for bolt-action Snipers.
-- `ObjectTemplate.velocity 1000` for the USSNI_M95_Barret.
+Set `ObjectTemplate.velocity` to:
+- `300` for shotguns.
+- `400` for pistols.
+- `500` for SMGs.
+- `600` for Carbines.
+- `700` for ARs and LMGs.
+- `800` for semi-auto Snipers.
+- `900` for bolt-action Snipers.
+- `1000` for the USSNI_M95_Barret.
 
 ###### Ammo
 Set for 
@@ -219,23 +211,21 @@ ObjectTemplate.ammo.autoReload 1
 rem ---EndComp ---
 ```
 
-Set the number of mags to:
-- `ObjectTemplate.ammo.nrOfMags 4` for pistols.
-- `ObjectTemplate.ammo.nrOfMags 6` for SMGs, Carbines, ARs, and Snipers.
-- `ObjectTemplate.ammo.nrOfMags 2` for LMGs and Rocket Launchers.
-- `ObjectTemplate.ammo.nrOfMags 5` for Grenade Launchers.
-
-Stationary:
-- `ObjectTemplate.ammo.nrOfMags 11` for aas_phalanx and S. Rocket L.s.
+Set `ObjectTemplate.ammo.nrOfMags` to:
+- `4` for Pistols.
+- `6` for SMGs, Carbines, ARs, and Snipers.
+- `2` for LMGs and Rocket Launchers.
+- `5` for Grenade Launchers.
+- `11` for aas_phalanx and S. Rocket L.s.
 
 Set mag sizes to the realistic weapon magazine capacity.
 
 ###### Zoom
-Set the add zoom factor to:
-- `ObjectTemplate.zoom.addZoomFactor 0.6` for iron sights.
-- `ObjectTemplate.zoom.addZoomFactor 0.3` for normal rifle scopes.
-- `ObjectTemplate.zoom.addZoomFactor 0.1` for sniper scopes.
-- `ObjectTemplate.zoom.addZoomFactor 0.05` for the M95 Barret.
+Set `ObjectTemplate.zoom.addZoomFactor` to:
+- `0.6` for iron sights.
+- `0.3` for normal rifle scopes.
+- `0.1` for sniper scopes.
+- `0.05` for the M95 Barret.
 
 Always set `ObjectTemplate.zoom.disableMuzzleWhenZoomed 0`.
 
@@ -244,10 +234,10 @@ Both `ObjectTemplate.fire.roundsPerMinute` and `ObjectTemplate.fire.addFireRate`
 
 - `ObjectTemplate.fire.roundsPerMinute 600` is a safe middle ground for most full-auto weapons.
 
-Where:
-- `ObjectTemplate.fire.addFireRate 0` means semi-auto fire.
-- `ObjectTemplate.fire.addFireRate 1` means burst fire.
-- `ObjectTemplate.fire.addFireRate 2` means full-auto fire.
+Where `ObjectTemplate.fire.addFireRate`:
+- `0` means semi-auto fire.
+- `1` means burst fire.
+- `2` means full-auto fire.
 
 ###### Deviation
 > Generally decrease the overall deviation, thus increasing accuracy.
@@ -369,8 +359,8 @@ rem ---EndComp ---
 
 ###### Damage
 
-Set machine gun damage to:
-- `ObjectTemplate.damage 50` for ahe_ah1z and ahe_z10
-- `ObjectTemplate.damage 150` for ahe_havoc
-- `ObjectTemplate.damage 150` for xpak2_tiger
+Set machine gun `ObjectTemplate.damage` to:
+- `50` for ahe_ah1z and ahe_z10
+- `150` for ahe_havoc
+- `150` for xpak2_tiger
 
