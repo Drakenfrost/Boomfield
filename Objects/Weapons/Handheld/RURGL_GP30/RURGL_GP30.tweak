@@ -110,12 +110,12 @@ ObjectTemplate.createdInEditor 1
 rem ---BeginComp:DefaultCollisionComp ---
 ObjectTemplate.createComponent DefaultCollisionComp
 rem ---EndComp ---
-rem ---BeginComp:DefaultDetonationComp ---
+rem ---BeginComp:DefaultDetonationComp --- 
 ObjectTemplate.createComponent DefaultDetonationComp
 ObjectTemplate.detonation.explosionMaterial 69
-ObjectTemplate.detonation.explosionRadius 4.5
-ObjectTemplate.detonation.explosionForce 7
-ObjectTemplate.detonation.explosionDamage 150
+ObjectTemplate.detonation.explosionRadius 10
+ObjectTemplate.detonation.explosionForce 15
+ObjectTemplate.detonation.explosionDamage 750
 ObjectTemplate.detonation.endEffectTemplate e_exp_grenade
 ObjectTemplate.detonation.timeUntilCanDetonate 0.3
 rem ---EndComp ---

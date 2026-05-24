@@ -1,4 +1,4 @@
-rem *** Generated with Bf2Editor.exe [created: 2005/7/30 12:37]
+ rem *** Generated with Bf2Editor.exe [created: 2005/7/30 12:37]
 GeometryTemplate.compressVertexData 1
 GeometryTemplate.maxTextureRepeat 16
 ObjectTemplate.activeSafe GenericFireArm nsrif_crossbow

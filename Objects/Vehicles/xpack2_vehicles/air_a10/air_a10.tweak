@@ -22,8 +22,8 @@ ObjectTemplate.saveInSeparateFile 1
 ObjectTemplate.castsDynamicShadow 1
 rem ---BeginComp:Armor ---
 ObjectTemplate.createComponent Armor
-ObjectTemplate.armor.maxHitPoints 850
-ObjectTemplate.armor.hitPoints 850
+ObjectTemplate.armor.maxHitPoints 2250
+ObjectTemplate.armor.hitPoints 2250
 ObjectTemplate.armor.defaultMaterial 32
 ObjectTemplate.armor.hpLostWhileUpSideDown 0
 ObjectTemplate.armor.hpLostWhileInWater 0
