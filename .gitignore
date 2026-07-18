@@ -8,3 +8,8 @@ Logs
 .idea
 *.user
 Settings/Usersettings.con
+
+# Boomfield Installer Windows Forms app
+BoomfieldInstaller/bin/Debug
+BoomfieldInstaller/bin/Release
+BoomfieldInstaller/obj
