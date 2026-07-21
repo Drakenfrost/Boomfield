@@ -10,6 +10,7 @@ using File = System.IO.File;
 
 namespace BoomfieldInstaller;
 
+// TODO Make async and include progress bar.
 public partial class BoomfieldInstallerForm : Form
 {
     private const string BoomfieldFolderName = "boomfield";
@@ -127,15 +128,9 @@ public partial class BoomfieldInstallerForm : Form
         }
 
         // Find the root Boomfield folder.
-        var currentDirPath = AppDomain.CurrentDomain.BaseDirectory;
+        var boomfieldPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, BoomfieldFolderName);
 
-        var boomfieldDirPath = Path.Combine(
-            currentDirPath[..currentDirPath.IndexOf(BoomfieldFolderName, StringComparison.Ordinal)],
-            BoomfieldFolderName);
-
-        var boomfieldDir = new DirectoryInfo(boomfieldDirPath);
-
-        if (!boomfieldDir.Exists)
+        if (!Directory.Exists(boomfieldPath))
         {
             ShowErrorMessage("This copy of boomfield has been altered or corrupted.");
             return;
@@ -146,7 +141,7 @@ public partial class BoomfieldInstallerForm : Form
         // Let the user know that the installation is about to begin.
         var installDialogResult = MessageBox.Show(
             $"You are about to install Boomfield, a mod for Battlefield 2!\n\n" + 
-            $"Source: {boomfieldDir}\n" +
+            $"Source: {boomfieldPath}\n" +
             $"Destination: {installPath}\n\n" +
             $"Would you like to continue with the installation?",
             "Install Boomfield",
@@ -180,8 +175,7 @@ public partial class BoomfieldInstallerForm : Form
                 }
                 catch (IOException e)
                 {
-                    ShowErrorMessage("Failed to clean mod files.\n\n" +
-                                     $"{e.Message}");
+                    ShowErrorMessage("Failed to clean mod files.\n\n" + $"{e.Message}");
                 }
             }
             
@@ -201,8 +195,7 @@ public partial class BoomfieldInstallerForm : Form
                 }
                 catch (IOException e)
                 {
-                    ShowErrorMessage("Failed to clean mod files.\n\n" +
-                                     $"{e.Message}");
+                    ShowErrorMessage("Failed to clean mod files.\n\n" + $"{e.Message}");
                 }
             }
         }
@@ -210,7 +203,7 @@ public partial class BoomfieldInstallerForm : Form
         // Copy mod folders.
         foreach (var folderName in BoomfieldModFolderNames)
         {
-            var source = Path.Combine(boomfieldDir.FullName, folderName);
+            var source = Path.Combine(boomfieldPath, folderName);
             var dest = Path.Combine(installPath, folderName);
             var sourceIsDest = source == dest;
 #if DEBUG_MODE
@@ -231,15 +224,14 @@ public partial class BoomfieldInstallerForm : Form
             }
             catch (IOException e)
             {
-                ShowErrorMessage("Failed to copy mod folders.\n\n" +
-                                 $"{e.Message}");
+                //ShowErrorMessage("Failed to copy mod folders.\n\n" + $"{e.Message}");
             }
         }
 
         // Copy mod files.
         foreach (var fileName in BoomfieldModFileNames)
         {
-            var source = Path.Combine(boomfieldDir.FullName, fileName);
+            var source = Path.Combine(boomfieldPath, fileName);
             var dest = Path.Combine(installPath, fileName);
             var sourceIsDest = source == dest;
 #if DEBUG_MODE
@@ -256,12 +248,11 @@ public partial class BoomfieldInstallerForm : Form
 
             try
             {
-                File.Copy(fileName, Path.Combine(source, dest));
+                File.Copy(source, dest);
             }
             catch (IOException e)
             {
-                ShowErrorMessage("Failed to copy mod files.\n\n" +
-                                 $"{e.Message}");
+                //ShowErrorMessage("Failed to copy mod files.\n\n" + $"{e.Message}");
             }
         }
 
@@ -284,15 +275,6 @@ public partial class BoomfieldInstallerForm : Form
         var targetPath = $"\"{Bf2ExeFilePath}\"";
         var arguments = $"+restart 1 +modPath \"mods/{BoomfieldFolderName}\"";
         var iconPath = Path.Combine(Bf2ModsFolderPath, BoomfieldFolderName, BoomfieldIconName);
-
-        var createShortcutResult = MessageBox.Show(
-            $"Do you want to create a shortcut at '{shortcutPath}'?",
-            "Create Boomfield Shortcut",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Information);
-
-        if (createShortcutResult != DialogResult.Yes)
-            return;
 
         try
         {
