@@ -1,3 +1,4 @@
 # LFS
 *.zip filter=lfs diff=lfs merge=lfs -text
 BoomfieldInstaller/bin/installer/BoomfieldInstaller.exe filter=lfs diff=lfs merge=lfs -text
+BoomfieldPackager.exe filter=lfs diff=lfs merge=lfs -text

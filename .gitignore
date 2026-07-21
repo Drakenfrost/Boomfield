@@ -4,12 +4,20 @@ Logs
 # Bf2Editor package files (include Levels/*/*.zip)
 /*.zip
 
-# User specific files
+# IDE files
+.vs
 .idea
+
+# User specific files
 *.user
 Settings/Usersettings.con
 
-# Boomfield Installer Windows Forms app
+# Boomfield Installer
 BoomfieldInstaller/bin/Debug
 BoomfieldInstaller/bin/Release
 BoomfieldInstaller/obj
+
+# Boomfield Packager
+BoomfieldPackager/bin/Debug
+BoomfieldPackager/bin/Release
+BoomfieldPackager/obj

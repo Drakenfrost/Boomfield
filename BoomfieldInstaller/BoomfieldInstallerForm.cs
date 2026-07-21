@@ -66,6 +66,8 @@ public partial class BoomfieldInstallerForm : Form
         "Ingame.mep"
     ];
 
+    private bool installing;
+
     public BoomfieldInstallerForm()
     {
         InitializeComponent();
@@ -103,6 +105,9 @@ public partial class BoomfieldInstallerForm : Form
 
     private void InstallBoomfield()
     {
+        if (installing)
+            return;
+
         if (string.IsNullOrWhiteSpace(Bf2ExeFilePath))
         {
             ShowErrorMessage($"Please provide the location of {Bf2ExeFileName}.");
@@ -153,6 +158,8 @@ public partial class BoomfieldInstallerForm : Form
             ShowErrorMessage("You aborted the installation.", "Aborted");
             return;
         }
+
+        installing = true;
 
         // Delete mod folders and files if doing a clean install.
         if (cleanInstallCheckBox.Checked)
@@ -266,8 +273,8 @@ public partial class BoomfieldInstallerForm : Form
 
         // Success!
         ShowInfoMessage("Boomfield Battlefield 2 mod installed!", "Success");
-
-        return;
+        Close();
+        installing = false;
     }
 
     private void CreateShortcut()

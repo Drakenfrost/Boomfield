@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <UseWindowsForms>true</UseWindowsForms>
         <ImplicitUsings>false</ImplicitUsings>
+        <ApplicationManifest>BoomfieldPackager.manifest</ApplicationManifest>
         <ApplicationIcon>mod_icon.ico</ApplicationIcon>
     </PropertyGroup>
 
@@ -23,10 +24,6 @@
 
     <ItemGroup>
       <Content Include="mod_icon.ico" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Com" Version="1.1.0" />
     </ItemGroup>
 
 </Project>
