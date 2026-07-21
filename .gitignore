@@ -21,3 +21,6 @@ BoomfieldInstaller/obj
 BoomfieldPackager/bin/Debug
 BoomfieldPackager/bin/Release
 BoomfieldPackager/obj
+
+# Default Packager output folder name
+BoomfieldBF2Mod
