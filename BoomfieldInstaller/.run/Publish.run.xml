@@ -1,6 +1,6 @@
 ﻿<component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Publish" type="DotNetFolderPublish" factoryName="Publish to folder">
-    <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" self_contained="true" target_folder="$PROJECT_DIR$/bin/installer" target_framework="net8.0-windows" uuid_high="6476233470140640275" uuid_low="-6015928806808271325">
+    <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" self_contained="true" target_folder="$PROJECT_DIR$/bin/Installer" target_framework="net8.0-windows" uuid_high="6476233470140640275" uuid_low="-6015928806808271325">
       <runtimes>
         <item value="win-x86" />
       </runtimes>

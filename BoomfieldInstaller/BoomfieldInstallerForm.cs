@@ -5,15 +5,29 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
+using IWshRuntimeLibrary;
+using File = System.IO.File;
 
 namespace BoomfieldInstaller;
 
-// TODO: Try to find the BF2 exe and autopopulate the path field.
 public partial class BoomfieldInstallerForm : Form
 {
     private const string BoomfieldFolderName = "boomfield";
 
+    private const string BoomfieldIconName = "mod_icon.ico";
+
     private const string Bf2ExeFileName = "BF2.exe";
+
+    private const string Bf2DefaultInstallPath = "C:\\Program Files (x86)\\EA Games\\Battlefield 2";
+
+    /// <summary>
+    /// Assigned from <see cref="bf2ExePathTextBox"/>.
+    /// </summary>
+    private string Bf2ExeFilePath => bf2ExePathTextBox.Text.Trim();
+
+    private string Bf2RootFolderPath => Path.GetDirectoryName(Bf2ExeFilePath) ?? "";
+
+    private string Bf2ModsFolderPath => Path.Combine(Bf2RootFolderPath, "mods");
 
     private static readonly string[] BoomfieldModFolderNames =
     [
@@ -62,6 +76,16 @@ public partial class BoomfieldInstallerForm : Form
         bf2ExeOpenFileDialog.Filter = "BF2 Executable | BF2.exe";
 
         createShortcutCheckBox.Checked = true;
+
+        var defaultBf2ExeLocation = Path.Combine(Bf2DefaultInstallPath, Bf2ExeFileName);
+
+        // TODO: Try to find the BF2 exe and autopopulate the path field.
+        // For now, only check if the BF2.exe is at the default install location,
+        // otherwise the input field is left blank for the user to fill in.
+        if (File.Exists(defaultBf2ExeLocation))
+        {
+            bf2ExePathTextBox.Text = defaultBf2ExeLocation;
+        }
     }
 
     private void bf2ExeSelectButton_Click(object sender, EventArgs e)
@@ -79,35 +103,21 @@ public partial class BoomfieldInstallerForm : Form
 
     private void InstallBoomfield()
     {
-        var bf2ExePath = bf2ExePathTextBox.Text.Trim();
-
-        if (string.IsNullOrWhiteSpace(bf2ExePath))
+        if (string.IsNullOrWhiteSpace(Bf2ExeFilePath))
         {
             ShowErrorMessage($"Please provide the location of {Bf2ExeFileName}.");
             return;
         }
 
-        var bf2Exe = new FileInfo(bf2ExePath);
-
-        if (!bf2Exe.Exists)
+        if (!File.Exists(Bf2ExeFilePath))
         {
-            ShowErrorMessage($"{Bf2ExeFileName} was not found at '{bf2ExePath}'.");
+            ShowErrorMessage($"{Bf2ExeFileName} was not found at '{Bf2ExeFilePath}'.");
             return;
         }
 
-        var bf2RootDir = Path.GetDirectoryName(bf2Exe.FullName);
-
-        if (bf2RootDir == null)
+        if (!Directory.Exists(Bf2ModsFolderPath))
         {
-            ShowErrorMessage($"{Bf2ExeFileName} is not in a valid location.");
-            return;
-        }
-
-        var bf2ModsDir = new DirectoryInfo(Path.Combine(bf2RootDir, "mods"));
-
-        if (!bf2ModsDir.Exists)
-        {
-            ShowErrorMessage($"No mods folder exists at '{bf2RootDir}'.");
+            ShowErrorMessage($"No mods folder exists at '{Bf2RootFolderPath}'.");
             return;
         }
 
@@ -126,7 +136,7 @@ public partial class BoomfieldInstallerForm : Form
             return;
         }
 
-        var installPath = Path.Combine(bf2ModsDir.FullName, BoomfieldFolderName);
+        var installPath = Path.Combine(Bf2ModsFolderPath, BoomfieldFolderName);
 
         // Let the user know that the installation is about to begin.
         var installDialogResult = MessageBox.Show(
@@ -143,15 +153,13 @@ public partial class BoomfieldInstallerForm : Form
             ShowErrorMessage("You aborted the installation.", "Aborted");
             return;
         }
-        
+
         // Delete mod folders and files if doing a clean install.
         if (cleanInstallCheckBox.Checked)
         {
             foreach (var folderName in BoomfieldModFolderNames)
             {
                 var folderPath = Path.Combine(installPath, folderName);
-                    
-
 #if DEBUG_MODE
                 ShowWarningMessage(
                     $"The following would be deleted in a real installation:\n\n" +
@@ -159,7 +167,6 @@ public partial class BoomfieldInstallerForm : Form
                     "Debug");
                 continue;
 #endif
-
                 try
                 {
                     Directory.Delete(folderPath, true);
@@ -174,7 +181,6 @@ public partial class BoomfieldInstallerForm : Form
             foreach (var fileName in BoomfieldModFileNames)
             {
                 var filePath = Path.Combine(installPath, fileName);
-
 #if DEBUG_MODE
                 ShowWarningMessage(
                     $"The following would be deleted in a real installation:\n\n" +
@@ -182,7 +188,6 @@ public partial class BoomfieldInstallerForm : Form
                     "Debug");
                 continue;
 #endif
-
                 try
                 {
                     File.Delete(filePath);
@@ -201,7 +206,6 @@ public partial class BoomfieldInstallerForm : Form
             var source = Path.Combine(boomfieldDir.FullName, folderName);
             var dest = Path.Combine(installPath, folderName);
             var sourceIsDest = source == dest;
-
 #if DEBUG_MODE
             ShowWarningMessage(
                 $"The following would be copied in a real installation:\n\n" +
@@ -211,8 +215,7 @@ public partial class BoomfieldInstallerForm : Form
                 "Debug");
             continue;
 #endif
-
-            if (source == dest)
+            if (sourceIsDest)
                 continue;
 
             try
@@ -232,7 +235,6 @@ public partial class BoomfieldInstallerForm : Form
             var source = Path.Combine(boomfieldDir.FullName, fileName);
             var dest = Path.Combine(installPath, fileName);
             var sourceIsDest = source == dest;
-
 #if DEBUG_MODE
             ShowWarningMessage(
                 $"The following would be copied in a real installation:\n\n" +
@@ -242,8 +244,7 @@ public partial class BoomfieldInstallerForm : Form
                 "Debug");
             continue;
 #endif
-
-            if (source == dest)
+            if (sourceIsDest)
                 continue;
 
             try
@@ -257,24 +258,68 @@ public partial class BoomfieldInstallerForm : Form
             }
         }
 
+        // Create shortcut if the user chose to.
+        if (createShortcutCheckBox.Checked)
+        {
+            CreateShortcut();
+        }
+
         // Success!
         ShowInfoMessage("Boomfield Battlefield 2 mod installed!", "Success");
 
         return;
+    }
 
-        void ShowInfoMessage(string message, string caption = "Info")
-        {
-            MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+    private void CreateShortcut()
+    {
+        var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        var shortcutPath = Path.Combine(desktopPath, "Boomfield.lnk");
+        var targetPath = $"\"{Bf2ExeFilePath}\"";
+        var arguments = $"+restart 1 +modPath \"mods/{BoomfieldFolderName}\"";
+        var iconPath = Path.Combine(Bf2ModsFolderPath, BoomfieldFolderName, BoomfieldIconName);
 
-        void ShowWarningMessage(string message, string caption = "Warning")
-        {
-            MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
+        var createShortcutResult = MessageBox.Show(
+            $"Do you want to create a shortcut at '{shortcutPath}'?",
+            "Create Boomfield Shortcut",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Information);
 
-        void ShowErrorMessage(string message, string caption = "Error")
+        if (createShortcutResult != DialogResult.Yes)
+            return;
+
+        try
         {
-            MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            var shell = new WshShell();
+            var shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
+
+            shortcut.Description = "Runs Battlefield 2 with the Boomfield mod";
+            shortcut.TargetPath = targetPath;
+            shortcut.IconLocation = iconPath;
+            shortcut.Arguments = arguments;
+            shortcut.WorkingDirectory = Bf2RootFolderPath;
+            shortcut.WindowStyle = 1;
+            shortcut.Save();
+
         }
+        catch (IOException e)
+        {
+            ShowErrorMessage("Failed to create shortcut.\n\n" +
+                             $"{e.Message}");
+        }
+    }
+
+    private static void ShowInfoMessage(string message, string caption = "Info")
+    {
+        MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
+    private static void ShowWarningMessage(string message, string caption = "Warning")
+    {
+        MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+    }
+
+    private static void ShowErrorMessage(string message, string caption = "Error")
+    {
+        MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 }
