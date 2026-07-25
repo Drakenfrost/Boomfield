@@ -1,0 +1,48 @@
+I have finally succeeded my attempt to figure out how these damn .ogg files work. DICE took the liberty (unfortunately) to hard code serials into the engine. 
+
+So, to achieve a successful input of new sounds, you need to do the following. 
+
+First and foremost, you are going to need to grab Vorbis' .ogg tools off of this website (the encoder file set). Now, let's get our hands dirty. 
+
+Let's say we wish to replace the M1A2 cockpit ambience with a Panzer's ambience... 
+
+1. First, create your sounds files as always (.wav). 
+2. Grab an .ogg file from another tank's cockpit ambience in Battlefield 2. Let's use the default M1A2 .ogg file. 
+
+...\Objects_client\Vehicles\Land\USTNK_M1A2\Sounds\M1A2_cockpit.ogg 
+
+3. Now, open up your command prompt (Start > Run > cmd) 
+4. You should now pinpoint cmd to the location you had installed the Vorbiss tools. In my case, it's C:\Program Files\Vorbis\ 
+5. Before we continue, we need to obtain the serial number I talked about earlier: type the following into the cmd prompt. 
+
+ogginfo M1A2_cockpit.ogg 
+
+8. It will give you some information at the top that should look like this: 
+
+New logical stream <#1, serial: 00000e9a> 
+
+6. Write the serial number provided (00000e9a) down. You should also pay attention to the "Nominal bitrate" (56.001000), which you should also write down. 
+7. We need to convert the Unicode the program spat out into ASCII. To do so, you need to go to this page. 
+8. On the page I just provided, you will see the field "Input Base". Set that to "hex or U+xxxx". 
+9. In the "Enter Number" field, you are going to type in the serial number you just obtained from the M1A2_cockpit.ogg file (00000e9a). 
+10. After that, you simply need to hit the "Process" button. 
+11. Once you hit "Process", you will see numbers and letters in the four boxes below. What we want is from the "Dec" field (3738). 
+
+Note: the ASCII should be eight characters long, so keep in mind the webpage is removing the four beginning zeroes. The actual ASCII code is 00003738. 
+
+12. To convert the .wav file into an .ogg file, the formula is as follows (typed into the cmd prompt, of course): 
+
+oggenc -b (bitrate) -s (serial number) (newsound.wav) 
+
+13. So in or case it should read as follows: 
+
+oggenc -b 56.001000 -s 00003738 Panzer_cockpit.wav 
+
+It should start encoding the .wav file. 
+
+14. After the Encoding has completed, you are going to want to make sure the serial numbers and bitrates are the exact same. So type the following into the cmd prompt to double check them: 
+
+ogginfo M1A2_cockpit.ogg 
+ogginfo Panzer_cockpit.ogg 
+
+If the serial numbers match, then you have successfully encoded an .ogg file! If you guys have any questions, feel free to ask. I should also note this works with ANY .ogg file, be it ambience or menu / loading music.

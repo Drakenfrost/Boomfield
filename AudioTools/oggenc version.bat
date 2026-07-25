@@ -1,0 +1,2 @@
+oggenc -v
+pause
