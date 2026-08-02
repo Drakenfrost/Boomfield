@@ -1,0 +1,66 @@
+hudBuilder.createSplitNode		IngameHud IglaHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 23
+hudBuilder.addNodeBlendEffect			7 2
+
+hudBuilder.createTextNode			IglaHud IGLAMarkerLabel0 100 100 40 10  
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				0.925 0.424 0.267 1
+
+hudBuilder.createTextNode			IglaHud IGLAMarkerLabel1 100 120 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				0.925 0.424 0.267 1
+
+hudBuilder.createTextNode			IglaHud IGLAMarkerLabel2 100 140 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				0.925 0.424 0.267 1
+
+hudBuilder.createTextNode			IglaHud IGLAMarkerLabel3 100 160 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				0.925 0.424 0.267 1
+
+hudBuilder.createObjectMarkerNode 		IglaHud IGLAMarker 0 152 800 310
+hudBuilder.setObjectMarkerNodeTexture 		0 Ingame\Vehicles\Icons\Hud\Land\Tunguska\friendly.tga
+hudBuilder.setObjectMarkerNodeTexture 		1 Ingame\Vehicles\Icons\Hud\Land\Tunguska\lockBox.tga
+hudBuilder.setObjectMarkerNodeTexture 		2 Ingame\Vehicles\Icons\Hud\Land\Tunguska\locked.tga
+hudBuilder.setObjectMarkerNodeTexture 		3 Ingame\Vehicles\Icons\Hud\Land\Tunguska\rangeLine.tga
+hudBuilder.setObjectMarkerNodeTextureSize	0 32 32
+hudBuilder.setObjectMarkerNodeTextureSize	1 32 32
+hudBuilder.setObjectMarkerNodeTextureSize	2 64 64
+hudBuilder.setObjectMarkerNodeTextureSize	3 16 256
+hudBuilder.setObjectMarkerNodeObjects 		4
+hudBuilder.setObjectMarkerNodeLockText 		1 IGLAMarkerLabel
+hudBuilder.setObjectMarkerNodeLockTextOffset	-32 8
+hudBuilder.addObjectMarkerNodeLockTextNode	IGLAMarkerLabel0
+hudBuilder.addObjectMarkerNodeLockTextNode	IGLAMarkerLabel1
+hudBuilder.addObjectMarkerNodeLockTextNode	IGLAMarkerLabel2
+hudBuilder.addObjectMarkerNodeLockTextNode	IGLAMarkerLabel3
+hudBuilder.setNodeColor				0.925 0.424 0.267 1
+
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel0TextNode 
+hudBuilder.setTextNodeStringVariable		IGLAMarkerLabel0String
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel0
+hudBuilder.setNodeShowVariable 			IGLAMarkerLabel0Show
+
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel1TextNode 
+hudBuilder.setTextNodeStringVariable		IGLAMarkerLabel1String
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel1
+hudBuilder.setNodeShowVariable 			IGLAMarkerLabel1Show
+
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel2TextNode
+hudBuilder.setTextNodeStringVariable		IGLAMarkerLabel2String
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel2
+hudBuilder.setNodeShowVariable	 		IGLAMarkerLabel2Show
+
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel3TextNode
+hudBuilder.setTextNodeStringVariable		IGLAMarkerLabel3String
+hudBuilder.setActiveObject			IglaHud IGLAMarkerLabel3
+hudBuilder.setNodeShowVariable	 		IGLAMarkerLabel3Show
+
+hudBuilder.createPictureNode			IglaHud IGLACrossHair 274 175 256 256
+hudBuilder.setPictureNodeTexture 		Ingame\Vehicles\Icons\Hud\Land\Tunguska\crosshair.tga
+hudBuilder.setNodeColor				0.925 0.424 0.267 1
+
+hudBuilder.createPictureNode			IglaHud IGLAHeatLock 353 460 128 32
+hudBuilder.setPictureNodeTexture 		Ingame\Vehicles\Icons\Hud\Land\Tunguska\missileLock.tga
+hudBuilder.setNodeColor				0.925 0.424 0.267 1
+hudBuilder.setNodeShowVariable 			IGLAMarkerObjectMarkerNodeLockedShow

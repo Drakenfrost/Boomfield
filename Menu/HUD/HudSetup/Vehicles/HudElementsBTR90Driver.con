@@ -1,0 +1,30 @@
+hudBuilder.createSplitNode			VehicleHuds BTR90Hud
+hudBuilder.setNodeLogicShowVariable 		EQUAL GuiIndex 33
+hudBuilder.addNodeBlendEffect			7 2
+
+rem ------------crosshair-------------------------
+
+hudBuilder.createPictureNode		BTR90Hud BTR90Crosshair 272 265 256 128 
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Land\BTR90\BTR_cross.dds
+hudBuilder.setNodeColor		 	0.925 0.424 0.267 1
+
+rem -------------------------------------- Hit Indication----------------------------------------------------
+   
+hudBuilder.createPictureNode 		BTR90Hud BTR90HitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeColor 		0.925 0.424 0.267 1
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 		HitIndicatorIconShow
+
+rem ------------range to target text---------------
+
+beginrem
+hudBuilder.createPictureNode		BTR90Hud BTR90RangeText 100 445 128 16 
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Land\BTR90\range_toTarget_text.dds
+hudBuilder.setNodeColor		 	0.925 0.424 0.267 1
+
+hudBuilder.createTextNode		BTR90Hud BTR90RangeLabel 225 447 101 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetDistanceString
+hudBuilder.setNodeColor		 	0.925 0.424 0.267 1
+endrem

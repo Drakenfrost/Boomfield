@@ -1,0 +1,61 @@
+hudManager.setMouseTextureEmpty		Ingame/GeneralIcons/empty.tga
+hudManager.setMouseTextureFull		Ingame/GeneralIcons/pointerMinimap.tga
+hudManager.setMouseTextureArtillery	Ingame/GeneralIcons/crosshair_placeAirStrike.tga
+hudManager.setMouseTextureUAV		Ingame/GeneralIcons/crosshair_uav.tga
+hudManager.setMouseTextureSupply	Ingame/GeneralIcons/crosshair_supply.tga
+hudManager.setMouseTextureCancel	Ingame/GeneralIcons/crosshair_cancel.tga
+hudManager.setCommMouseSensitivity	22
+hudManager.setPointerMouseSensitivity	40
+hudManager.setPointerSize		25 25
+hudManager.setCommSize			490 300
+hudManager.setCommPos			150 150
+hudManager.setCommMousePos		400 300
+
+hudManager.setSpottedMenuSize		83 130
+hudManager.setSpottedMenuPos		356 234
+hudManager.setSpottedMousePos		400 300
+
+hudManager.setMaximumNrOfCPs		20
+
+
+rem ----------------------------------------- 	Global Hud -----------------------------------------------------------
+
+hudBuilder.createSplitNode			Global GlobalHud
+hudBuilder.setNodeShowVariable 			ShowIngameHud
+hudBuilder.setNodeInTime 			2
+hudBuilder.setNodeOutTime 			2
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createSplitNode			GlobalHud VehicleHuds
+hudBuilder.setNodeShowVariable 			VehicleIconShow
+
+hudBuilder.createSplitNode			GlobalHud Chat
+hudBuilder.createSplitNode			GlobalHud IngameHud
+
+rem ----------------------------------------- 	Bottom right animate Hud -----------------------------------------------------------
+
+hudBuilder.createSplitNode			BottomRightAnimate BottomRightAnimateHud
+hudBuilder.setNodeShowVariable 			ShowIngameHud
+
+rem ----------------------------------------- 	Bottom right static Hud -----------------------------------------------------------
+
+hudBuilder.createSplitNode			BottomRightStatic BottomRightStaticHud
+hudBuilder.setNodeShowVariable 			ShowIngameHud
+
+rem ----------------------------------------- 	Bottom left static Hud -----------------------------------------------------------
+
+hudBuilder.createSplitNode			BottomLeftStatic BottomLeftStaticHud
+hudBuilder.setNodeShowVariable 			ShowIngameHud
+
+rem ----------------------------------------- 	Bottom left animate Hud -----------------------------------------------------------
+
+hudBuilder.createSplitNode			BottomLeftAnimate BottomLeftAnimateHud
+hudBuilder.setNodeShowVariable 			ShowIngameHud
+
+rem -----------------------------------------   Top Layer Hud ------------------------------------------------------------------------------
+
+hudBuilder.createSplitNode			TopLayer TopLayerHud
+hudBuilder.setNodeShowVariable 			ShowIngameHud
+hudBuilder.setNodeInTime 			2
+hudBuilder.setNodeOutTime 			2
+hudBuilder.addNodeAlphaShowEffect	

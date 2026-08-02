@@ -1,0 +1,369 @@
+hudBuilder.createSplitNode		CommanderInterfaceMap CommanderMenu
+hudBuilder.setNodeShowVariable 		CommanderMenuShow
+hudBuilder.setNodeInTime 		0.2
+hudBuilder.setNodeOutTime 		0
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createSplitNode		CommanderMenu CommanderMenuButtons
+rem hudBuilder.setNodeColor		1 1 1 0.8
+
+
+hudBuilder.createPictureNode 		CommanderMenuButtons CommanderMenuMarker 605 3 40 40
+hudBuilder.setPictureNodeTexture 	Ingame/GeneralIcons/crosshair_comrose.tga
+hudBuilder.setNodePosVariable		0 OrderMenuPosX
+hudBuilder.setNodePosVariable		1 OrderMenuPosY
+hudBuilder.setNodeOffset		-20 -20
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderOrder1 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.sendOrder 4 1" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderOrder2 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.sendOrder 5 1" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderOrder3 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.sendOrder 6 1" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderOrder4 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.sendOrder 7 1" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderOrder5 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.sendOrder 8 1" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderOrder6 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.sendOrder 9 1" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons OrderArtillery 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.artillery" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons OrderUAV 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.uav" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons OrderSupplies 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.supplies" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons OrderVehicleDrop 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.vehicleDrop" 0
+hudBuilder.setNodeShowVariable 		CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 	NOT InvalidVehicleDropArea 1
+hudBuilder.setNodeColor			1 1 1 0.8
+
+rem hudBuilder.setNodeRGBVariables		CommanderRightNameColorRed CommanderRightNameColorGreen CommanderRightNameColorBlue
+
+hudBuilder.createButtonNode 		CommanderMenuButtons OrderInvalidVehicleDrop 370 20 150 15
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setNodeShowVariable 		CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 	AND InvalidVehicleDropArea 1
+hudBuilder.setNodeColor 		0.9 0.0 0.0 1
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderZoom 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Commander.zoomCommander" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		CommanderMenuButtons CommanderSpotted 370 20 150 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 1 VTNoVehicleType" 0
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createPictureNode		CommanderMenuButtons CommanderEmptyButton1 370 20 150 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createPictureNode		CommanderMenuButtons CommanderEmptyButton2 370 20 150 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createPictureNode		CommanderMenuButtons CommanderEmptyButton3 370 20 150 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createTransformListNode		CommanderMenuButtons CommanderMenuButtonList 243 22 555 555 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setNodeShowVariable 			CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 		NOT InvalidVehicleDropArea 1
+hudBuilder.addTransformListNode			CommanderZoom 
+hudBuilder.addTransformListNode			CommanderEmptyButton1 
+hudBuilder.addTransformListNode			CommanderSpotted
+hudBuilder.addTransformListNode			CommanderEmptyButton2 
+hudBuilder.addTransformListNode			OrderArtillery
+hudBuilder.addTransformListNode			OrderUAV
+hudBuilder.addTransformListNode			OrderSupplies
+hudBuilder.addTransformListNode			OrderVehicleDrop
+hudBuilder.addTransformListNode			CommanderEmptyButton3 
+hudBuilder.addTransformListNode			CommanderOrder1 
+hudBuilder.addTransformListNode			CommanderOrder2 
+hudBuilder.addTransformListNode			CommanderOrder3 
+hudBuilder.addTransformListNode			CommanderOrder4 
+hudBuilder.addTransformListNode			CommanderOrder5 
+hudBuilder.addTransformListNode			CommanderOrder6 
+
+hudBuilder.createTransformListNode		CommanderMenuButtons CommanderMenuButtonList2 243 22 555 555 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setNodeShowVariable 			CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 		AND InvalidVehicleDropArea 1
+hudBuilder.addTransformListNode			CommanderZoom 
+hudBuilder.addTransformListNode			CommanderEmptyButton1 
+hudBuilder.addTransformListNode			CommanderSpotted
+hudBuilder.addTransformListNode			CommanderEmptyButton2 
+hudBuilder.addTransformListNode			OrderArtillery
+hudBuilder.addTransformListNode			OrderUAV
+hudBuilder.addTransformListNode			OrderSupplies
+hudBuilder.addTransformListNode			OrderInvalidVehicleDrop
+hudBuilder.addTransformListNode			CommanderEmptyButton3 
+hudBuilder.addTransformListNode			CommanderOrder1 
+hudBuilder.addTransformListNode			CommanderOrder2 
+hudBuilder.addTransformListNode			CommanderOrder3 
+hudBuilder.addTransformListNode			CommanderOrder4 
+hudBuilder.addTransformListNode			CommanderOrder5 
+hudBuilder.addTransformListNode			CommanderOrder6 
+
+hudBuilder.createSplitNode		CommanderMenu CommanderMenuIcons
+rem hudBuilder.setNodeColor		0.549 0.733 0.8309 0.85
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderAttackIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_attack.tga
+hudBuilder.setNodeColor			1 0.611 0 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderDefendIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_defend.tga
+hudBuilder.setNodeColor			0.792 0.2 0.949 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderMoveIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_move.tga
+hudBuilder.setNodeColor			0.796 0.776 0.2156 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderArtilleryIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_artillery.tga
+hudBuilder.setNodeColor			0.757 0.2196 0.196 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderUAVIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_UAV.tga
+hudBuilder.setNodeColor			0.388 0.6 0.984 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderSupplyIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_supplies.tga
+hudBuilder.setNodeColor			0.388 0.6 0.984 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderVehicleDropIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_vehicledrop.dds
+hudBuilder.setNodeShowVariable 		CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 	NOT InvalidVehicleDropArea 1
+hudBuilder.setNodeColor			0.388 0.6 0.984 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderInvalidVehicleDropIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/crosshair_cancel.tga
+hudBuilder.setNodeShowVariable 		CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 	AND InvalidVehicleDropArea 1
+hudBuilder.setNodeColor 		0.9 0.0 0.0 1
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderDestroyIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_destroy.tga
+hudBuilder.setNodeColor			1 0.611 0 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderRepairIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_repair.tga
+hudBuilder.setNodeColor			0.792 0.2 0.949 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderMineIcon 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/Minimap/Icons/icon_mine.tga
+hudBuilder.setNodeColor			1 0.611 0 1.0
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderEmptyIcon1 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderEmptyIcon2 440 25 15 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderEmptyIcon3 440 25 15 15
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderEmptyIcon4 440 25 15 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+
+hudBuilder.createPictureNode		CommanderMenuIcons CommanderEmptyIcon5 440 25 15 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+
+hudBuilder.createTransformListNode		CommanderMenu CommanderMenuIconList 243 22 420 555 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setNodeShowVariable 			CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 		NOT InvalidVehicleDropArea 1
+hudBuilder.addTransformListNode			CommanderEmptyIcon1
+hudBuilder.addTransformListNode			CommanderEmptyIcon2
+hudBuilder.addTransformListNode			CommanderEmptyIcon3
+hudBuilder.addTransformListNode			CommanderEmptyIcon4
+hudBuilder.addTransformListNode			CommanderArtilleryIcon 
+hudBuilder.addTransformListNode			CommanderUAVIcon 
+hudBuilder.addTransformListNode			CommanderSupplyIcon 
+hudBuilder.addTransformListNode			CommanderVehicleDropIcon 
+hudBuilder.addTransformListNode			CommanderEmptyIcon5
+hudBuilder.addTransformListNode			CommanderMoveIcon 
+hudBuilder.addTransformListNode			CommanderAttackIcon 
+hudBuilder.addTransformListNode			CommanderDefendIcon 
+hudBuilder.addTransformListNode			CommanderRepairIcon 
+hudBuilder.addTransformListNode			CommanderDestroyIcon 
+hudBuilder.addTransformListNode			CommanderMineIcon 
+
+hudBuilder.createTransformListNode		CommanderMenu CommanderMenuIconList2 243 22 420 555 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setNodeShowVariable 			CommanderMenuShow
+hudBuilder.setNodeLogicShowVariable 		AND InvalidVehicleDropArea 1
+hudBuilder.addTransformListNode			CommanderEmptyIcon1
+hudBuilder.addTransformListNode			CommanderEmptyIcon2
+hudBuilder.addTransformListNode			CommanderEmptyIcon3
+hudBuilder.addTransformListNode			CommanderEmptyIcon4
+hudBuilder.addTransformListNode			CommanderArtilleryIcon 
+hudBuilder.addTransformListNode			CommanderUAVIcon 
+hudBuilder.addTransformListNode			CommanderSupplyIcon 
+hudBuilder.addTransformListNode			CommanderInvalidVehicleDropIcon 
+hudBuilder.addTransformListNode			CommanderEmptyIcon5
+hudBuilder.addTransformListNode			CommanderMoveIcon 
+hudBuilder.addTransformListNode			CommanderAttackIcon 
+hudBuilder.addTransformListNode			CommanderDefendIcon 
+hudBuilder.addTransformListNode			CommanderRepairIcon 
+hudBuilder.addTransformListNode			CommanderDestroyIcon 
+hudBuilder.addTransformListNode			CommanderMineIcon 
+
+
+hudBuilder.createSplitNode		CommanderMenu CommanderMenuText
+rem hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderAttackText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_ATTACK
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderDefendText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_DEFEND
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderMoveText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_MOVE
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderRepairText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_REPAIR
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderDestroyText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_DESTROY
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderMineText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_MINE
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderArtilleryText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_ARTILLERY
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderUAVText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_UAV
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderSuppliesText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_SUPPLIES
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderVehicleDropText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_COMMANDER_VEHICLEDROP
+hudBuilder.setNodeOffset		16 1
+hudBuilder.setNodeRGBVariables		CommanderRightNameColorRed CommanderRightNameColorGreen CommanderRightNameColorBlue
+
+hudBuilder.createTextNode		CommanderMenuText CommanderZoomText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_MAP_QUICKMENU_ZOOMIN
+hudBuilder.setNodeOffset		2 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTextNode		CommanderMenuText CommanderSpottedText 440 25 150 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_MAP_QUICKMENU_SPOTTED
+hudBuilder.setNodeOffset		2 1
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createPictureNode		CommanderMenuText CommanderEmptyText1 440 25 150 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createPictureNode		CommanderMenuText CommanderEmptyText2 440 25 150 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createPictureNode		CommanderMenuText CommanderEmptyText3 440 25 150 10
+hudBuilder.setPictureNodeTexture	Ingame/GeneralIcons/empty.tga
+hudBuilder.setNodeColor			1 1 1 1
+
+hudBuilder.createTransformListNode		CommanderMenuText CommanderMenuLabelList 243 19 555 556 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setTranformListNodeOffset		0 -2
+hudBuilder.addTransformListNode			CommanderZoomText 
+hudBuilder.addTransformListNode			CommanderEmptyText1
+hudBuilder.addTransformListNode			CommanderSpottedText
+hudBuilder.addTransformListNode			CommanderEmptyText2
+hudBuilder.addTransformListNode			CommanderArtilleryText
+hudBuilder.addTransformListNode			CommanderUAVText 
+hudBuilder.addTransformListNode			CommanderSuppliesText 
+hudBuilder.addTransformListNode			CommanderVehicleDropText
+hudBuilder.addTransformListNode			CommanderEmptyText3
+hudBuilder.addTransformListNode			CommanderMoveText 
+hudBuilder.addTransformListNode			CommanderAttackText
+hudBuilder.addTransformListNode			CommanderDefendText
+hudBuilder.addTransformListNode			CommanderRepairText
+hudBuilder.addTransformListNode			CommanderDestroyText
+hudBuilder.addTransformListNode			CommanderMineText
+ 

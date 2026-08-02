@@ -1,0 +1,126 @@
+
+rem ------------------------------------ Occupying Player Names -------------------------------------------------------
+
+hudBuilder.createTransformNode 			IngameHud PlayerNames 150 477 180 60
+hudBuilder.setNodeShowVariable 			VehiclePassengersShow
+hudBuilder.setNodeInTime 			0.5
+hudBuilder.setNodeOutTime 			0.5
+hudBuilder.addNodeAlphaShowEffect	
+
+rem ------------------------------------ Player 1 -------------------------------------------------------
+
+hudBuilder.createTransformNode 			PlayerNames PlayerName1 0 70 180 14
+hudBuilder.setNodeShowVariable			OccupyingPlayerName1Show
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeMoveShowEffect		1.57 14
+
+hudBuilder.createPictureNode 			PlayerName1 Player1Background 0 0 180 14
+hudBuilder.setPictureNodeTexture 		Ingame/GeneralIcons/full.tga
+hudBuilder.setNodeColor 			0.268 0.294 0.243 1
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+hudBuilder.createTextNode			PlayerName1 Player1Name 2 -2 180 14
+hudBuilder.setTextNodeStyle			Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable		OccupyingPlayerName1String
+hudBuilder.setNodeRGBVariables			OccupyingPlayer1ColorRed OccupyingPlayer1ColorGreen OccupyingPlayer1ColorBlue
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+rem ------------------------------------ Player 2 -------------------------------------------------------
+
+hudBuilder.createTransformNode 			PlayerNames PlayerName2 0 56 180 14
+hudBuilder.setNodeShowVariable			OccupyingPlayerName2Show
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeMoveShowEffect		1.57 14
+
+hudBuilder.createPictureNode 			PlayerName2 Player2Background 0 0 180 14
+hudBuilder.setPictureNodeTexture 		Ingame/GeneralIcons/full.tga
+hudBuilder.setNodeColor 			0.268 0.294 0.243 1
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+hudBuilder.createTextNode			PlayerName2 Player2Name 2 -2 180 14
+hudBuilder.setTextNodeStyle			Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable		OccupyingPlayerName2String
+hudBuilder.setNodeRGBVariables			OccupyingPlayer2ColorRed OccupyingPlayer2ColorGreen OccupyingPlayer2ColorBlue
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+rem ------------------------------------ Player 3 -------------------------------------------------------
+
+hudBuilder.createTransformNode 			PlayerNames PlayerName3 0 42 180 14
+hudBuilder.setNodeShowVariable			OccupyingPlayerName3Show
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeMoveShowEffect		1.57 14
+
+hudBuilder.createPictureNode 			PlayerName3 Player3Background 0 0 180 14
+hudBuilder.setPictureNodeTexture 		Ingame/GeneralIcons/full.tga
+hudBuilder.setNodeColor 			0.268 0.294 0.243 1
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+hudBuilder.createTextNode			PlayerName3 Player3Name 2 -2 180 14
+hudBuilder.setTextNodeStyle			Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable		OccupyingPlayerName3String
+hudBuilder.setNodeRGBVariables			OccupyingPlayer3ColorRed OccupyingPlayer3ColorGreen OccupyingPlayer3ColorBlue
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+rem ------------------------------------ Player 4 -------------------------------------------------------
+
+hudBuilder.createTransformNode 			PlayerNames PlayerName4 0 28 180 14
+hudBuilder.setNodeShowVariable			OccupyingPlayerName4Show
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeMoveShowEffect		1.57 14
+
+hudBuilder.createPictureNode 			PlayerName4 Player4Background 0 0 180 14
+hudBuilder.setPictureNodeTexture 		Ingame/GeneralIcons/full.tga
+hudBuilder.setNodeColor 			0.268 0.294 0.243 1
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+hudBuilder.createTextNode			PlayerName4 Player4Name 2 -2 180 14
+hudBuilder.setTextNodeStyle			Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable		OccupyingPlayerName4String
+hudBuilder.setNodeRGBVariables			OccupyingPlayer4ColorRed OccupyingPlayer4ColorGreen OccupyingPlayer4ColorBlue
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+rem ------------------------------------ Player 5 -------------------------------------------------------
+
+hudBuilder.createTransformNode 			PlayerNames PlayerName5 0 14 180 14
+hudBuilder.setNodeShowVariable			OccupyingPlayerName5Show
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeMoveShowEffect		1.57 14
+
+hudBuilder.createPictureNode 			PlayerName5 Player5Background 0 0 180 14
+hudBuilder.setPictureNodeTexture 		Ingame/GeneralIcons/full.tga
+hudBuilder.setNodeColor 			0.268 0.294 0.243 1
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+hudBuilder.createTextNode			PlayerName5 Player5Name 2 -2 180 14
+hudBuilder.setTextNodeStyle			Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable		OccupyingPlayerName5String
+hudBuilder.setNodeRGBVariables			OccupyingPlayer5ColorRed OccupyingPlayer5ColorGreen OccupyingPlayer5ColorBlue
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+rem ------------------------------------ Player 6 -------------------------------------------------------
+
+hudBuilder.createTransformNode 			PlayerNames PlayerName6 0 0 180 14
+hudBuilder.setNodeShowVariable			OccupyingPlayerName6Show
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeMoveShowEffect		1.57 14
+
+hudBuilder.createPictureNode 			PlayerName6 Player6Background 0 0 180 14
+hudBuilder.setPictureNodeTexture 		Ingame/GeneralIcons/full.tga
+hudBuilder.setNodeColor 			0.268 0.294 0.243 1
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+hudBuilder.createTextNode			PlayerName6 Player6Name 2 -2 180 14
+hudBuilder.setTextNodeStyle			Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable		OccupyingPlayerName6String
+hudBuilder.setNodeRGBVariables			OccupyingPlayer6ColorRed OccupyingPlayer6ColorGreen OccupyingPlayer6ColorBlue
+hudBuilder.setNodeAlphaVariable 		BottomLeftVehicleFadedAlpha
+
+
+
+

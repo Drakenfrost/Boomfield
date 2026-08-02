@@ -1,0 +1,13 @@
+hudBuilder.createSplitNode		IngameHud M203Hud
+hudBuilder.setNodeRGBVariables		CrossHairColorRed CrossHairColorGreen CrossHairColorBlue
+hudBuilder.setNodeAlphaVariable		CrossHairColorAlpha
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 6
+hudBuilder.addNodeBlendEffect		7 2
+
+rem --------------------------------------------Crosshair----------------------------------------------------------
+
+hudBuilder.createPictureNode 		M203Hud M203CrosshairLeft 382 299 16 64
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/M16m203/m203CrosshairLeft.tga
+
+hudBuilder.createPictureNode 		M203Hud M203CrosshairRight 401 299 16 64
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/M16m203/m203CrosshairRight.tga

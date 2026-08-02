@@ -1,0 +1,18 @@
+
+hudBuilder.createSplitNode		VehicleHuds Type98Hud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 37
+hudBuilder.addNodeBlendEffect		7 2
+
+rem ------------crosshair-------------------------
+
+hudBuilder.createPictureNode		Type98Hud Type98Crosshair 292 284 216 105 
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Land\Type98\Type98_cross.tga
+hudBuilder.setNodeColor		 	0.5725 0.8666 0.2352 0.9
+
+rem -------------------------------------- Hit Indication----------------------------------------------------
+   
+hudBuilder.createPictureNode 		Type98Hud Type98HitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeColor 		0.5725 0.8666 0.2352 1
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 		HitIndicatorIconShow

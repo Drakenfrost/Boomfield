@@ -1,0 +1,47 @@
+hudBuilder.createSplitNode		CommanderInterfaceMap ChoiceMenu
+hudBuilder.setNodeShowVariable 		ChoiceMenuShow
+
+beginrem
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+endrem
+
+
+hudBuilder.createButtonNode 		ChoiceMenu Accept 370 20 80 15
+hudBuilder.setButtonNodeMouseArea	1 1 97 17
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.dds
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.dds
+hudBuilder.setButtonNodeConCmd		"Commander.accept 1" 0
+
+hudBuilder.createButtonNode 		ChoiceMenu Reject 370 20 80 15
+hudBuilder.setButtonNodeMouseArea	1 1 97 17
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.dds
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.dds
+hudBuilder.setButtonNodeConCmd		"Commander.accept 0" 0
+
+hudBuilder.createTransformListNode		ChoiceMenu ChoiceMenuButtonList 285 35 500 495 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.addTransformListNode			Accept
+hudBuilder.addTransformListNode			Reject
+
+hudBuilder.createSplitNode		ChoiceMenu ChoiceMenuText
+hudBuilder.setNodeColor			0.82 0.82 0.61 1
+
+hudBuilder.createTextNode		ChoiceMenuText AcceptText 300 25 80 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setTextNodeString		HUD_TEXT_CHOICE_ACCEPT
+
+hudBuilder.createTextNode		ChoiceMenuText RejectText 300 25 80 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setTextNodeString		HUD_TEXT_CHOICE_REJECT
+
+hudBuilder.createTransformListNode		ChoiceMenu ChoiceMenuLabelList 285 35 500 495 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setTranformListNodeOffset		0 -2
+hudBuilder.addTransformListNode			AcceptText
+hudBuilder.addTransformListNode			RejectText

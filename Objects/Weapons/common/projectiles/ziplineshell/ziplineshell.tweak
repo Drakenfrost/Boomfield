@@ -1,0 +1,56 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe GenericProjectile ziplineshell
+ObjectTemplate.creator DSU-1:dsu
+ObjectTemplate.modifiedByUser "ryanm"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.createNotInGrid 1
+rem ---BeginComp:DefaultCollisionComp ---
+ObjectTemplate.createComponent DefaultCollisionComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultDetonationComp ---
+ObjectTemplate.createComponent DefaultDetonationComp
+ObjectTemplate.detonation.explosionMaterial 70
+ObjectTemplate.detonation.explosionRadius 0
+ObjectTemplate.detonation.explosionForce 0
+ObjectTemplate.detonation.explosionDamage 0
+ObjectTemplate.detonation.useMMOnEndEffect 1
+ObjectTemplate.detonation.detectionRadius 1.5
+ObjectTemplate.detonation.maxDepthForExplosion 2
+rem ---EndComp ---
+rem ---BeginComp:DefaultProjSoundComp ---
+ObjectTemplate.createComponent DefaultProjSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultRicochetComp ---
+ObjectTemplate.createComponent DefaultRicochetComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultPenetrateComp ---
+ObjectTemplate.createComponent DefaultPenetrateComp
+rem ---EndComp ---
+ObjectTemplate.geometry shell_m203
+ObjectTemplate.drag 0.1
+ObjectTemplate.mass 2
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.collisionGroups 8
+rem -------------------------------------
+ObjectTemplate.addTemplate S_ziplineshell_Looping
+rem -------------------------------------
+ObjectTemplate.timeToLive CRD_UNIFORM/30/0/0
+ObjectTemplate.material -1
+ObjectTemplate.hasOnTimeEffect 1
+ObjectTemplate.tracerScaler 30
+ObjectTemplate.maxTracerScaler 30
+ObjectTemplate.minTracerScaler 30
+ObjectTemplate.tracerSizeModifier 10
+ObjectTemplate.minDamage 50
+ObjectTemplate.damage 100
+ObjectTemplate.distToStartLoseDamage 250
+ObjectTemplate.distToMinDamage 300
+
+ObjectTemplate.activeSafe Sound S_ziplineshell_Looping
+ObjectTemplate.modifiedByUser "ryanm"
+

@@ -1,0 +1,27 @@
+hudBuilder.createSplitNode		IngameHud PredatorHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 58
+
+rem --------------------------------------------Crosshair----------------------------------------------------------
+beginrem
+hudBuilder.createPictureNode 		PredatorHud PredatorCrosshair 398 285 8 8
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Predator/PredatorCross.tga
+endrem
+rem --------------------------------------------- Scope -----------------------------------------------------------
+
+hudBuilder.createPictureNode 		PredatorHud PredatorScope 272 168 256 256
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Predator/AT_crosshair.tga
+hudBuilder.setNodeShowVariable 		HasMissileConnection
+hudBuilder.addNodeBlendEffect		7 2
+
+rem -------------------------------------------- Hit Indication ---------------------------------------------------
+
+hudBuilder.createPictureNode 		PredatorHud HitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeRGBVariables		CrossHairColorRed CrossHairColorGreen CrossHairColorBlue
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 		HitIndicatorIconShow
+hudBuilder.addNodeBlendEffect		7 2
+
+
+
+

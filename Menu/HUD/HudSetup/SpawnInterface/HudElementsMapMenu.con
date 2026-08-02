@@ -1,0 +1,33 @@
+hudBuilder.createSplitNode		MembersSelectionInfo MapMenu
+hudBuilder.setNodeShowVariable 		MapMenuShow
+
+beginrem
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+endrem
+
+hudBuilder.createSplitNode		MapMenu MapMenuButtons
+hudBuilder.setNodeColor			1 1 1 0.7
+
+hudBuilder.createButtonNode 		MapMenuButtons MapZoom 370 20 80 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"MiniMap.setZoom" 0
+
+hudBuilder.createTransformListNode		MapMenuButtons MapMenuButtonList 285 35 500 495 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.addTransformListNode			MapZoom
+
+hudBuilder.createTextNode		MapMenu MapZoomText 440 25 80 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_MAP_QUICKMENU_ZOOMIN
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTransformListNode		MapMenu MapMenuLabelList 285 32 500 496 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setTranformListNodeOffset		0 -2
+hudBuilder.addTransformListNode			MapZoomText

@@ -1,0 +1,75 @@
+hudBuilder.createSplitNode		IngameHud LaserPainterHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 1
+
+hudBuilder.createPictureNode		LaserPainterHud LaserPaintFrame 0 0 1024 1024
+hudBuilder.setPictureNodeTexture 	Ingame\Weapons\Icons\Hud\LaserPainter\laserPainter.tga
+
+
+hudBuilder.createPictureNode			LaserPainterHud LaserPaintCrosshair 336 268 128 64
+hudBuilder.setPictureNodeVariableTexture 	CrosshairIconPathString
+
+hudBuilder.createCompassNode 		LaserPainterHud LaserPaintCompass 3 309 165 186 32 1 0
+hudBuilder.setCompassNodeTexture 	1 Ingame\Weapons\Icons\Hud\LaserPainter\compass.tga
+hudBuilder.setCompassNodeTextureSize	1024 32
+hudBuilder.setCompassNodeBorder		0 0 0 164
+hudBuilder.setCompassNodeValueVariable	PlayerAngle
+hudBuilder.setCompassNodeOffset		375
+hudBuilder.setNodeColor		 	0.4 0.4 0.4 1
+
+	
+hudBuilder.createTextNode		LaserPainterHud XLabelOff 239 420 46 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetCoordXString
+hudBuilder.setNodeColor			0.3 0.3 0.3 1
+
+
+hudBuilder.createTextNode		LaserPainterHud YLabelOff 290 420 46 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetCoordYString
+hudBuilder.setNodeColor			0.3 0.3 0.3 1
+
+
+hudBuilder.createTextNode		LaserPainterHud ZLabelOff 338 420 46 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetCoordZString
+hudBuilder.setNodeColor			0.3 0.3 0.3 1
+
+
+hudBuilder.createTextNode		LaserPainterHud RangeLabelOff 383 420 101 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetDistanceString
+hudBuilder.setNodeColor			0.3 0.3 0.3 1
+
+
+hudBuilder.createTextNode		LaserPainterHud TargetLabelOff 476 420 115 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_LASERTARGET_TARGET_AQUIRED
+hudBuilder.setNodeColor			0.3 0.3 0.3 1
+
+hudBuilder.createSplitNode		LaserPainterHud LaserPainterValues
+hudBuilder.setNodeLogicShowVariable 	EQUAL FiringIndex 1
+
+hudBuilder.createTextNode		LaserPainterValues XLabelOn 239 420 46 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetCoordXString
+hudBuilder.setNodeColor			0.7 0.1 0.1 1
+
+hudBuilder.createTextNode		LaserPainterValues YLabelOn 290 420 46 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetCoordYString
+hudBuilder.setNodeColor			0.7 0.1 0.1 1
+
+hudBuilder.createTextNode		LaserPainterValues ZLabelOn 338 420 46 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetCoordZString
+hudBuilder.setNodeColor			0.7 0.1 0.1 1
+
+hudBuilder.createTextNode		LaserPainterValues RangeLabelOn 383 420 101 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 2
+hudBuilder.setTextNodeStringVariable	TargetDistanceString
+hudBuilder.setNodeColor			0.7 0.1 0.1 1
+
+hudBuilder.createTextNode		LaserPainterValues TargetLabelOn 476 420 115 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_LASERTARGET_TARGET_AQUIRED
+hudBuilder.setNodeColor			0.7 0.1 0.1 1

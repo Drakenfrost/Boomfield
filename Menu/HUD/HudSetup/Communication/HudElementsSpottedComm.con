@@ -1,0 +1,141 @@
+hudBuilder.createSplitNode		IngameHud SpottedMenu
+hudBuilder.setNodeShowVariable 		SpottedInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createSplitNode		SpottedMenu SpottedMenuButtons
+hudBuilder.setNodeColor			1 1 1 0.8
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType0Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownTop_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownTop_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTHeavyTank" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam tank_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType1Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownCentre_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownCentre_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTFighter" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam air_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType2Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownCentre_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownCentre_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTHelicopterAttack" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam heli_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType3Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownCentre_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownCentre_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTInfantry" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam  infantry_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType4Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownCentre_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownCentre_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTBoat" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam boat_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType5Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownCentre_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownCentre_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTLightTank" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam vehicle_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType6Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownCentre_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownCentre_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTApc" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam apc_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType7Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownCentre_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownCentre_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTAA" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam aa_spotted" 0
+
+hudBuilder.createButtonNode 		SpottedMenuButtons SpottedType8Button 370 20 85 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\comroseDropdownBottom_Light.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\comroseDropdownBottom_Dark.tga
+hudBuilder.setButtonNodeConCmd		"Radio.sendSpottedMessage 0 VTSniper" 0
+hudBuilder.setButtonNodeConCmd		"game.radioMessage TCTeam sniper_spotted" 0
+
+hudBuilder.createTransformListNode	SpottedMenuButtons SpottedMenuButtonList 355 233 85 300 0
+hudBuilder.addTransformListNode		SpottedType0Button
+hudBuilder.addTransformListNode		SpottedType1Button
+hudBuilder.addTransformListNode		SpottedType2Button
+hudBuilder.addTransformListNode		SpottedType3Button
+hudBuilder.addTransformListNode		SpottedType4Button
+hudBuilder.addTransformListNode		SpottedType5Button
+hudBuilder.addTransformListNode		SpottedType6Button
+hudBuilder.addTransformListNode		SpottedType7Button
+hudBuilder.addTransformListNode		SpottedType8Button
+
+hudBuilder.createSplitNode		SpottedMenu SpottedMenuText
+hudBuilder.setNodeColor			0.937 0.929 0.831 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType0Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_TANK
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType1Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_PLANE
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType2Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_HELICOPTER
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType3Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_SOLDIER
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType4Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_BOAT
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType5Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_VEHICLE
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType6Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_APC
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType7Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_AA
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTextNode		SpottedMenuText SpottedType8Text 440 25 85 15
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+hudBuilder.setTextNodeString		HUD_COMROSE_SPOTTED_SNIPER
+hudBuilder.setNodeOffset		0 1
+
+hudBuilder.createTransformListNode	SpottedMenuText SpottedMenuLabelList 355 233 850 300 0
+hudBuilder.addTransformListNode		SpottedType0Text 
+hudBuilder.addTransformListNode		SpottedType1Text 
+hudBuilder.addTransformListNode		SpottedType2Text 
+hudBuilder.addTransformListNode		SpottedType3Text 
+hudBuilder.addTransformListNode		SpottedType4Text 
+hudBuilder.addTransformListNode		SpottedType5Text 
+hudBuilder.addTransformListNode		SpottedType6Text 
+hudBuilder.addTransformListNode		SpottedType7Text 
+hudBuilder.addTransformListNode		SpottedType8Text 

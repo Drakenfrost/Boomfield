@@ -1,0 +1,16 @@
+rem ** Set up Weapon HUD's **
+
+run HudElementsLaserPainter.con
+run HudElementsM4.con
+run HudElementsM16m203.con
+run HudElementsJackHammer.con
+run HudElementsGenericWeapon.con
+run HudElementsIGLA.con
+run HudElementsStinger.con
+run HudElementsWASPDefence.con
+run HudElementsWrench.con
+run HudElementsDefibrillator.con
+run HudElementsPredator.con
+run HudElementsATS.con
+run HudElementsCannotFire.con
+run HudElementsCanFire.con

@@ -1,0 +1,7 @@
+rem ** Set up the thing to be drawn last in HUD **
+
+run "HudElementsHit.con"
+run "HudElementsGameInfo.con"
+
+
+

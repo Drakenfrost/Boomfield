@@ -1,0 +1,32 @@
+hudBuilder.createSplitNode		IngameHud JackhammerHud
+hudBuilder.setNodeRGBVariables		CrossHairColorRed CrossHairColorGreen CrossHairColorBlue
+hudBuilder.setNodeAlphaVariable		CrossHairColorAlpha
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 9
+hudBuilder.addNodeBlendEffect		7 2
+
+rem --------------------------------------------Crosshair----------------------------------------------------------
+
+hudBuilder.createPictureNode 		JackhammerHud JackHammerCrosshairMiddle  396 296 8 8
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Jackhammer/shotgun_cross.tga
+
+hudBuilder.createPictureNode 		JackhammerHud JackHammerCrosshairUp 385 284 32 8
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Jackhammer/jackhammerCrosshairUp.tga
+hudBuilder.setNodePosVariable 		1 CrosshairUpPos
+
+hudBuilder.createPictureNode 		JackhammerHud JackHammerCrosshairDown 385 284 32 8
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Jackhammer/jackhammerCrosshairDown.tga
+hudBuilder.setNodePosVariable 		1 CrosshairDownPos
+
+hudBuilder.createPictureNode 		JackhammerHud JackHammerCrosshairLeft 384 284 8 32
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Jackhammer/jackhammerCrosshairLeft.tga
+hudBuilder.setNodePosVariable 		0 CrosshairLeftPos
+
+hudBuilder.createPictureNode 		JackhammerHud JackHammerCrosshairRight 384 284 8 32
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Jackhammer/jackhammerCrosshairRight.tga
+hudBuilder.setNodePosVariable 		0 CrosshairRightPos
+
+hudBuilder.createPictureNode 		JackhammerHud JackHammerHitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeRGBVariables		CrossHairColorRed CrossHairColorGreen CrossHairColorBlue
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 		HitIndicatorIconShow

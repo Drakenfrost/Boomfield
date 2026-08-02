@@ -1,0 +1,98 @@
+hudBuilder.createSplitNode			VehicleHuds Su30CoPilotHud
+hudBuilder.setNodeLogicShowVariable 		EQUAL GuiIndex 48
+hudBuilder.setNodeLogicShowVariable 		OR GuiIndex 49
+
+rem -------------------------------------- Hit Indication----------------------------------------------------
+   
+hudBuilder.createPictureNode 		Su30CoPilotHud Su30CoPilotHitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeColor 		1 1 0 1
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 		HitIndicatorIconShow
+
+hudBuilder.createPictureNode		Su30CoPilotHud Su30TvHud -113 39 1024 512
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\F15\LaserGuided\laserHud.tga
+hudBuilder.setNodeColor		 	1 1 1 1
+
+hudBuilder.createPictureNode		Su30CoPilotHud Su30TVFrame 0 0 1024 1024
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\F15\LaserGuided\laserFrame.tga
+
+hudBuilder.createPictureNode		Su30CoPilotHud Su30LaserCrosshair 274 165 256 256
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\LaserGuided\laserCrosshair.tga
+hudBuilder.setNodeColor		 	1 1 1 1
+
+rem --------------------------------------LaserGuided-----------------------------------------------------------
+
+hudBuilder.createSplitNode			Su30CoPilotHud Su30LaserHud 
+hudBuilder.setNodeLogicShowVariable 		EQUAL GuiIndex 48
+
+hudBuilder.createTextNode			Su30LaserHud Su30LaserTargetLabel0 100 100 40 10  
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				1 1 1 1
+
+hudBuilder.createTextNode			Su30LaserHud Su30LaserTargetLabel1 100 120 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				1 1 1 1
+
+hudBuilder.createTextNode			Su30LaserHud Su30LaserTargetLabel2 100 140 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				1 1 1 1
+
+hudBuilder.createTextNode			Su30LaserHud Su30LaserTargetLabel3 100 160 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setNodeColor				1 1 1 1
+
+hudBuilder.createObjectMarkerNode 		Su30LaserHud Su30LaserTargetMarker 126 73 548 452
+hudBuilder.setObjectMarkerNodeTexture 		0 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockBoxFriendly.tga
+hudBuilder.setObjectMarkerNodeTexture 		1 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\LaserGuided\laserLockBox.tga
+hudBuilder.setObjectMarkerNodeTexture 		2 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\LaserGuided\laserLockBoxLocked.tga
+hudBuilder.setObjectMarkerNodeTextureSize	0 32 32
+hudBuilder.setObjectMarkerNodeTextureSize	1 32 32
+hudBuilder.setObjectMarkerNodeTextureSize	2 64 64
+hudBuilder.setObjectMarkerNodeLockOnType	1
+hudBuilder.setObjectMarkerNodeObjects 		4
+hudBuilder.setObjectMarkerNodeLockText 		1 Su30LaserTargetLabel
+hudBuilder.setObjectMarkerNodeLockTextOffset	-32 8
+hudBuilder.addObjectMarkerNodeLockTextNode	Su30LaserTargetLabel0 
+hudBuilder.addObjectMarkerNodeLockTextNode	Su30LaserTargetLabel1 
+hudBuilder.addObjectMarkerNodeLockTextNode	Su30LaserTargetLabel2 
+hudBuilder.addObjectMarkerNodeLockTextNode	Su30LaserTargetLabel3 
+hudBuilder.setNodeColor		 		1 1 1 1
+
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel0TextNode 
+hudBuilder.setTextNodeStringVariable		Su30LaserTargetLabel0String
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel0
+hudBuilder.setNodeShowVariable 			Su30LaserTargetLabel0Show
+
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel1TextNode 
+hudBuilder.setTextNodeStringVariable		Su30LaserTargetLabel1String
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel1
+hudBuilder.setNodeShowVariable 			Su30LaserTargetLabel1Show
+
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel2TextNode 
+hudBuilder.setTextNodeStringVariable		Su30LaserTargetLabel2String
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel2
+hudBuilder.setNodeShowVariable 			Su30LaserTargetLabel2Show
+
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel3TextNode 
+hudBuilder.setTextNodeStringVariable		Su30LaserTargetLabel3String
+hudBuilder.setActiveObject			Su30LaserHud Su30LaserTargetLabel3
+hudBuilder.setNodeShowVariable 			Su30LaserTargetLabel3Show
+
+beginrem
+hudBuilder.createPictureNode			Su30LaserHud Su30LaserText 320 466 75 13
+hudBuilder.setPictureNodeTexture 		Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\LaserGuided\lasertext_LaserGuidedMissile.dds
+hudBuilder.setNodeColor				1 1 1 1
+endrem
+
+hudBuilder.createPictureNode			Su30LaserHud Su30LaserLock 435 464 49 13
+hudBuilder.setPictureNodeTexture 		Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\LaserGuided\lasertext_Locked.dds
+hudBuilder.setNodeColor				1 1 1 1
+hudBuilder.setNodeShowVariable 			Su30LaserTargetMarkerObjectMarkerNodeLockedShow
+
+beginrem
+hudBuilder.createPictureNode			Su30LaserHud Su30LaserArmed 435 464 87 14
+hudBuilder.setPictureNodeTexture 		Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\LaserGuided\lasertext_Armed.dds
+hudBuilder.setNodeColor				1 1 1 1
+hudBuilder.setNodeLogicShowVariable 		NOT Su30LaserTargetMarkerObjectMarkerNodeLockedShow 1
+endrem

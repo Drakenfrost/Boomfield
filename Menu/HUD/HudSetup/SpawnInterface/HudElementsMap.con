@@ -1,0 +1,236 @@
+rem ----------------------------------- New layer for the Map -----------------------------------------------
+
+hudBuilder.newLayer
+
+rem --------------------------------------------Map----------------------------------------------------------
+
+rem Needs this because the mapnode itself doesn't get any parent node created automaticly
+hudBuilder.createSplitNode		IngameHud MapSplit
+hudBuilder.setNodeShowVariable		MapShow
+hudBuilder.setNodeInTime 		0.5
+hudBuilder.setNodeOutTime 		0.5
+hudBuilder.addNodeAlphaShowEffect	
+
+hudBuilder.createMapNode		MapSplit Minimap
+
+hudBuilder.setMaxiPos		-122/-273
+hudBuilder.setMiniPos		197/-300
+hudBuilder.setMaxiSize		512/512
+hudBuilder.setMiniSize 		197/197
+hudBuilder.setCommanderPos	-161/-281
+hudBuilder.setCommanderSize 	561/561
+hudBuilder.setZoomIcons 	0
+hudBuilder.setCPFont 		"Fonts/commanderChatFontLocal_6.dif"
+hudBuilder.setCPFontColor 	1 0.792 0.043 1
+
+hudBuilder.createSplitNode		IngameHud MinSizeAlpha
+hudBuilder.setNodeAlphaVariable		MenuBackgroundAlpha
+hudBuilder.setNodeShowVariable 		MapMinSize 
+rem hudBuilder.setNodeLogicShowVariable	NOT CommanderShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createSplitNode		IngameHud MinSizeMap
+hudBuilder.setNodeShowVariable 		MapMinSize 
+rem hudBuilder.setNodeLogicShowVariable	NOT CommanderShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createSplitNode		IngameHud TicketInfo 
+hudBuilder.setNodeLogicShowVariable	NOT CommanderShow 1
+hudBuilder.setNodeLogicShowVariable	NOT DemoShow 1
+hudBuilder.setNodeInTime 		0
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+rem --------------------------------------------Team Flags---------------------------------------------
+
+hudBuilder.createSplitNode		MinSizeMap TeamFlags
+hudBuilder.setNodeShowVariable 		MapMinSize 
+hudBuilder.setNodeInTime 		0.4
+hudBuilder.setNodeOutTime 		0
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		 TeamFlags FriendlyTeamFlag 	602 20 18 12
+hudBuilder.setPictureNodeVariableTexture FriendlyFlagIconPathString
+
+hudBuilder.createPictureNode 		 TeamFlags EnemyTeamFlag 	772 20 18 12
+hudBuilder.setPictureNodeVariableTexture EnemyFlagIconPathString
+
+rem --------------------------------------------Team selected---------------------------------------------
+
+hudBuilder.createPictureNode 		TicketInfo USMCTopBarTeam2 605 0 49 15
+hudBuilder.setPictureNodeTexture 	Ingame/MiniMap/teamPoint_blueLeft.tga
+
+hudBuilder.createPictureNode 		TicketInfo MECTopBarTeam2 738 0 49 15
+hudBuilder.setPictureNodeTexture 	Ingame/MiniMap/teamPoint_redRight.tga
+
+rem -------------------------------------Map frame------------------------------------------------------
+
+hudBuilder.createPictureNode 		MinSizeAlpha MapFrame 596 0 200 212
+hudBuilder.setPictureNodeTexture 	Ingame/MiniMap/map_Frame.tga
+
+hudBuilder.createPictureNode 		MinSizeAlpha MapCompass 600 3 192 192
+hudBuilder.setPictureNodeTexture 	Ingame/MiniMap/map_Compass.tga
+hudBuilder.setPictureNodeRotateVariable MinimapDelayedMapAngle
+
+rem -------------------------------------Map frame open-------------------------------------------------
+
+hudBuilder.createSplitNode		TicketInfo MapFrameOpen
+hudBuilder.setNodeLogicShowVariable	NOT MapMinSize 1
+hudBuilder.setNodeInTime 		0
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		MapFrameOpen MapFrameOpenPic 596 0 200 18
+hudBuilder.setPictureNodeTexture 	Ingame/MiniMap/map_FrameOpen.tga
+hudBuilder.setNodeAlphaVariable		MenuBackgroundAlpha
+
+hudBuilder.createBarNode 		MapFrameOpen FriendlyCPsMapOpen 2 658 6 78 6
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_FrameOpen_Captured_Left.tga
+hudBuilder.setBarNodeBorder		0 0 0 39
+hudBuilder.setBarNodeValueVariable 	FriendlyCPs
+hudBuilder.setNodeRGBVariables		FriendlyTicketRed FriendlyTicketGreen FriendlyTicketBlue
+
+hudBuilder.createBarNode 		MapFrameOpen FriendlyNeutralCPsMapOpen 2 658 6 78 6
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_FrameOpen_Captured_Left.tga
+hudBuilder.setBarNodeBorder		0 0 0 39
+hudBuilder.setBarNodeValueVariable 	FriendlyNeutralCPs
+hudBuilder.setNodeColor 		0.513 0.513 0.513 1
+
+hudBuilder.createBarNode 		MapFrameOpen EnemyFriendlyCPsMapOpen 2 658 6 78 6
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_FrameOpen_Captured_Left.tga
+hudBuilder.setBarNodeBorder		0 0 0 39
+hudBuilder.setBarNodeValueVariable 	EnemyFriendlyCPs
+hudBuilder.setNodeRGBVariables		EnemyTicketRed EnemyTicketGreen EnemyTicketBlue
+
+hudBuilder.createBarNode 		MapFrameOpen EnemyCPsMapOpen 3 658 6 78 6
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_FrameOpen_Captured_Right.tga
+hudBuilder.setBarNodeBorder		0 0 39 0
+hudBuilder.setBarNodeValueVariable 	EnemyCPs
+hudBuilder.setNodeRGBVariables		EnemyTicketRed EnemyTicketGreen EnemyTicketBlue
+
+hudBuilder.createBarNode 		MapFrameOpen EnemyNeutralCPsMapOpen 3 658 6 78 6
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_FrameOpen_Captured_Right.tga
+hudBuilder.setBarNodeBorder		0 0 39 0
+hudBuilder.setBarNodeValueVariable 	EnemyNeutralCPs
+hudBuilder.setNodeColor 		0.513 0.513 0.513 1
+
+hudBuilder.createBarNode 		MapFrameOpen FriendlyEnemyCPsMapOpen 3 658 6 78 6
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_FrameOpen_Captured_Right.tga
+hudBuilder.setBarNodeBorder		0 0 39 0
+hudBuilder.setBarNodeValueVariable 	FriendlyEnemyCPs
+hudBuilder.setNodeRGBVariables		FriendlyTicketRed FriendlyTicketGreen FriendlyTicketBlue
+
+rem -----------------------------------ControlPoints-------------------------------------------------
+
+hudBuilder.createSplitNode		MinSizeMap CPInformationItems
+
+hudBuilder.createBarNode 		CPInformationItems FriendlyCPs 2 643 180 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_Captured_Left.tga
+hudBuilder.setBarNodeBorder		0 0 5 54
+hudBuilder.setBarNodeValueVariable 	FriendlyCPs
+hudBuilder.setNodeRGBVariables		FriendlyTicketRed FriendlyTicketGreen FriendlyTicketBlue
+
+hudBuilder.createBarNode 		CPInformationItems FriendlyNeutralCPs 2 643 180 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_Captured_Left.tga
+hudBuilder.setBarNodeBorder		0 0 5 54
+hudBuilder.setBarNodeValueVariable 	FriendlyNeutralCPs
+hudBuilder.setNodeColor 		0.513 0.513 0.513 1
+
+hudBuilder.createBarNode 		CPInformationItems EnemyFriendlyCPs 2 643 180 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_Captured_Left.tga
+hudBuilder.setBarNodeBorder		0 0 5 54
+hudBuilder.setBarNodeValueVariable 	EnemyFriendlyCPs
+hudBuilder.setNodeRGBVariables		EnemyTicketRed EnemyTicketGreen EnemyTicketBlue
+
+hudBuilder.createBarNode 		CPInformationItems EnemyCPs 3 643 180 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_Captured_Right.tga
+hudBuilder.setBarNodeBorder		0 0 54 5
+hudBuilder.setBarNodeValueVariable 	EnemyCPs
+hudBuilder.setNodeRGBVariables		EnemyTicketRed EnemyTicketGreen EnemyTicketBlue
+
+hudBuilder.createBarNode 		CPInformationItems EnemyNeutralCPs 3 643 180 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_Captured_Right.tga
+hudBuilder.setBarNodeBorder		0 0 54 5
+hudBuilder.setBarNodeValueVariable 	EnemyNeutralCPs
+hudBuilder.setNodeColor 		0.513 0.513 0.513 1
+
+hudBuilder.createBarNode 		CPInformationItems FriendlyEnemyCPs 3 643 180 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/flags_Captured_Right.tga
+hudBuilder.setBarNodeBorder		0 0 54 5
+hudBuilder.setBarNodeValueVariable 	FriendlyEnemyCPs
+hudBuilder.setNodeRGBVariables		FriendlyTicketRed FriendlyTicketGreen FriendlyTicketBlue
+
+rem ---------------------------------------- Controlpoint Info---------------------------------------------------
+
+hudBuilder.createTransformNode		MinSizeMap CPInterfaceItems 640 200 129 30
+hudBuilder.setNodeShowVariable 		CPInterfaceEnabled
+hudBuilder.setNodeInTime		0.15
+hudBuilder.setNodeOutTime		0.15
+hudBuilder.addNodeMoveShowEffect	-1.57 15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		CPInterfaceItems CaptureTimeBackground 0 2 112 36
+hudBuilder.setPictureNodeTexture 	Ingame/Minimap/captureFlag_Background.tga
+hudBuilder.setNodeAlphaVariable		MenuBackgroundAlpha
+
+hudBuilder.createBarNode 		CPInterfaceItems TimePreCPIsNeutral 3 3 5 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/captureFlag_Right.tga
+hudBuilder.setBarNodeValueVariable 	TimePreCPIsNeutral
+hudBuilder.setBarNodeBorder 		0 0 66 2
+hudBuilder.setNodeRGBVariables		EnemyTicketRed EnemyTicketGreen EnemyTicketBlue
+
+hudBuilder.createBarNode 		CPInterfaceItems TimePreCPIsTaken 2 1 5 108 31
+hudbuilder.setBarNodeTexture		1 Ingame/Minimap/captureFlag_Left.tga 
+hudBuilder.setBarNodeValueVariable 	TimePreCPIsTaken
+hudBuilder.setBarNodeBorder 		0 0 2 66
+hudBuilder.setNodeRGBVariables		FriendlyTicketRed FriendlyTicketGreen FriendlyTicketBlue
+
+hudBuilder.createPictureNode 			CPInterfaceItems CloseToAlliedCP 47 22 18 12
+hudBuilder.setPictureNodeVariableTexture 	Team2FlagIconPathString
+hudBuilder.setNodeShowVariable 			CloseToAlliedCP
+hudBuilder.setNodeInTime			0
+hudBuilder.setNodeOutTime			0.15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 			CPInterfaceItems CloseToAxisCP 47 22 18 12
+hudBuilder.setPictureNodeVariableTexture 	Team1FlagIconPathString
+hudBuilder.setNodeShowVariable 			CloseToAxisCP
+hudBuilder.setNodeInTime			0
+hudBuilder.setNodeOutTime			0.15
+hudBuilder.addNodeAlphaShowEffect
+
+rem -----------------------------------------Ticket Info---------------------------------------------------
+
+hudBuilder.createTextNode		TicketInfo FriendlyTickets 612 2 27 10
+hudBuilder.setTextNodeStyle		Fonts/digitalNumbers.dif 1
+hudBuilder.setTextNodeStringVariable	FriendlyTicketsString
+hudBuilder.setNodeRGBVariables	        FriendlyTeamTopRed FriendlyTeamTopGreen FriendlyTeamTopBlue
+hudBuilder.setNodeAlphaVariable 	FriendlyTicketBleed
+
+hudBuilder.createTextNode		TicketInfo EnemyTickets 756 2 27 10
+hudBuilder.setTextNodeStyle		Fonts/digitalNumbers.dif 1
+hudBuilder.setTextNodeStringVariable	EnemyTicketsString
+hudBuilder.setNodeRGBVariables	        EnemyTeamTopRed EnemyTeamTopGreen EnemyTeamTopBlue
+hudBuilder.setNodeAlphaVariable 	EnemyTicketBleed
+
+rem -----------------------------------------Time Info---------------------------------------------------
+
+hudBuilder.createSplitNode		MinSizeMap TimeItems
+hudBuilder.setNodeShowVariable 		MapMinSize
+hudBuilder.setNodeLogicShowVariable 	AND TimeInfoShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.5
+hudBuilder.addNodeMoveShowEffect	-1.57 50
+
+hudBuilder.createPictureNode 		TimeItems TimeBackground 522 0 78 18
+hudBuilder.setPictureNodeTexture 	Ingame/Bars/timeBarBackground.tga
+hudBuilder.setNodeAlphaVariable	MenuBackgroundAlpha
+
+hudBuilder.createTextNode		TimeItems TimeHour 528 2 70 10
+hudBuilder.setTextNodeStyle		Fonts/digitalNumbers.dif 1
+hudBuilder.setTextNodeStringVariable 	LevelTime
+hudBuilder.setNodeColor 		0.792 0.792 0.588 1

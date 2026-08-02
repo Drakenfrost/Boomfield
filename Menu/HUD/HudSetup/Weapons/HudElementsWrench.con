@@ -1,0 +1,11 @@
+hudBuilder.createSplitNode		IngameHud WrenchHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 56
+
+rem --------------------------------------------Crosshair----------------------------------------------------------
+
+hudBuilder.createPictureNode 		WrenchHud WrenchCrosshair 385 285 31 31
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Crosshair/wrenchCrosshair_Aim.tga
+
+hudBuilder.createPictureNode 		WrenchHud WrenchCrosshairLeft 385 285 31 31
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Crosshair/wrenchCrosshair_Fix.tga
+hudBuilder.setNodeShowVariable 		WrenchRepairingShow

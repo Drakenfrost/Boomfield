@@ -1,0 +1,10 @@
+rem ** Set up Basic HUD's **
+
+run HudElementsGameInfo.con
+run HudElementsWeaponSelect.con
+run HudElementsPlayer.con
+run HudElementsActionIcons.con
+
+
+
+

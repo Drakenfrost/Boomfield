@@ -1,0 +1,72 @@
+hudBuilder.createSplitNode			IngameHud WASPHud
+hudBuilder.setNodeLogicShowVariable		EQUAL GuiIndex 55
+
+hudBuilder.createPictureNode			WASPHud WASPCrossHair2 300 200 200 200
+hudBuilder.setPictureNodeTexture 		Ingame\Weapons\Icons\Hud\WASP\wasp_defence_crosshair2.dds
+
+hudBuilder.createSplitNode			WASPHud WASPHudBlended
+hudBuilder.setNodeLogicShowVariable		EQUAL GuiIndex 55
+hudBuilder.addNodeBlendEffect			7 2
+
+hudBuilder.createPictureNode 			WASPHudBlended WASPHitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 		Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeColor 			0.404 0.576 0.416 1
+hudBuilder.setNodeAlphaVariable     		HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 			HitIndicatorIconShow
+
+hudBuilder.createTextNode			WASPHudBlended WASPMarkerLabel0 100 100 40 10  
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+
+hudBuilder.createTextNode			WASPHudBlended WASPMarkerLabel1 100 120 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+
+hudBuilder.createTextNode			WASPHudBlended WASPMarkerLabel2 100 140 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+
+hudBuilder.createTextNode			WASPHudBlended WASPMarkerLabel3 100 160 40 10
+hudBuilder.setTextNodeStyle			Fonts/vehicleHudFont_6.dif 1
+
+hudBuilder.createObjectMarkerNode 		WASPHudBlended WASPMarker 126 73 548 452
+hudBuilder.setObjectMarkerNodeTexture 		0 Ingame\Weapons\Icons\Hud\WASP\wasp_lockBoxFriendly.tga
+hudBuilder.setObjectMarkerNodeTexture 		1 Ingame\Weapons\Icons\Hud\WASP\wasp_lockBox.tga
+hudBuilder.setObjectMarkerNodeTexture 		2 Ingame\Weapons\Icons\Hud\WASP\wasp_lockBoxLocked.tga
+hudBuilder.setObjectMarkerNodeTexture 		3 Ingame\Vehicles\Icons\Hud\Land\Tunguska\rangeLine.tga
+hudBuilder.setObjectMarkerNodeTextureSize	0 67 67
+hudBuilder.setObjectMarkerNodeTextureSize	1 67 67
+hudBuilder.setObjectMarkerNodeTextureSize	2 67 67
+hudBuilder.setObjectMarkerNodeTextureSize	3 16 256
+hudBuilder.setObjectMarkerNodeObjects 		4
+hudBuilder.setObjectMarkerNodeWeapon 		1
+hudBuilder.setObjectMarkerNodeLockText 		1 WASPMarkerLabel
+hudBuilder.setObjectMarkerNodeLockTextOffset	-32 8
+hudBuilder.addObjectMarkerNodeLockTextNode	WASPMarkerLabel0
+hudBuilder.addObjectMarkerNodeLockTextNode	WASPMarkerLabel1
+hudBuilder.addObjectMarkerNodeLockTextNode	WASPMarkerLabel2
+hudBuilder.addObjectMarkerNodeLockTextNode	WASPMarkerLabel3
+
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel0TextNode 
+hudBuilder.setTextNodeStringVariable		WASPMarkerLabel0String
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel0
+hudBuilder.setNodeShowVariable 			WASPMarkerLabel0Show
+
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel1TextNode 
+hudBuilder.setTextNodeStringVariable		WASPMarkerLabel1String
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel1
+hudBuilder.setNodeShowVariable 			WASPMarkerLabel1Show
+
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel2TextNode
+hudBuilder.setTextNodeStringVariable		WASPMarkerLabel2String
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel2
+hudBuilder.setNodeShowVariable	 		WASPMarkerLabel2Show
+
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel3TextNode
+hudBuilder.setTextNodeStringVariable		WASPMarkerLabel3String
+hudBuilder.setActiveObject			WASPHudBlended WASPMarkerLabel3
+hudBuilder.setNodeShowVariable	 		WASPMarkerLabel3Show
+
+hudBuilder.createPictureNode			WASPHudBlended WASPCrossHair 0 0 800 600
+hudBuilder.setPictureNodeTexture 		Ingame\Weapons\Icons\Hud\WASP\wasp_defence_crosshair.dds
+
+hudBuilder.createPictureNode			WASPHudBlended WASPHeatLock 353 460 128 32
+hudBuilder.setPictureNodeTexture 		Ingame\Weapons\Icons\Hud\Stinger\missileLock.tga
+hudBuilder.setNodeShowVariable 			WASPMarkerObjectMarkerNodeLockedShow

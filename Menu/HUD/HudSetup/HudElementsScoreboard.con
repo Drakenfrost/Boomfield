@@ -1,0 +1,252 @@
+
+hudBuilder.createSplitNode		IngameHud Scoreboard
+hudBuilder.setNodeShowVariable		ScoreboardShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+rem -------------------------------This is for stopping input to lower level buttons--------------------
+
+hudBuilder.createButtonNode 		Scoreboard DummyButton 0 0 800 600
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+
+rem -----------------------------------------Tabs---------------------------------------------------
+
+hudBuilder.createPictureNode 		Scoreboard ToggleScoreTab 10 26 389 50
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/team1_byScore.tga
+hudBuilder.setNodeShowVariable 		ToggleScore 
+
+hudBuilder.createPictureNode 		Scoreboard ToggleSquadsTab 10 26 389 50
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/team1_bySquad.tga
+hudBuilder.setNodeShowVariable 		ToggleSquads
+
+hudBuilder.createPictureNode 		Scoreboard ToggleManageTab 10 26 389 50
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/team1_manage.tga
+hudBuilder.setNodeShowVariable 		ToggleManage
+
+hudBuilder.createTextNode		Scoreboard ToggleScoreLabelFaded 12 53 120 32
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_PLAYERS
+hudBuilder.setNodeColor			1 0.792 0.043 1
+hudBuilder.setNodeLogicShowVariable 	NOT ToggleScore 1
+
+hudBuilder.createTextNode		Scoreboard ToggleSquadsLabelFaded 126 53 120 32
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_SQUADS
+hudBuilder.setNodeColor			1 0.792 0.043 1
+hudBuilder.setNodeLogicShowVariable 	NOT ToggleSquads 1
+
+hudBuilder.createTextNode		Scoreboard ToggleManageLabelFaded 245 53 120 32
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_MANAGE
+hudBuilder.setNodeColor			1 0.792 0.043 1
+hudBuilder.setNodeLogicShowVariable 	NOT ToggleManage 1
+
+hudBuilder.createTextNode		Scoreboard ToggleScoreLabel 12 53 120 32
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_PLAYERS
+hudBuilder.setNodeColor			1 1 1 1
+hudBuilder.setNodeShowVariable 		ToggleScore 
+
+hudBuilder.createTextNode		Scoreboard ToggleSquadsLabel 126 53 120 32
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_SQUADS
+hudBuilder.setNodeColor			1 1 1 1
+hudBuilder.setNodeShowVariable 		ToggleSquads
+
+hudBuilder.createTextNode		Scoreboard ToggleManageLabel 245 53 120 32
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_MANAGE
+hudBuilder.setNodeColor			1 1 1 1
+hudBuilder.setNodeShowVariable 		ToggleManage
+
+hudBuilder.createButtonNode 		Scoreboard ToggleScore 10 51 120 20
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"scoreboard.setToggleShow 0" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+hudBuilder.createButtonNode 		Scoreboard ToggleSquads 132 51 120 20
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"scoreboard.setToggleShow 1" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+hudBuilder.createButtonNode 		Scoreboard ToggleManage 251 51 120 20
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"scoreboard.setToggleShow 2" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+rem -----------------------------------------Friendly/Score-------------------------------------------------------
+
+hudBuilder.createListNode 			Scoreboard FriendlyScoreList 10 75 389 462 19 1
+hudBuilder.setListNodeData			2
+hudBuilder.setListNodeFont 			Fonts/scoreboardFontLocal_8.dif 0
+hudBuilder.setListNodeFont 			Fonts/scoreboardFont_8.dif 1
+hudBuilder.setListNodeConCmd			1 "Scoreboard.singleClick 2"
+hudBuilder.setListNodeSelectColor		1 1 1 0
+hudBuilder.setListNodeBackgroundColor   	0.745 0.729 0.58 0.9
+hudBuilder.setListNodeBorder 			20 22 3 3
+hudBuilder.setListNodeBorderColor   		0.482 0.474 0.388 1
+hudBuilder.setListNodeScrollbar			10 3
+hudBuilder.setListNodeScrollbarColor		0.486 0.478 0.388 1
+hudBuilder.setListNodeScrollbarBackgroundColor	0.576 0.573 0.451 1
+
+rem -----------------------------------------Friendly/Header1-------------------------------------------------------
+
+hudBuilder.createPictureNode 		 Scoreboard FriendlyFlag 	17 33 18 12
+hudBuilder.setPictureNodeVariableTexture FriendlyFlagIconPathString
+
+hudBuilder.createTextNode		Scoreboard FriendlyTabLabel  40 30 74 19
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeStringVariable	FriendlyTeamNameString
+hudBuilder.setNodeColor		      	1 1 1 1
+
+hudBuilder.createTextNode		Scoreboard FriendlyWinsLabel  66 30 150 16
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 1
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_ROUNDSWON
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+hudBuilder.createTextNode		Scoreboard FriendlyWins  220 30 35 16
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable	FriendlyTeamWinsString
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+rem -----------------------------------------Friendly/Header2-------------------------------------------------------
+
+hudBuilder.createPictureNode 		Scoreboard FriendlyHeaderIcons 	231 74 150 20
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/scoreboard_icons.tga
+hudBuilder.setNodeLogicShowVariable 	NOT ToggleManage 1
+
+hudBuilder.createTextNode		Scoreboard FriendlyHeaderLabel  15 75 138 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_PLAYERNAME
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+hudBuilder.createSplitNode		Scoreboard ManageFriendlies
+hudBuilder.setNodeShowVariable		ToggleManage
+
+beginrem
+hudBuilder.createTextNode		ManageFriendlies FriendlyBuddyLabel  211 75 138 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_BUDDY
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+endrem
+
+hudBuilder.createTextNode		ManageFriendlies FriendlyVoipLabel  189 75 80 16
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_VOIP
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+hudBuilder.createTextNode		ManageFriendlies FriendlyKickLabel  281 75 88 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_KICKVOTE
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+rem -----------------------------------------Friendly/Footers-------------------------------------------------------
+
+hudBuilder.createListNode 		Scoreboard FriendlyTeamTotalScoreList 10 517 389 30 19 0
+hudBuilder.setListNodeData		10
+hudBuilder.setListNodeBorder 		0 0 3 6
+hudBuilder.setListNodeBorderColor   	0 0 0 0
+hudBuilder.setListNodeFont 		Fonts/scoreboardFontLocal_8.dif 0
+hudBuilder.setListNodeFont 		Fonts/scoreboardFont_8.dif 1
+hudBuilder.setNodeLogicShowVariable	NOT ToggleManage 1
+
+hudBuilder.createPictureNode 		Scoreboard FriendlyBottomLine 10 536 389 3
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/bottom.tga
+
+rem -----------------------------------------Enemy/Score-------------------------------------------------------
+
+hudBuilder.createListNode 			Scoreboard EnemyScoreList 401 75 389 462 19 1
+hudBuilder.setListNodeData			1
+hudBuilder.setListNodeFont 			Fonts/scoreboardFontLocal_8.dif 0
+hudBuilder.setListNodeFont 			Fonts/scoreboardFont_8.dif 1
+hudBuilder.setListNodeConCmd			1 "Scoreboard.singleClick 1"
+hudBuilder.setListNodeSelectColor		1 1 1 0
+hudBuilder.setListNodeBackgroundColor   	0.745 0.729 0.58 0.9
+hudBuilder.setListNodeBorder 			20 22 3 3
+hudBuilder.setListNodeBorderColor   		0.482 0.474 0.388 1
+hudBuilder.setListNodeScrollbar			10 3
+hudBuilder.setListNodeScrollbarColor		0.486 0.478 0.388 1
+hudBuilder.setListNodeScrollbarBackgroundColor	0.576 0.573 0.451 1
+
+rem -----------------------------------------Enemy/Header1-------------------------------------------------------
+
+hudBuilder.createPictureNode 		Scoreboard EnemyTab 401 26 389 50
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/team2_empty.tga
+
+hudBuilder.createPictureNode 		 Scoreboard EnemyFlag 	406 33 18 12
+hudBuilder.setPictureNodeVariableTexture EnemyFlagIconPathString
+
+hudBuilder.createTextNode		Scoreboard EnemyTabLabel  429 30 65 16
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor		      0.796 0.796 0.592 1
+hudBuilder.setTextNodeStringVariable	EnemyTeamNameString
+
+hudBuilder.createTextNode		Scoreboard EnemyWinsLabel  463 30 150 16
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 1
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_ROUNDSWON
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+hudBuilder.createTextNode		Scoreboard EnemyWins  616 30 80 16
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 2
+hudBuilder.setTextNodeStringVariable	EnemyTeamWinsString
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+rem -----------------------------------------Enemy/Header2-------------------------------------------------------
+
+hudBuilder.createPictureNode 		Scoreboard EnemylyHeaderIcons 	622 74 150 20
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/scoreboard_icons.tga
+hudBuilder.setNodeLogicShowVariable 	NOT ToggleManage 1
+
+hudBuilder.createTextNode		Scoreboard EnemyHeaderLabel  406 75 138 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SCORE_PLAYERNAME
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+hudBuilder.createSplitNode		Scoreboard ManageEnemies
+hudBuilder.setNodeShowVariable		ToggleManage
+
+beginrem
+hudBuilder.createTextNode		ManageEnemies EnemyBuddyLabel  602 75 138 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_BUDDY
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+endrem
+
+hudBuilder.createTextNode		ManageEnemies EnemyVoipLabel  588 75 80 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_VOIP
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+hudBuilder.createTextNode		ManageEnemies EnemyKickLabel  671 75 88 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_KICKVOTE
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+hudBuilder.setNodeLogicShowVariable	NOT TeamVoteOnly 1
+
+rem -----------------------------------------Enemy/Footers-------------------------------------------------------
+
+hudBuilder.createListNode 		Scoreboard EnemyTeamTotalScoreList 401 517 389 30 19 0
+hudBuilder.setListNodeData		9
+hudBuilder.setListNodeBorder 		0 0 3 6
+hudBuilder.setListNodeBorderColor   	0 0 0 0
+hudBuilder.setListNodeFont 		Fonts/scoreboardFontLocal_8.dif 0
+hudBuilder.setListNodeFont 		Fonts/scoreboardFont_8.dif 1
+hudBuilder.setNodeLogicShowVariable	NOT ToggleManage 1
+
+hudBuilder.createPictureNode 		Scoreboard EnemyBottomLine 401 536 389 3
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/bottom.tga
+
+rem -----------------------------------------Help-------------------------------------------------------
+
+hudBuilder.createPictureNode 		Scoreboard HelpBackground 10 540 780 18
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/staticInfoBackground.tga
+
+hudBuilder.createTextNode		Scoreboard ActivateMouseHelpText 10 540 780 18
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_SCOREBOARD_HELP_ACTIVATE_MOUSE
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1

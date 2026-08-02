@@ -1,0 +1,128 @@
+hudBuilder.createSplitNode		IngameHud CommanderRadio
+hudBuilder.setNodeShowVariable 		CommanderRadioShow
+hudBuilder.setNodeInTime 		0.2
+hudBuilder.setNodeOutTime 		0
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createSplitNode		CommanderRadio CommanderRadioButtons
+hudBuilder.setNodeColor			1 1 1 0.7
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio1 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_commend TCSquadId" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio2 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_rebuke TCSquadId" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio3 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_followorders TCSquadLeader" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio4 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_artilleryheadsup TCSquadLeader" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio5 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_artilleryavailable TCSquadLeader" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio6 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_supplydropavailable TCSquadLeader" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio7 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_uavavailable TCSquadLeader" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio8 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage PLAYER_CONFIRM_sorry TCSquadId" 0
+
+hudBuilder.createButtonNode 		CommanderRadioButtons CommanderRadio9 370 20 141 15
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapSquadOrderOn.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapSquadOrderOff.tga
+hudBuilder.setButtonNodeConCmd		"CommanderMenu.sendRadioMessage COMMSL_COMRADIO_divide TCSquadId" 0
+
+hudBuilder.createTransformListNode		CommanderRadioButtons CommanderRadioButtonList 0 0 800 600 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.addTransformListNode			CommanderRadio1 
+hudBuilder.addTransformListNode			CommanderRadio2 
+hudBuilder.addTransformListNode			CommanderRadio3 
+hudBuilder.addTransformListNode			CommanderRadio4 
+hudBuilder.addTransformListNode			CommanderRadio5 
+hudBuilder.addTransformListNode			CommanderRadio6 
+hudBuilder.addTransformListNode			CommanderRadio7
+hudBuilder.addTransformListNode			CommanderRadio8
+hudBuilder.addTransformListNode			CommanderRadio9
+
+hudBuilder.createSplitNode		CommanderRadio CommanderRadioText
+hudBuilder.setNodeColor			0.82 0.82 0.61 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText1 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_commendsquad
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText2 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_rebukesquad
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText3 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_followorders
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText4 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_moveartillery
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText5 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_artilleryavailable
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText6 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_suppliesavailable
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText7 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_uavavailable
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText8 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_sorry
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTextNode		CommanderRadioText CommanderRadioText9 370 20 141 15
+hudBuilder.setTextNodeStyle		Fonts/dropDownFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_COMRADIO_BUTTON_dividesquad
+hudBuilder.setNodeOffset		5 1
+
+hudBuilder.createTransformListNode		CommanderRadioText CommanderRadioLabelList 0 0 800 600 1
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.setTranformListNodeOffset		0 -2
+hudBuilder.addTransformListNode			CommanderRadioText1 
+hudBuilder.addTransformListNode			CommanderRadioText2 
+hudBuilder.addTransformListNode			CommanderRadioText3 
+hudBuilder.addTransformListNode			CommanderRadioText4 
+hudBuilder.addTransformListNode			CommanderRadioText5 
+hudBuilder.addTransformListNode			CommanderRadioText6 
+hudBuilder.addTransformListNode			CommanderRadioText7 
+hudBuilder.addTransformListNode			CommanderRadioText8 
+hudBuilder.addTransformListNode			CommanderRadioText9 

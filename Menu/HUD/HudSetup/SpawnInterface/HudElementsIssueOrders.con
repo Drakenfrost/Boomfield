@@ -1,0 +1,69 @@
+hudBuilder.createSplitNode		IngameHud IssueOrderMenu
+hudBuilder.setNodeShowVariable 		IssueOrdersShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createButtonNode 		IssueOrderMenu Order1 370 20 128 32
+hudBuilder.setButtonNodeMouseArea	1 1 97 17
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapOrderOn.dds
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapOrderOff.dds
+hudBuilder.setButtonNodeConCmd		"SquadLeader.sendOrder 0" 0
+
+hudBuilder.createButtonNode 		IssueOrderMenu Order2 370 20 128 32
+hudBuilder.setButtonNodeMouseArea	1 1 97 17
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapOrderOn.dds
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapOrderOff.dds
+hudBuilder.setButtonNodeConCmd		"SquadLeader.sendOrder 2" 0
+
+hudBuilder.createButtonNode 		IssueOrderMenu Order3 370 20 128 32
+hudBuilder.setButtonNodeMouseArea	1 1 97 17
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapOrderOn.dds
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapOrderOff.dds
+hudBuilder.setButtonNodeConCmd		"SquadLeader.sendOrder 1" 0
+
+hudBuilder.createButtonNode 		IssueOrderMenu Zoom 370 20 128 32
+hudBuilder.setButtonNodeMouseArea	1 1 97 17
+hudBuilder.setButtonNodeTexture 	2 Ingame\Minimap\Icons\minimapOrderOn.dds
+hudBuilder.setButtonNodeTexture 	1 Ingame\Minimap\Icons\minimapOrderOff.dds
+hudBuilder.setButtonNodeConCmd		"Minimap.setZoom" 0
+
+hudBuilder.createTransfomListNode		IssueOrderMenu OrderMenuButtonList 210 54 524 492 -14
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.addTransfomListNode			Order1
+hudBuilder.addTransfomListNode			Order2
+hudBuilder.addTransfomListNode			Order3
+hudBuilder.addTransfomListNode			Zoom
+
+hudBuilder.createTextNode		IssueOrderMenu SelectAttackText 300 25 98 32
+hudBuilder.setTextNodeStyle		Fonts/Onesize_Fill.dif 0
+hudBuilder.setTextNodeOutLine		Fonts/Onesize_Outline.dif
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setTextNodeString		IssueOrderMenu SelectAttackText Attack
+
+hudBuilder.createTextNode		IssueOrderMenu SelectDefendText 370 25 98 32
+hudBuilder.setTextNodeStyle		Fonts/Onesize_Fill.dif 0
+hudBuilder.setTextNodeOutLine		Fonts/Onesize_Outline.dif
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setTextNodeString		IssueOrderMenu SelectDefendText Defend
+
+hudBuilder.createTextNode		IssueOrderMenu SelectMoveText 440 25 98 32
+hudBuilder.setTextNodeStyle		Fonts/Onesize_Fill.dif 0
+hudBuilder.setTextNodeOutLine		Fonts/Onesize_Outline.dif
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_MAP_QUICKMENU_MOVE
+
+hudBuilder.createTextNode		IssueOrderMenu SelectZoomText 440 25 98 32
+hudBuilder.setTextNodeStyle		Fonts/Onesize_Fill.dif 0
+hudBuilder.setTextNodeOutLine		Fonts/Onesize_Outline.dif
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_MAP_QUICKMENU_ZOOMIN
+
+hudBuilder.createTransfomListNode		IssueOrderMenu OrderMenuLabelList 210 54 496 492 -14
+hudBuilder.setTranformListNodePosVariable	0 OrderMenuPosX
+hudBuilder.setTranformListNodePosVariable	1 OrderMenuPosY
+hudBuilder.addTransfomListNode			SelectMoveText 
+hudBuilder.addTransfomListNode			SelectDefendText
+hudBuilder.addTransfomListNode			SelectAttackText
+hudBuilder.addTransfomListNode			SelectZoomText 

@@ -1,0 +1,11 @@
+hudBuilder.createSplitNode		IngameHud DemoPlayerName
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoPlayerNameShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createTextNode		DemoPlayerName DemoPlayerNameString 0 580 800 20
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	DemoPlayerNameString
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1

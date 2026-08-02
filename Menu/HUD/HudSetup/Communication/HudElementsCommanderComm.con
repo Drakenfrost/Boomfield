@@ -1,0 +1,98 @@
+hudBuilder.createSplitNode		IngameHud CommanderRose
+hudBuilder.setNodeShowVariable 		CommanderInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createButtonNode 		CommanderRose CommanderMiddle 345 245 108 108
+hudBuilder.setButtonNodeMouseArea 	-260 -20 628 148
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_circle.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_circle.tga
+hudBuilder.setButtonNodeConCmd		"CommanderInterface.selectOrder 1" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setButtonNodeDebug		0
+hudBuilder.setNodeShowVariable 		CommanderInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createTextNode		CommanderRose CommanderMiddleLabel 376 293 47 47
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	Commander1String
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		CommanderRose CommanderUp 182 248 190 26
+hudBuilder.setButtonNodeMouseArea 	-47 -126 190 103	
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_L01.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_L01.tga
+hudBuilder.setButtonNodeConCmd		"CommanderInterface.selectOrder 2" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable  	CommanderInterfaceShow
+hudBuilder.setButtonNodeDebug		0
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeMoveShowEffect	-0.7 30
+
+hudBuilder.createTextNode		CommanderRose CommanderUpLabel 193 254 150 20
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	Commander2String
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		CommanderRose CommanderDown 285 350 228 26
+hudBuilder.setButtonNodeMouseArea 	-200 23 628 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_bottom.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_bottom.tga
+hudBuilder.setButtonNodeConCmd		"CommanderInterface.selectOrder 6" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setButtonNodeDebug		0
+hudBuilder.setNodeShowVariable  	CommanderInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeMoveShowEffect	1.57 30
+
+hudBuilder.createTextNode		CommanderRose CommanderDownLabel 353 356 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	Commander6String
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		CommanderRose CommanderRight 426 248 190 26
+hudBuilder.setButtonNodeMouseArea 	47 -126 170 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_R01.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_R01.tga
+hudBuilder.setButtonNodeConCmd		"CommanderInterface.selectOrder 7" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setButtonNodeDebug		0
+hudBuilder.setNodeShowVariable  	CommanderInterfaceShow
+hudBuilder.setNodeLogicShowVariable 	NOT InvalidVehicleDropArea 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeMoveShowEffect	-2.44 30
+hudBuilder.setNodeColor 		1.0 1.0 1.0 1
+rem hudBuilder.setNodeRGBVariables		CommanderRightNameColorRed CommanderRightNameColorGreen CommanderRightNameColorBlue
+
+
+hudBuilder.createPictureNode 		CommanderRose CommanderInvalidRight 426 248 190 26
+rem hudBuilder.setButtonNodeMouseArea 	47 -126 170 103
+hudBuilder.setPictureNodeTexture 	Ingame\Communication\Rose\unSelected_R01.tga
+hudBuilder.setNodeShowVariable  	CommanderInterfaceShow
+hudBuilder.setNodeLogicShowVariable 	AND InvalidVehicleDropArea 1
+hudBuilder.setNodeColor 		0.937 0.0 0.0 1
+
+
+hudBuilder.createTextNode		CommanderRose CommanderRightLabel 456 254 150 120
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	Commander7String
+hudBuilder.setNodeShowVariable  	CommanderInterfaceShow
+hudBuilder.setNodeLogicShowVariable 	NOT InvalidVehicleDropArea 1
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createTextNode		CommanderRose CommanderRightLabel2 456 254 150 120
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	Commander7String
+hudBuilder.setNodeShowVariable  	CommanderInterfaceShow
+hudBuilder.setNodeLogicShowVariable 	AND InvalidVehicleDropArea 1
+hudBuilder.setNodeColor 		0.6 0.6 0.55 1

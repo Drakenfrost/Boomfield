@@ -1,0 +1,1111 @@
+
+hudBuilder.createButtonNode 		IngameHud MinimizeSpawnButton 770 31 16 16
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"hudItems.setBool SetSpawnPoint 0" 3
+hudBuilder.setButtonNodeConCmd		"hudManager.setDone 1" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setNodeShowVariable 		MapFullSizeAndSpawnShow
+
+hudBuilder.createPictureNode 		IngameHud MinimizeSpawnButtonPic 770 31 16 16
+hudBuilder.setPictureNodeTexture 	Ingame/MiniMap/boxcross.tga
+hudBuilder.setNodeShowVariable 		MapFullSizeAndSpawnShow
+
+rem -----------------------------------------Spawn Timer---------------------------------------------------
+
+hudBuilder.createSplitNode		IngameHud SpawnInfo
+hudBuilder.setNodeShowVariable 		SpawnInfoShow
+hudBuilder.setNodeLogicShowVariable  	NOT ScoreboardShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.5
+hudBuilder.addNodeMoveShowEffect	-1.57 50
+
+hudBuilder.createPictureNode 		SpawnInfo TopMiddleBar 250 0 270 19
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/spawnBar_short.tga
+hudBuilder.setNodeAlphaVariable		MenuBackgroundAlpha
+
+hudBuilder.createTextNode		SpawnInfo TimeToSpawn 250 1 270 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	SpawnInfoString
+hudBuilder.setNodeColor 	        0.82 0.82 0.61 1
+
+rem -----------------------------------------Map Buttons---------------------------------------------------
+
+hudBuilder.createSplitNode		TopLayerHud MapButtons
+hudBuilder.setNodeShowVariable 		MapFullSizeAndSpawnShow
+
+hudBuilder.createPictureNode 		MapButtons MapSuicideBg 542 539 124 17
+hudBuilder.setPictureNodeTexture	Ingame/MiniMap/suicide_button.tga
+hudBuilder.setNodeShowVariable 		SuicideButtonShow
+
+hudBuilder.createButtonNode 		MapButtons SuicideButton 542 539 124 17
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.commitSuicide" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setNodeShowVariable 		SuicideButtonShow
+
+hudBuilder.createTextNode		MapButtons SuicideLabel 542 538 124 9
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+hudBuilder.setTextNodeString 	      	HUD_TEXT_MENU_SPAWN_SUICIDE
+hudBuilder.setNodeShowVariable 		SuicideButtonShow
+
+hudBuilder.createPictureNode 		MapButtons MapDoneBg 666 539 124 17
+hudBuilder.setPictureNodeTexture	Ingame/MiniMap/done_button.tga
+
+hudBuilder.createButtonNode 		MapButtons DoneButton 666 539 124 17
+hudBuilder.setButtonNodeMouseArea 	0 -5 124 22
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"hudManager.setDone 1" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+hudBuilder.createTextNode		MapButtons DoneLabel 666 538 124 9
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+hudBuilder.setTextNodeString 	      	HUD_TEXT_MENU_SPAWN_DONE
+
+
+
+rem -----------------------------------------Team Select---------------------------------------------------
+
+hudBuilder.createSplitNode		IngameHud SpawnMenu
+hudBuilder.setNodeShowVariable 		SpawnShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeMoveShowEffect	0 30
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createSplitNode		SpawnMenu TeamSelectInfo
+
+hudBuilder.createSplitNode		TeamSelectInfo Team1SelectedInfo
+hudBuilder.setNodeShowVariable 		Team1Selected
+
+hudBuilder.createSplitNode		TeamSelectInfo Team2SelectedInfo
+hudBuilder.setNodeShowVariable 		Team2Selected
+
+hudBuilder.createPictureNode 		Team2SelectedInfo SelectedTeam1SquadFolder 10 26 246 50
+hudBuilder.setPictureNodeTexture	Ingame/Respawn/team1_squad.tga
+hudBuilder.setNodeShowVariable 		MembersShow
+
+hudBuilder.createPictureNode 		Team1SelectedInfo SelectedTeam2SquadFolder 10 26 246 50
+hudBuilder.setPictureNodeTexture	Ingame/Respawn/team2_squad.tga
+hudBuilder.setNodeShowVariable 		MembersShow
+
+hudBuilder.createPictureNode 		Team2SelectedInfo SelectedTeam1KitFolder 10 26 246 50
+hudBuilder.setPictureNodeTexture	Ingame/Respawn/team1_kit.tga
+hudBuilder.setNodeShowVariable 		KitsShow
+
+hudBuilder.createPictureNode 		Team1SelectedInfo SelectedTeam2KitFolder 10 26 246 50
+hudBuilder.setPictureNodeTexture	Ingame/Respawn/team2_kit.tga
+hudBuilder.setNodeShowVariable 		KitsShow
+
+hudBuilder.createButtonNode 		TeamSelectInfo SelectTeam1 95 27 85 25
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerTeam 1" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+hudBuilder.createButtonNode 		TeamSelectInfo SelectTeam2 10 27 85 25
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerTeam 2" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+hudBuilder.createTextNode		Team2SelectedInfo SelectTeam1LabelFaded 125 28 77 19
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor 	     	1 0.792 0.043 1
+hudBuilder.setTextNodeStringVariable	Team1NameString
+
+hudBuilder.createPictureNode 		Team2SelectedInfo Team1FlagFaded 104 32 18 12
+hudBuilder.setPictureNodeVariableTexture 	Team1FlagIconPathString
+hudBuilder.setNodeColor 	       	1 1 1 0.7
+
+hudBuilder.createTextNode		Team1SelectedInfo SelectTeam1Label 125 28 77 19
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor 	      	1 1 1 1
+hudBuilder.setTextNodeStringVariable	Team1NameString
+
+hudBuilder.createPictureNode 		Team1SelectedInfo Team1SelectedFlag 104 32 18 12
+hudBuilder.setPictureNodeVariableTexture 	Team1FlagIconPathString
+
+hudBuilder.createTextNode		Team1SelectedInfo SelectTeam2LabelFaded 37 28 77 19
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+hudBuilder.setTextNodeStringVariable	Team2NameString
+
+hudBuilder.createTextNode		Team2SelectedInfo SelectTeam2Label 37 28 77 19
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor 	      	1 1 1 1
+hudBuilder.setTextNodeStringVariable	Team2NameString
+
+hudBuilder.createPictureNode 		Team2SelectedInfo Team2SelectedFlag 16 31 18 12
+hudBuilder.setPictureNodeVariableTexture 	Team2FlagIconPathString
+
+hudBuilder.createPictureNode 		Team1SelectedInfo Team2FlagFaded 16 31 18 12
+hudBuilder.setPictureNodeVariableTexture 	Team2FlagIconPathString
+hudBuilder.setNodeColor 	        1 1 1 0.7
+
+rem -----------------------------------------Show Select---------------------------------------------------
+
+hudBuilder.createSplitNode		SpawnMenu KitsSelectionInfo
+hudBuilder.setNodeShowVariable 		KitsShow
+
+hudBuilder.createSplitNode		SpawnMenu MembersSelectionInfo
+hudBuilder.setNodeShowVariable 		MembersShow
+
+hudBuilder.createButtonNode 		SpawnMenu  ShowKitsButton 14 52 103 24
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"SpawnManager.toggleMembers 0" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+hudBuilder.createButtonNode 		SpawnMenu ShowMembersButton 118 52 103 24
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"SpawnManager.toggleMembers 1" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+
+hudBuilder.createTextNode		KitsSelectionInfo ToggleMembersFadedLabel 118 53 101 24
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+hudBuilder.setTextNodeString 	      	HUD_TEXT_MENU_SPAWN_SQUAD_SQUAD
+
+hudBuilder.createTextNode		MembersSelectionInfo ToggleMembersLabel 118 53 101 24
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString 	      	HUD_TEXT_MENU_SPAWN_SQUAD_SQUAD
+hudBuilder.setNodeColor 	      	1 1 1 1
+
+hudBuilder.createTextNode		MembersSelectionInfo ToggleKitsFadedLabel 15 53 101 24
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+hudBuilder.setTextNodeString 	      	HUD_TEXT_MENU_SPAWN_KIT_KIT
+
+hudBuilder.createTextNode		KitsSelectionInfo ToggleKitsLabel 15 53 101 24
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString 	      	HUD_TEXT_MENU_SPAWN_KIT_KIT
+hudBuilder.setNodeColor 	      	1 1 1 1
+
+rem ---------------------------------------Select Kit 0-------------------------------------------------------
+
+hudBuilder.createSplitNode		KitsSelectionInfo Kit0Info
+hudBuilder.setNodeShowVariable 		Kit0Show
+
+hudBuilder.createPictureNode 		Kit0Info Kit0BackgroundIcon 10 73 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_background.tga
+
+hudBuilder.createSplitNode		Kit0Info Kit0NotSelected
+hudBuilder.setNodeLogicShowVariable  	NOT PlayerKitIcon0SelectShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit0NotSelected Kit0KitSquare 15 78 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createPictureNode 		Kit0NotSelected Kit0MiniIcon 15 78 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon0Path
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit0NotSelected SelectKit0InactiveLabel 34 77 142 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor 	      	0.792 0.792 0.588 1
+hudBuilder.setTextNodeStringVariable    KitName0String
+
+hudBuilder.createButtonNode 		Kit0NotSelected SelectKit0 10 73 246 69
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/kit_selected.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerKit 0" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitSelect" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitOver" 1
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createSplitNode		Kit0Info Kit0Selected
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setNodeShowVariable 		PlayerKitIcon0SelectShow
+hudBuilder.setNodeInTime 		0.15
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit0Selected Kit0KitSquareSelected 15 78 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createPictureNode 		Kit0Selected Kit0MiniIconSelected 15 78 16 16
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+hudBuilder.setPictureNodeVariableTexture 	KitIcon0Path
+
+hudBuilder.createPictureNode 		Kit0Selected Kit0SelectIcon 10 73 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_selected.tga
+
+hudBuilder.createTextNode		Kit0Selected SelectKit0ActiveLabel 34 77 142 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeStringVariable    KitName0String
+
+hudBuilder.createPictureNode 		Kit0Info Kit0WeaponIcon 15 95 150 44
+hudBuilder.setPictureNodeVariableTexture 	KitWeaponIcon0Path
+
+hudBuilder.createSplitNode		Kit0Info Kit0Unlockable
+hudBuilder.setNodeShowVariable  	KitUnlock0Show
+
+hudBuilder.createSplitNode		Kit0Unlockable Kit0Unlocked
+hudBuilder.setNodeShowVariable  	KitUnlockArrow0Show
+
+hudBuilder.createPictureNode 		 Kit0Unlocked Kit0AltWeaponIcon 174 77 58 17
+hudBuilder.setPictureNodeVariableTexture 	KitAltWeaponIcon0Path
+hudBuilder.setNodeColor 	         0.937 0.921 0.776 1
+
+hudBuilder.createButtonNode 		Kit0Unlocked SelectUnlock0Right 233 77 17 17
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/swapWeaponIcon2.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.selectNextUnlock 0" 0
+
+hudBuilder.createPictureNode 		Kit0Unlocked Unlock0Blink 233 77 17 17
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/swapWeaponIcon3.tga
+hudBuilder.setNodeColor 	        0.580 0.094 0.098 1
+hudBuilder.setNodeAlphaVariable		Kit0UnlockBlinkAlpha
+
+hudBuilder.createSplitNode		Kit0Unlockable Kit0NotUnlocked
+hudBuilder.setNodeLogicShowVariable  	NOT KitUnlockArrow0Show 1
+
+hudBuilder.createPictureNode 		Kit0NotUnlocked Kit0LockAltWeaponIcon 174 77 58 17
+hudBuilder.setPictureNodeVariableTexture 	KitAltWeaponIcon0Path
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit0NotUnlocked Kit0LockSquare 234 78 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		Kit0NotUnlocked Kit0Lock 234 78 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit0Info Kit0SprintAbilityIcon 177 101 13 5
+hudBuilder.setPictureNodeTexture 	Ingame/Player/Icons/Hud/sprintIcon.tga
+hudBuilder.setNodeColor 		0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 		Kit0Info Kit0SprintAbilityFaded 190 101 59 5
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createBarNode 		Kit0Info Kit0SprintAbility 3 190 101 59 5
+hudbuilder.setBarNodeTexture		1 Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setBarNodeValueVariable 	Kit0SprintAbility
+hudBuilder.setBarNodeSnap		20
+hudBuilder.setBarNodeSnapDir		1
+hudBuilder.setNodeColor 	        0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 			Kit0Info Kit0AbilityIcon0 234 114 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit0AbilityIcon0PathString
+hudBuilder.setNodeShowVariable  		Kit0AbilityIcon0Show
+
+hudBuilder.createPictureNode 			Kit0Info Kit0AbilityIcon1 216 114 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit0AbilityIcon1PathString
+hudBuilder.setNodeShowVariable  		Kit0AbilityIcon1Show
+
+hudBuilder.createPictureNode 			Kit0Info Kit0AbilityIcon2 198 114 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit0AbilityIcon2PathString
+hudBuilder.setNodeShowVariable  		Kit0AbilityIcon2Show
+
+hudBuilder.createPictureNode 			Kit0Info Kit0AbilityIcon3 180 114 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit0AbilityIcon3PathString
+hudBuilder.setNodeShowVariable  		Kit0AbilityIcon3Show
+
+hudBuilder.createPictureNode 			Kit0Info Kit0AbilityIcon4 162 114 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit0AbilityIcon4PathString
+hudBuilder.setNodeShowVariable  		Kit0AbilityIcon4Show
+
+
+rem ---------------------------------------Select Kit 1-------------------------------------------------------
+
+hudBuilder.createSplitNode		KitsSelectionInfo Kit1Info
+hudBuilder.setNodeShowVariable 		Kit1Show
+
+hudBuilder.createPictureNode 		Kit1Info Kit1BackgroundIcon 10 139 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_background.tga
+
+hudBuilder.createSplitNode		Kit1Info Kit1NotSelected
+hudBuilder.setNodeLogicShowVariable  	NOT PlayerKitIcon1SelectShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit1NotSelected Kit1KitSquare 15 144 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createPictureNode 			Kit1NotSelected Kit1MiniIcon 15 144 15 15
+hudBuilder.setPictureNodeVariableTexture 	KitIcon1Path
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit1NotSelected SelectKit1InactiveLabel 34 143 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor 	      	0.792 0.792 0.588 1
+hudBuilder.setTextNodeStringVariable    KitName1String
+
+hudBuilder.createButtonNode 		Kit1NotSelected SelectKit1 10 139 246 69
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/kit_selected.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerKit 1" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitSelect" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitOver" 1
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit1NotSelected SelectKit1InactiveLabel 34 143 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeStringVariable    KitName1String
+
+hudBuilder.createSplitNode		Kit1Info Kit1Selected
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setNodeShowVariable  	PlayerKitIcon1SelectShow
+hudBuilder.setNodeInTime 		0.15
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit1Selected Kit1KitSquareSelected 15 144 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+
+hudBuilder.createPictureNode 			Kit1Selected Kit1MiniIconSelected 15 144 15 15
+hudBuilder.setPictureNodeVariableTexture 	KitIcon1Path
+
+hudBuilder.createTextNode		Kit1Selected SelectKit1InactiveLabel 34 143 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeStringVariable    KitName1String
+
+hudBuilder.createPictureNode 		Kit1Selected Kit1SelectIcon 10 139 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_selected.tga
+
+hudBuilder.createTextNode		Kit1Selected SelectKit1ActiveLabel 34 143 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeStringVariable    KitName1String
+
+hudBuilder.createPictureNode 			Kit1Info Kit1WeaponIcon 15 161 150 44
+hudBuilder.setPictureNodeVariableTexture 	KitWeaponIcon1Path
+
+hudBuilder.createSplitNode		Kit1Info Kit1Unlockable
+hudBuilder.setNodeShowVariable  	KitUnlock1Show
+
+hudBuilder.createSplitNode		Kit1Unlockable Kit1Unlocked
+hudBuilder.setNodeShowVariable  	KitUnlockArrow1Show
+
+hudBuilder.createPictureNode 		 	Kit1Unlocked Kit1AltWeaponIcon 174 143 58 17
+hudBuilder.setPictureNodeVariableTexture 	KitAltWeaponIcon1Path
+hudBuilder.setNodeColor 	         	0.937 0.921 0.776 1
+
+hudBuilder.createButtonNode 		Kit1Unlocked SelectUnlock1Right 233 143 17 17
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/swapWeaponIcon2.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.selectNextUnlock 1" 0
+
+hudBuilder.createPictureNode 		Kit1Unlocked Unlock1Blink 233 143 17 17
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/swapWeaponIcon3.tga
+hudBuilder.setNodeColor 	        0.580 0.094 0.098 1
+hudBuilder.setNodeAlphaVariable		Kit1UnlockBlinkAlpha
+
+hudBuilder.createSplitNode		Kit1Unlockable Kit1NotUnlocked
+hudBuilder.setNodeLogicShowVariable  	NOT KitUnlockArrow1Show 1
+
+hudBuilder.createPictureNode 		 Kit1NotUnlocked Kit1LockAltWeaponIcon 174 143 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon1Path
+hudBuilder.setNodeColor 	         0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit1NotUnlocked Kit1LockSquare 234 144 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		Kit1NotUnlocked Kit1Lock 234 144 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit1Info Kit1SprintAbilityIcon 177 167 13 5
+hudBuilder.setPictureNodeTexture 	Ingame/Player/Icons/Hud/sprintIcon.tga
+hudBuilder.setNodeColor 		0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 		Kit1Info Kit1SprintAbilityFaded 190 167 59 5
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createBarNode 		Kit1Info Kit1SprintAbility 3 190 167 59 5
+hudbuilder.setBarNodeTexture		1 Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setBarNodeValueVariable 	Kit1SprintAbility
+hudBuilder.setBarNodeSnap		20
+hudBuilder.setBarNodeSnapDir		1
+hudBuilder.setNodeColor 	        0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 			Kit1Info Kit1AbilityIcon0 234 180 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit1AbilityIcon0PathString
+hudBuilder.setNodeShowVariable  		Kit1AbilityIcon0Show
+
+hudBuilder.createPictureNode 			Kit1Info Kit1AbilityIcon1 216 180 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit1AbilityIcon1PathString
+hudBuilder.setNodeShowVariable  		Kit1AbilityIcon1Show
+
+hudBuilder.createPictureNode 			Kit1Info Kit1AbilityIcon2 198 180 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit1AbilityIcon2PathString
+hudBuilder.setNodeShowVariable  		Kit1AbilityIcon2Show
+
+hudBuilder.createPictureNode 			Kit1Info Kit1AbilityIcon3 180 180 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit1AbilityIcon3PathString
+hudBuilder.setNodeShowVariable  		Kit1AbilityIcon3Show
+
+hudBuilder.createPictureNode 			Kit1Info Kit1AbilityIcon4 162 180 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit1AbilityIcon4PathString
+hudBuilder.setNodeShowVariable  		Kit1AbilityIcon4Show
+
+rem ---------------------------------------Select Kit 2-------------------------------------------------------
+
+hudBuilder.createSplitNode		KitsSelectionInfo Kit2Info
+hudBuilder.setNodeShowVariable 		Kit2Show
+
+hudBuilder.createPictureNode 		Kit2Info Kit2BackgroundIcon 10 205 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_background.tga
+
+hudBuilder.createSplitNode		Kit2Info Kit2NotSelected
+hudBuilder.setNodeLogicShowVariable  	NOT PlayerKitIcon2SelectShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit2NotSelected Kit2KitSquare 15 210 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	     	1 0.792 0.043 1
+
+hudBuilder.createPictureNode 			Kit2NotSelected Kit2MiniIcon 15 210 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon2Path
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createButtonNode 		Kit2NotSelected SelectKit2 10 205 246 69
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/kit_selected.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerKit 2" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitSelect" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitOver" 1
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit2NotSelected SelectKit2InactiveLabel 34 209 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setNodeColor 	      	0.792 0.792 0.588 1
+hudBuilder.setTextNodeStringVariable    KitName2String
+
+hudBuilder.createSplitNode		Kit2Info Kit2Selected
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setNodeShowVariable  	PlayerKitIcon2SelectShow
+hudBuilder.setNodeInTime 		0.15
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit2Selected Kit2KitSquareSelected 15 210 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+
+hudBuilder.createPictureNode 			Kit2Selected Kit2MiniIconSelected 15 210 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon2Path
+
+hudBuilder.createPictureNode 		Kit2Selected Kit2SelectIcon 10 205 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_selected.tga
+
+hudBuilder.createTextNode		Kit2Selected SelectKit2ActiveLabel 34 209 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeStringVariable    KitName2String
+
+hudBuilder.createPictureNode 			Kit2Info Kit2WeaponIcon 15 227 150 44
+hudBuilder.setPictureNodeVariableTexture 	KitWeaponIcon2Path
+
+hudBuilder.createSplitNode		Kit2Info Kit2Unlockable
+hudBuilder.setNodeShowVariable  	KitUnlock2Show
+
+hudBuilder.createSplitNode		Kit2Unlockable Kit2Unlocked
+hudBuilder.setNodeShowVariable  	KitUnlockArrow2Show
+
+hudBuilder.createPictureNode 		 Kit2Unlocked Kit2AltWeaponIcon 174 209 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon2Path
+hudBuilder.setNodeColor 	         0.937 0.921 0.776 1
+
+hudBuilder.createButtonNode 		Kit2Unlocked SelectUnlock2Right 233 209 17 17
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/swapWeaponIcon2.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.selectNextUnlock 2" 0
+
+hudBuilder.createPictureNode 		Kit2Unlocked Unlock2Blink 233 209 17 17
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/swapWeaponIcon3.tga
+hudBuilder.setNodeColor 	        0.580 0.094 0.098 1
+hudBuilder.setNodeAlphaVariable		Kit2UnlockBlinkAlpha
+
+hudBuilder.createSplitNode		Kit2Unlockable Kit2NotUnlocked
+hudBuilder.setNodeLogicShowVariable  	NOT KitUnlockArrow2Show 1
+
+hudBuilder.createPictureNode 		 Kit2NotUnlocked Kit2LockAltWeaponIcon 174 209 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon2Path
+hudBuilder.setNodeColor 	         0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit2NotUnlocked Kit2LockSquare 234 210 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		Kit2NotUnlocked Kit2Lock 234 210 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit2Info Kit2SprintAbilityIcon 177 233 13 5
+hudBuilder.setPictureNodeTexture 	Ingame/Player/Icons/Hud/sprintIcon.tga
+hudBuilder.setNodeColor 		0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 		Kit2Info Kit2SprintAbilityFaded 190 233 59 5
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createBarNode 		Kit2Info Kit2SprintAbility 3 190 233 59 5
+hudbuilder.setBarNodeTexture		1 Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setBarNodeValueVariable 	Kit2SprintAbility
+hudBuilder.setBarNodeSnap		20
+hudBuilder.setBarNodeSnapDir		1
+hudBuilder.setNodeColor 	        0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 			Kit2Info Kit2AbilityIcon0 234 246 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit2AbilityIcon0PathString
+hudBuilder.setNodeShowVariable  		Kit2AbilityIcon0Show
+
+hudBuilder.createPictureNode 			Kit2Info Kit2AbilityIcon1 216 246 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit2AbilityIcon1PathString
+hudBuilder.setNodeShowVariable  		Kit2AbilityIcon1Show
+
+hudBuilder.createPictureNode 			Kit2Info Kit2AbilityIcon2 198 246 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit2AbilityIcon2PathString
+hudBuilder.setNodeShowVariable  		Kit2AbilityIcon2Show
+
+hudBuilder.createPictureNode 			Kit2Info Kit2AbilityIcon3 180 246 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit2AbilityIcon3PathString
+hudBuilder.setNodeShowVariable  		Kit2AbilityIcon3Show
+
+hudBuilder.createPictureNode 			Kit2Info Kit2AbilityIcon4 162 246 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit2AbilityIcon4PathString
+hudBuilder.setNodeShowVariable  		Kit2AbilityIcon4Show
+
+rem ---------------------------------------Select Kit 3-------------------------------------------------------
+
+hudBuilder.createSplitNode		KitsSelectionInfo Kit3Info
+hudBuilder.setNodeShowVariable 		Kit3Show
+
+hudBuilder.createPictureNode 		Kit3Info Kit3BackgroundIcon 10 271 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_background.tga
+
+hudBuilder.createSplitNode		Kit3Info Kit3NotSelected
+hudBuilder.setNodeLogicShowVariable  	NOT PlayerKitIcon3SelectShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit3NotSelected Kit3KitSquare 15 276 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createPictureNode 			Kit3NotSelected Kit3MiniIcon 15 276 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon3Path
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createButtonNode 		Kit3NotSelected SelectKit3 10 271 246 69
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/kit_selected.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerKit 3" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitSelect" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitOver" 1
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit3NotSelected SelectKit3InactiveLabel 34 275 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setNodeColor 	      0.792 0.792 0.588 1
+hudBuilder.setTextNodeStringVariable   KitName3String
+
+hudBuilder.createSplitNode		Kit3Info Kit3Selected
+hudBuilder.setNodeColor 	      	1 1 1 1
+hudBuilder.setNodeShowVariable  	PlayerKitIcon3SelectShow
+hudBuilder.setNodeInTime 		0.15
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit3Selected Kit3KitSquareSelected 15 276 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+
+hudBuilder.createPictureNode 			Kit3Selected Kit3MiniIconSelected 15 276 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon3Path
+
+hudBuilder.createPictureNode 		Kit3Selected Kit3SelectIcon 10 271 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_selected.tga
+
+hudBuilder.createTextNode		Kit3Selected SelectKit3ActiveLabel 34 275 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setTextNodeStringVariable    KitName3String
+
+hudBuilder.createPictureNode 			Kit3Info Kit3WeaponIcon 15 293 150 44
+hudBuilder.setPictureNodeVariableTexture 	KitWeaponIcon3Path
+
+hudBuilder.createSplitNode		Kit3Info Kit3Unlockable
+hudBuilder.setNodeShowVariable  	KitUnlock3Show
+
+hudBuilder.createSplitNode		Kit3Unlockable Kit3Unlocked
+hudBuilder.setNodeShowVariable  	KitUnlockArrow3Show
+
+hudBuilder.createPictureNode 		 Kit3Unlocked Kit3AltWeaponIcon 174 274 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon3Path
+hudBuilder.setNodeColor 	         0.937 0.921 0.776 1
+
+hudBuilder.createButtonNode 		Kit3Unlocked SelectUnlock3Right 233 276 17 17
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/swapWeaponIcon2.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.selectNextUnlock 3" 0
+
+hudBuilder.createPictureNode 		Kit3Unlocked Unlock3Blink 233 276 17 17
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/swapWeaponIcon3.tga
+hudBuilder.setNodeColor 	        0.580 0.094 0.098 1
+hudBuilder.setNodeAlphaVariable		Kit3UnlockBlinkAlpha
+
+hudBuilder.createSplitNode		Kit3Unlockable Kit3NotUnlocked
+hudBuilder.setNodeLogicShowVariable  	NOT KitUnlockArrow3Show 1
+
+hudBuilder.createPictureNode 		 Kit3NotUnlocked Kit3LockAltWeaponIcon 174 274 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon3Path
+hudBuilder.setNodeColor 	         0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit3NotUnlocked Kit3LockSquare 234 277 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		Kit3NotUnlocked Kit3Lock 234 277 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit3Info Kit3SprintAbilityIcon 177 299 13 5
+hudBuilder.setPictureNodeTexture 	Ingame/Player/Icons/Hud/sprintIcon.tga
+hudBuilder.setNodeColor 		0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 		Kit3Info Kit3SprintAbilityFaded 190 299 59 5
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createBarNode 		Kit3Info Kit3SprintAbility 3 190 299 59 5
+hudbuilder.setBarNodeTexture		1 Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setBarNodeValueVariable 	Kit3SprintAbility
+hudBuilder.setBarNodeSnap		20
+hudBuilder.setBarNodeSnapDir		1
+hudBuilder.setNodeColor 	        0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 			Kit3Info Kit3AbilityIcon0 234 312 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit3AbilityIcon0PathString
+hudBuilder.setNodeShowVariable  		Kit3AbilityIcon0Show
+
+hudBuilder.createPictureNode 			Kit3Info Kit3AbilityIcon1 216 312 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit3AbilityIcon1PathString
+hudBuilder.setNodeShowVariable  		Kit3AbilityIcon1Show
+
+hudBuilder.createPictureNode 			Kit3Info Kit3AbilityIcon2 198 312 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit3AbilityIcon2PathString
+hudBuilder.setNodeShowVariable  		Kit3AbilityIcon2Show
+
+hudBuilder.createPictureNode 			Kit3Info Kit3AbilityIcon3 180 312 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit3AbilityIcon3PathString
+hudBuilder.setNodeShowVariable  		Kit3AbilityIcon3Show
+
+hudBuilder.createPictureNode 			Kit3Info Kit3AbilityIcon4 162 312 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit3AbilityIcon4PathString
+hudBuilder.setNodeShowVariable  		Kit3AbilityIcon4Show
+
+rem ---------------------------------------Select Kit 4-------------------------------------------------------
+
+hudBuilder.createSplitNode		KitsSelectionInfo Kit4Info
+hudBuilder.setNodeShowVariable 		Kit4Show
+
+hudBuilder.createPictureNode 		Kit4Info Kit4BackgroundIcon 10 337 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_background.tga
+
+hudBuilder.createSplitNode		Kit4Info Kit4NotSelected
+hudBuilder.setNodeLogicShowVariable  	NOT PlayerKitIcon4SelectShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit4NotSelected Kit4KitSquare 15 343 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createPictureNode 			Kit4NotSelected Kit4MiniIcon 15 343 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon4Path
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createButtonNode 		Kit4NotSelected SelectKit4 10 337 246 69
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/kit_selected.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerKit 4" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitSelect" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitOver" 1
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit4NotSelected SelectKit4InactiveLabel 34 342 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setNodeColor 	     	0.792 0.792 0.588 1
+hudBuilder.setTextNodeStringVariable    KitName4String
+
+hudBuilder.createSplitNode		Kit4Info Kit4Selected
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setNodeShowVariable  	PlayerKitIcon4SelectShow
+hudBuilder.setNodeInTime 		0.15
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit4Selected Kit4KitSquareSelected 15 343 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+
+hudBuilder.createPictureNode 			Kit4Selected Kit4MiniIconSelected 15 343 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon4Path
+
+hudBuilder.createPictureNode 		Kit4Selected Kit4SelectIcon 10 337 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_selected.tga
+
+hudBuilder.createTextNode		Kit4Selected SelectKit4ActiveLabel 34 342 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setTextNodeStringVariable    KitName4String
+
+hudBuilder.createPictureNode 			Kit4Info Kit4WeaponIcon 15 359 150 44
+hudBuilder.setPictureNodeVariableTexture 	KitWeaponIcon4Path
+
+hudBuilder.createSplitNode		Kit4Info Kit4Unlockable
+hudBuilder.setNodeShowVariable  	KitUnlock4Show
+
+hudBuilder.createSplitNode		Kit4Unlockable Kit4Unlocked
+hudBuilder.setNodeShowVariable  	KitUnlockArrow4Show
+
+hudBuilder.createPictureNode 		 Kit4Unlocked Kit4AltWeaponIcon 174 341 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon4Path
+hudBuilder.setNodeColor 	         0.937 0.921 0.776 1
+
+hudBuilder.createButtonNode 		Kit4Unlocked SelectUnlock4Right 233 342 17 17
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/swapWeaponIcon2.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.selectNextUnlock 4" 0
+
+hudBuilder.createPictureNode 		Kit4Unlocked Unlock4Blink 233 342 17 17
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/swapWeaponIcon3.tga
+hudBuilder.setNodeColor 	        0.580 0.094 0.098 1
+hudBuilder.setNodeAlphaVariable		Kit4UnlockBlinkAlpha
+
+hudBuilder.createSplitNode		Kit4Unlockable  Kit4NotUnlocked
+hudBuilder.setNodeLogicShowVariable  	NOT KitUnlockArrow4Show 1
+
+hudBuilder.createPictureNode 		 Kit4NotUnlocked Kit4LockAltWeaponIcon 174 341 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon4Path
+hudBuilder.setNodeColor 	         0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit4NotUnlocked Kit4LockSquare 234 343 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		Kit4NotUnlocked Kit4Lock 234 343 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit4Info Kit4SprintAbilityIcon 177 365 13 5
+hudBuilder.setPictureNodeTexture 	Ingame/Player/Icons/Hud/sprintIcon.tga
+hudBuilder.setNodeColor 		0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 		Kit4Info Kit4SprintAbilityFaded 190 365 59 5
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createBarNode 		Kit4Info Kit4SprintAbility 3 190 365 59 5
+hudbuilder.setBarNodeTexture		1 Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setBarNodeValueVariable 	Kit4SprintAbility
+hudBuilder.setBarNodeSnap		20
+hudBuilder.setBarNodeSnapDir		1
+hudBuilder.setNodeColor 	        0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 			Kit4Info Kit4AbilityIcon0 234 378 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit4AbilityIcon0PathString
+hudBuilder.setNodeShowVariable  		Kit4AbilityIcon0Show
+
+hudBuilder.createPictureNode 			Kit4Info Kit4AbilityIcon1 216 378 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit4AbilityIcon1PathString
+hudBuilder.setNodeShowVariable  		Kit4AbilityIcon1Show
+
+hudBuilder.createPictureNode 			Kit4Info Kit4AbilityIcon2 198 378 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit4AbilityIcon2PathString
+hudBuilder.setNodeShowVariable  		Kit4AbilityIcon2Show
+
+hudBuilder.createPictureNode 			Kit4Info Kit4AbilityIcon3 180 378 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit4AbilityIcon3PathString
+hudBuilder.setNodeShowVariable  		Kit4AbilityIcon3Show
+
+hudBuilder.createPictureNode 			Kit4Info Kit4AbilityIcon4 162 378 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit4AbilityIcon4PathString
+hudBuilder.setNodeShowVariable  		Kit4AbilityIcon4Show
+
+
+rem ---------------------------------------Select Kit 5-------------------------------------------------------
+
+hudBuilder.createSplitNode		KitsSelectionInfo Kit5Info
+hudBuilder.setNodeShowVariable 		Kit5Show
+
+hudBuilder.createPictureNode 		Kit5Info Kit5BackgroundIcon 10 403 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_background.tga
+
+hudBuilder.createSplitNode		Kit5Info Kit5NotSelected
+hudBuilder.setNodeLogicShowVariable  	NOT PlayerKitIcon5SelectShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.15
+hudBuilder.addNodeAlphaShowEffect
+ 
+hudBuilder.createPictureNode 		Kit5NotSelected Kit5KitSquare 15 409 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createPictureNode 			Kit5NotSelected Kit5MiniIcon 15 409 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon5Path
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit5NotSelected SelectKit5InactiveLabel 34 408 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setNodeColor 	      0.792 0.792 0.588 1
+hudBuilder.setTextNodeStringVariable    KitName5String
+
+hudBuilder.createButtonNode 		Kit5NotSelected SelectKit5 10 403 246 69
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/kit_selected.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerKit 5" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitSelect" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitOver" 1
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createSplitNode		Kit5Info Kit5Selected
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setNodeShowVariable  	PlayerKitIcon5SelectShow
+hudBuilder.setNodeInTime 		0.15
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit5Selected Kit5KitSquareSelected 15 409 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+
+hudBuilder.createPictureNode 			Kit5Selected Kit5MiniIconSelected 15 409 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon5Path
+
+hudBuilder.createPictureNode 		Kit5Selected Kit5SelectIcon 10 404 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_selected.tga
+
+hudBuilder.createTextNode		Kit5Selected SelectKit5ActiveLabel 34 408 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setTextNodeStringVariable    KitName5String
+
+hudBuilder.createPictureNode 			Kit5Info Kit5WeaponIcon 15 426 150 44
+hudBuilder.setPictureNodeVariableTexture 	KitWeaponIcon5Path
+
+hudBuilder.createSplitNode		Kit5Info Kit5Unlockable
+hudBuilder.setNodeShowVariable  	KitUnlock5Show
+
+hudBuilder.createSplitNode		Kit5Unlockable Kit5Unlocked
+hudBuilder.setNodeShowVariable  	KitUnlockArrow5Show
+
+hudBuilder.createPictureNode 		 Kit5Unlocked Kit5AltWeaponIcon 174 408 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon5Path
+hudBuilder.setNodeColor 	         0.937 0.921 0.776 1
+
+hudBuilder.createButtonNode 		Kit5Unlocked SelectUnlock5Right 233 409 17 17
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/swapWeaponIcon2.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.selectNextUnlock 5" 0
+
+hudBuilder.createPictureNode 		Kit5Unlocked Unlock5Blink 233 409 17 17
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/swapWeaponIcon3.tga
+hudBuilder.setNodeColor 	        0.580 0.094 0.098 1
+hudBuilder.setNodeAlphaVariable		Kit5UnlockBlinkAlpha
+
+hudBuilder.createSplitNode		Kit5Unlockable Kit5NotUnlocked
+hudBuilder.setNodeLogicShowVariable  	NOT KitUnlockArrow5Show 1
+
+hudBuilder.createPictureNode 		 Kit5NotUnlocked Kit5LockAltWeaponIcon 174 408 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon5Path
+hudBuilder.setNodeColor 	         0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit5NotUnlocked Kit5LockSquare 234 409 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		Kit5NotUnlocked Kit5Lock 234 409 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit5Info Kit5SprintAbilityIcon 177 431 13 5
+hudBuilder.setPictureNodeTexture 	Ingame/Player/Icons/Hud/sprintIcon.tga
+hudBuilder.setNodeColor 		0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 		Kit5Info Kit5SprintAbilityFaded 190 431 59 5
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createBarNode 		Kit5Info Kit5SprintAbility 3 190 431 59 5
+hudbuilder.setBarNodeTexture		1 Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setBarNodeValueVariable 	Kit5SprintAbility
+hudBuilder.setBarNodeSnap		20
+hudBuilder.setBarNodeSnapDir		1
+hudBuilder.setNodeColor 	        0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 			Kit5Info Kit5AbilityIcon0 234 445 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit5AbilityIcon0PathString
+hudBuilder.setNodeShowVariable  		Kit5AbilityIcon0Show
+
+hudBuilder.createPictureNode 			Kit5Info Kit5AbilityIcon1 216 445 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit5AbilityIcon1PathString
+hudBuilder.setNodeShowVariable  		Kit5AbilityIcon1Show
+
+hudBuilder.createPictureNode 			Kit5Info Kit5AbilityIcon2 198 445 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit5AbilityIcon2PathString
+hudBuilder.setNodeShowVariable  		Kit5AbilityIcon2Show
+
+hudBuilder.createPictureNode 			Kit5Info Kit5AbilityIcon3 180 445 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit5AbilityIcon3PathString
+hudBuilder.setNodeShowVariable  		Kit5AbilityIcon3Show
+
+hudBuilder.createPictureNode 			Kit5Info Kit5AbilityIcon4 162 445 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit5AbilityIcon4PathString
+hudBuilder.setNodeShowVariable  		Kit5AbilityIcon4Show
+
+
+rem ---------------------------------------Select Kit 6-------------------------------------------------------
+
+hudBuilder.createSplitNode		KitsSelectionInfo Kit6Info
+hudBuilder.setNodeShowVariable 		Kit6Show
+
+hudBuilder.createPictureNode 		Kit6Info Kit6BackgroundIcon 10 469 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_background.tga
+
+rem -------------------------------BOTTOM ROW
+
+hudBuilder.createPictureNode        Kit6Info KitBottomRow 10 535 246 3
+hudBuilder.setPictureNodeTexture    Ingame/Respawn/respawn_bottom.tga
+
+rem -------------------------------CONTINUED
+
+hudBuilder.createSplitNode		Kit6Info Kit6NotSelected
+hudBuilder.setNodeLogicShowVariable  	NOT PlayerKitIcon6SelectShow 1
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.15
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit6NotSelected Kit6KitSquare 15 475 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createPictureNode 			Kit6NotSelected Kit6MiniIcon 15 475 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon6Path
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createTextNode		Kit6NotSelected SelectKit6InactiveLabel 34 474 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setNodeColor 	      0.792 0.792 0.588 1
+hudBuilder.setTextNodeStringVariable    KitName6String
+
+hudBuilder.createButtonNode 		Kit6NotSelected SelectKit6 10 469 246 69
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/kit_selected.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.setPlayerKit 6" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitSelect" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound kitOver" 1
+hudBuilder.setNodeColor 	        1 0.792 0.043 1
+
+hudBuilder.createSplitNode		Kit6Info Kit6Selected
+hudBuilder.setNodeColor 	        1 1 1 1
+hudBuilder.setNodeShowVariable  	PlayerKitIcon6SelectShow
+hudBuilder.setNodeInTime 		0.15
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		Kit6Selected Kit6KitSquareSelected 15 475 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+
+hudBuilder.createPictureNode 			Kit6Selected Kit6MiniIconSelected 15 475 16 16
+hudBuilder.setPictureNodeVariableTexture 	KitIcon6Path
+
+hudBuilder.createPictureNode 		Kit6Selected Kit6SelectIcon 10 470 246 69
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/kit_selected.tga
+
+hudBuilder.createTextNode		Kit6Selected SelectKit6ActiveLabel 34 474 131 13
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif  2
+hudBuilder.setTextNodeStringVariable    KitName6String
+
+hudBuilder.createPictureNode 			Kit6Info Kit6WeaponIcon 15 491 150 44
+hudBuilder.setPictureNodeVariableTexture 	KitWeaponIcon6Path
+
+hudBuilder.createSplitNode		Kit6Info Kit6Unlockable
+hudBuilder.setNodeShowVariable  	KitUnlock6Show
+
+hudBuilder.createSplitNode		Kit6Unlockable Kit6Unlocked
+hudBuilder.setNodeShowVariable  	KitUnlockArrow6Show
+
+hudBuilder.createPictureNode 		 Kit6Unlocked Kit6AltWeaponIcon 174 473 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon6Path
+hudBuilder.setNodeColor 	         0.937 0.921 0.776 1
+
+hudBuilder.createButtonNode 		Kit6Unlocked SelectUnlock6Right 233 474 17 17
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/swapWeaponIcon2.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/swapWeaponIcon.tga
+hudBuilder.setButtonNodeConCmd		"spawnManager.selectNextUnlock 6" 0
+
+hudBuilder.createPictureNode 		Kit6Unlocked Unlock6Blink 233 474 17 17
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/swapWeaponIcon3.tga
+hudBuilder.setNodeColor 	        0.580 0.094 0.098 1
+hudBuilder.setNodeAlphaVariable		Kit6UnlockBlinkAlpha
+
+hudBuilder.createSplitNode		Kit6Unlockable Kit6NotUnlocked
+hudBuilder.setNodeLogicShowVariable  	NOT KitUnlockArrow6Show 1
+
+hudBuilder.createPictureNode 		 Kit6NotUnlocked Kit6LockAltWeaponIcon 174 473 58 17
+hudBuilder.setPictureNodeVariableTexture KitAltWeaponIcon6Path
+hudBuilder.setNodeColor 	         0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit6NotUnlocked Kit6LockSquare 234 475 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	        0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		Kit6NotUnlocked Kit6Lock 234 475 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createPictureNode 		Kit6Info Kit6SprintAbilityIcon 177 497 13 5
+hudBuilder.setPictureNodeTexture 	Ingame/Player/Icons/Hud/sprintIcon.tga
+hudBuilder.setNodeColor 		0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 		Kit6Info Kit6SprintAbilityFaded 190 497 59 5
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setNodeColor 	        0.678 0.663 0.525 1
+
+hudBuilder.createBarNode 		Kit6Info Kit6SprintAbility 3 190 497 59 5
+hudbuilder.setBarNodeTexture		1 Ingame/Respawn/sprintAbilityBar_full.tga
+hudBuilder.setBarNodeValueVariable 	Kit6SprintAbility
+hudBuilder.setBarNodeSnap		20
+hudBuilder.setBarNodeSnapDir		1
+hudBuilder.setNodeColor 	        0.937 0.921 0.776 1
+
+hudBuilder.createPictureNode 			Kit6Info Kit6AbilityIcon0 234 510 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit6AbilityIcon0PathString
+hudBuilder.setNodeShowVariable  		Kit6AbilityIcon0Show
+
+hudBuilder.createPictureNode 			Kit6Info Kit6AbilityIcon1 216 510 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit6AbilityIcon1PathString
+hudBuilder.setNodeShowVariable  		Kit6AbilityIcon1Show
+
+hudBuilder.createPictureNode 			Kit6Info Kit6AbilityIcon2 198 510 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit6AbilityIcon2PathString
+hudBuilder.setNodeShowVariable  		Kit6AbilityIcon2Show
+
+hudBuilder.createPictureNode 			Kit6Info Kit6AbilityIcon3 180 510 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit6AbilityIcon3PathString
+hudBuilder.setNodeShowVariable  		Kit6AbilityIcon3Show
+
+hudBuilder.createPictureNode 			Kit6Info Kit6AbilityIcon4 162 510 15 15
+hudBuilder.setPictureNodeVariableTexture 	Kit6AbilityIcon4PathString
+hudBuilder.setNodeShowVariable  		Kit6AbilityIcon4Show

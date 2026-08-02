@@ -1,0 +1,7 @@
+rem ** Set up HUD **
+
+run GeneralHudSettings.con
+
+run "Weapons/HudSetupWeapons.con"
+run "Basic/HudSetupBasic.con"
+run "Vehicles/HudSetupVehicles.con"

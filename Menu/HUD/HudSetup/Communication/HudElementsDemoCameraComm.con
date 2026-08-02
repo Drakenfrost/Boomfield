@@ -1,0 +1,61 @@
+hudBuilder.createSplitNode		IngameHud DemoCameraRose
+hudBuilder.setNodeShowVariable 		DemoCameraInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createButtonNode 		DemoCameraRose DemoCameraMiddle 345 245 108 108
+hudBuilder.setButtonNodeMouseArea 	-20 -20 148 148
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_circle.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_circle.tga
+hudBuilder.setButtonNodeConCmd		"demo.toggleCameraDemo" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable 		DemoCameraInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createTextNode		DemoCameraRose DemoCameraMiddleLabel 376 293 47 47
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	DemoCameraString
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createSplitNode		DemoCameraRose DemoPlayersItems
+hudBuilder.setNodeShowVariable 		DemoCameraInterfaceShow
+hudBuilder.setNodeLogicShowVariable	AND DemoPlayerNameShow 1
+
+hudBuilder.createButtonNode 		DemoPlayersItems DemoCameraRight 449 286 198 26
+hudBuilder.setButtonNodeMouseArea 	24 -61 170 148
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_R02.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_R02.tga
+hudBuilder.setButtonNodeConCmd		"demo.togglePlayerDemo 1" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable 		DemoCameraInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	3.14 30
+	
+hudBuilder.createTextNode		DemoPlayersItems DemoCameraRightLabel 505 293 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_NEXT_PLAYER
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoPlayersItems DemoCameraLeft 151 286 198 26
+hudBuilder.setButtonNodeMouseArea 	-16 -61 190 148
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_L02.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_L02.tga
+hudBuilder.setButtonNodeConCmd		"demo.togglePlayerDemo 0" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable  	DemoCameraInterfaceShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	0 30
+
+hudBuilder.createTextNode		DemoPlayersItems DemoCameraLeftLabel 207 293 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_PREV_PLAYER 
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+

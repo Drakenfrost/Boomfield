@@ -1,0 +1,168 @@
+hudBuilder.createSplitNode		IngameHud DemoRecRose
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecMiddle 345 245 108 108
+hudBuilder.setButtonNodeMouseArea 	-20 -20 148 148
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_circle.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_circle.tga
+hudBuilder.setButtonNodeConCmd		"demo.toggleDemoPauseOrPlay" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createTextNode		DemoRecRose DemoRecMiddleLabel 376 293 47 47
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeStringVariable	DemoPausePlayString
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecUp 285 222 228 26
+hudBuilder.setButtonNodeMouseArea	40 -100 148 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_top.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_top.tga
+hudBuilder.setButtonNodeConCmd		"demo.restartDemo" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	-1.57 30
+
+hudBuilder.createTextNode		DemoRecRose DemoRecUpLabel 353 229 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_RESTART
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecUpRight 426 251 190 26
+hudBuilder.setButtonNodeMouseArea 	47 -129 170 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_R01.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_R01.tga
+hudBuilder.setButtonNodeConCmd		"game.simulationRate 100" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	-2.44 30
+
+hudBuilder.createTextNode		DemoRecRose DemoRecUpRightLabel 488 257 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_NORMAL
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecRight 449 286 198 26
+hudBuilder.setButtonNodeMouseArea 	24 -61 170 148
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_R02.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_R02.tga
+hudBuilder.setButtonNodeConCmd		"game.simulationRate 150" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	3.14 30
+	
+hudBuilder.createTextNode		DemoRecRose DemoRecRightLabel 505 293 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_FAST_1
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecDownRight 426 321 190 26
+hudBuilder.setButtonNodeMouseArea 	47 52 170 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_R03.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_R03.tga
+hudBuilder.setButtonNodeConCmd		"game.simulationRate 300" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	2.44 30
+
+hudBuilder.createTextNode		DemoRecRose DemoRecDownRightLabel 483 327 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_FAST_2
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecDown 285 350 228 26
+hudBuilder.setButtonNodeMouseArea 	40 23 148 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Selected_bottom.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\unSelected_bottom.tga
+hudBuilder.setButtonNodeConCmd		"demo.shutdownDemo" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	1.57 30
+
+hudBuilder.createTextNode		DemoRecRose DemoRecDownLabel 353 356 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_QUIT
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecDownLeft 182 321 190 26
+hudBuilder.setButtonNodeMouseArea 	-47 52 190 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_L03.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_L03.tga
+hudBuilder.setButtonNodeConCmd		"game.simulationRate 50" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	0.7 30
+
+hudBuilder.createTextNode		DemoRecRose DemoRecDownLeftLabel 229 327 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_SLOW_1
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecLeft 151 286 198 26
+hudBuilder.setButtonNodeMouseArea 	-16 -61 190 148
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_L02.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_L02.tga
+hudBuilder.setButtonNodeConCmd		"game.simulationRate 25" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	0 30
+
+hudBuilder.createTextNode		DemoRecRose DemoRecLeftLabel 207 293 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_SLOW_2
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1
+
+hudBuilder.createButtonNode 		DemoRecRose DemoRecUpLeft 182 251 190 26
+hudBuilder.setButtonNodeMouseArea 	-47 -129 190 103
+hudBuilder.setButtonNodeTexture 	2 Ingame\Communication\Rose\Squad_Selected_L01.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame\Communication\Rose\Squad_unSelected_L01.tga
+hudBuilder.setButtonNodeConCmd		"game.simulationRate 10" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable		DemoShow 
+hudBuilder.setNodeLogicShowVariable	AND DemoRecInterfaceShow 1
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNoDemoveShowEffect	-0.7 30
+
+hudBuilder.createTextNode		DemoRecRose DemoRecUpLeftLabel 229 257 85 17
+hudBuilder.setTextNodeStyle		Fonts/commRoseFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_HUD_DEMO_SLOW_3
+hudBuilder.setNodeColor 		0.937 0.929 0.831 1

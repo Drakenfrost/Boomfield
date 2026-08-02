@@ -1,0 +1,11 @@
+rem ** Set up Spawn interface HUD **
+
+run HudElementsMap.con
+run HudElementsSpawn.con
+run HudElementsSquadsNew.con
+run HudElementsCommander.con
+run HudElementsSquadLeaderMenu.con
+run HudElementsCommanderMenu.con
+run HudElementsCommanderRadio.con
+run HudElementsMapMenu.con
+run HudElementsChoiceMenu.con

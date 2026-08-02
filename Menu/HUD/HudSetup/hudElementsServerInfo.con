@@ -1,0 +1,152 @@
+
+hudBuilder.createSplitNode		Scoreboard ServerInfoLayer
+hudBuilder.setNodeLogicShowVariable	NOT SinglePlayerActive 1
+
+rem ------------------------- Dummy button making clicking outside the menu disabling the serverinfo ---------------
+
+hudBuilder.createButtonNode 		ServerInfoLayer DummyButtonServerInfo 0 0 800 600
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"hudItems.setBool ServerInfoSelected 0" 0
+hudBuilder.setButtonNodeConCmd		"hudItems.setBool ServerInfoSelected 0" 3
+hudBuilder.setNodeShowVariable 		ServerInfoSelected
+
+rem ----------------------------------------Bar and button----------------------------------------------------------
+
+hudBuilder.createPictureNode 		ServerInfoLayer ServerInfoBar 10 0 310 18
+hudBuilder.setNodeColor 		0.481 0.474 0.388 1
+hudBuilder.setNodeLogicShowVariable 	NOT ServerInfoSelected 1
+
+hudBuilder.createPictureNode 		ServerInfoLayer IsFavouriteServer 12 1 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/Icons/kickvote_yes.tga
+hudBuilder.setNodeLogicShowVariable 	NOT ServerInfoSelected 1
+hudBuilder.setNodeLogicShowVariable 	AND ServerIsFavourite 1
+
+hudBuilder.createPictureNode 		ServerInfoLayer NotFavouriteServer 12 1 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/Icons/kickvote_no.tga
+hudBuilder.setNodeLogicShowVariable 	NOT ServerInfoSelected 1
+hudBuilder.setNodeLogicShowVariable 	NOT ServerIsFavourite 1
+
+hudBuilder.createTextNode		ServerInfoLayer ServerInfoBarText 30 1 280 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		EOR_4_serverinfo 
+hudBuilder.setNodeColor 		1 0.792 0.043 1
+hudBuilder.setNodeLogicShowVariable 	NOT ServerInfoSelected 1
+
+hudBuilder.createTextNode		ServerInfoLayer ServerInfoBarText2 5 1 290 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	ServerIPString
+hudBuilder.setNodeColor 		1 0.792 0.043 1
+
+hudBuilder.createPictureNode 		ServerInfoLayer ServerInfoArrowDown 303 6 9 6
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/arrowDown.tga
+hudBuilder.setNodeLogicShowVariable 	NOT ServerInfoSelected 1
+
+hudBuilder.createButtonNode 		ServerInfoLayer ServerInfoSelect 300 0 20 18
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"hudItems.setBool ServerInfoSelected 1" 0
+
+
+rem -----------------------------------------Server Info------------------------------------------------------------
+
+hudBuilder.createSplitNode		ServerInfoLayer ServerInfo
+hudBuilder.setNodeShowVariable		ServerInfoSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeMoveShowEffect	-1.57 78
+
+hudBuilder.createButtonNode 		ServerInfo DummyButton2ServerInfo 10 0 310 97
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+
+hudBuilder.createPictureNode 		ServerInfo ServerInfoBackground 10 0 310 97
+hudBuilder.setNodeColor 		0.745 0.729 0.58 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoServerNameLabel 15 1 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HEADER_servername 
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoServerName 15 1 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	ServerNameString
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoMapNameLabel 15 15 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HEADER_mapname
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoMapName 15 15 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	ActiveLevel
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoIPLabel 15 29 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		CONNECT_ipaddress 
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoIP 15 29 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	ServerIPString
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoPortLabel 15 43 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		CONNECT_port
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createTextNode		ServerInfo GameInfoPort 15 43 300 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	ServerPortString
+hudBuilder.setNodeColor 		0.45 0.427 0.427 1
+
+hudBuilder.createButtonNode 		ServerInfo AddToFavourites 15 59 147 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight6.tga
+hudBuilder.setButtonNodeConCmd		"hudManager.addFavouriteServer 1" 3
+hudBuilder.setNodeColor 	        1 1 1 1
+
+hudBuilder.createTextNode		ServerInfo AddFavouritesLabel 15 59 147 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_ADD_FAVOURITE
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createButtonNode 		ServerInfo RemoveFromFavourites 170 59 147 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight6.tga
+hudBuilder.setButtonNodeConCmd		"hudManager.addFavouriteServer 0" 3
+hudBuilder.setNodeColor 	        1 1 1 1
+
+hudBuilder.createTextNode		ServerInfo RemoveFromFavouritesLabel 170 59 147 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_REMOVE_FAVOURITE
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createPictureNode 		ServerInfo ServerInfoDownBar 11 78 308 18
+hudBuilder.setNodeColor 		0.481 0.474 0.388 1
+
+hudBuilder.createPictureNode 		ServerInfo IsFavouriteServer2 12 79 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/Icons/kickvote_yes.tga
+hudBuilder.setNodeShowVariable 		ServerIsFavourite
+
+hudBuilder.createPictureNode 		ServerInfo NotFavouriteServer2 12 79 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/Icons/kickvote_no.tga
+hudBuilder.setNodeLogicShowVariable 	NOT ServerIsFavourite 1
+
+hudBuilder.createTextNode		ServerInfo ServerInfoBarTextDown 30 78 290 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		EOR_4_serverinfo 
+hudBuilder.setNodeColor 		0.796 0.796 0.592 1
+
+hudBuilder.createPictureNode 		ServerInfo ServerInfoArrowUp 303 85 9 6
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/arrowUp.tga
+
+hudBuilder.createButtonNode 		ServerInfo ServerInfoDeselect 300 83 20 18
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"hudItems.setBool ServerInfoSelected 0" 0

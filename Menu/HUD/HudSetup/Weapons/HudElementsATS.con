@@ -1,0 +1,63 @@
+hudBuilder.createSplitNode		IngameHud ATSHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 59
+
+
+
+
+
+rem --------------------------------------------Lockring----------------------------------------------------------
+
+hudBuilder.createSplitNode		ATSHud ATSCrosshair
+hudBuilder.setNodeShowVariable 		HasMissileConnection
+hudBuilder.addNodeBlendEffect		7 2
+
+hudBuilder.createPictureNode 		ATSCrosshair ATSCrosshairUp 336 236 64 64
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/ATS/ATS_crosshair.tga
+
+hudBuilder.createPictureNode 		ATSCrosshair ATSCrosshairDown 400 300 64 64
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/ATS/ATS_crosshair.tga
+hudBuilder.setPictureNodeRotation 	180
+
+hudBuilder.createPictureNode 		ATSCrosshair ATSCrosshairLeft 400 236 64 64
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/ATS/ATS_crosshair.tga
+hudBuilder.setPictureNodeRotation 	270
+
+hudBuilder.createPictureNode 		ATSCrosshair ATSCrosshairRight 336 300 64 64
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/ATS/ATS_crosshair.tga
+hudBuilder.setPictureNodeRotation 	90
+
+rem --------------------------------------------Crosshair----------------------------------------------------------
+
+hudBuilder.createSplitNode		ATSHud ATSCross
+hudBuilder.createPictureNode		ATSCross ATSCrossUp 336 236 64 64
+hudBuilder.setPictureNodeTexture	Ingame/Weapons/Icons/Hud/ATS/ATS_sight.tga
+hudBuilder.setNodeColor			0 0 0 1
+
+hudBuilder.createPictureNode		ATSCross ATSCrossDown 400 300 64 64
+hudBuilder.setPictureNodeTexture	Ingame/Weapons/Icons/Hud/ATS/ATS_sight.tga
+hudBuilder.setNodeColor			0 0 0 1
+hudBuilder.setPictureNodeRotation	180
+
+hudBuilder.createPictureNode		ATSCross ATSCrossLeft 400 236 64 64
+hudBuilder.setPictureNodeTexture	Ingame/Weapons/Icons/Hud/ATS/ATS_sight.tga
+hudBuilder.setNodeColor			0 0 0 1
+hudBuilder.setPictureNodeRotation	270
+
+hudBuilder.createPictureNode		ATSCross ATSCrossRight 336 300 64 64
+hudBuilder.setPictureNodeTexture	Ingame/Weapons/Icons/Hud/ATS/ATS_sight.tga
+hudBuilder.setNodeColor			0 0 0 1
+hudBuilder.setPictureNodeRotation	90
+
+rem -------------------------------------------- Hit Indication ---------------------------------------------------
+
+beginrem
+hudBuilder.createPictureNode 		ATSHud HitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeRGBVariables		CrossHairColorRed CrossHairColorGreen CrossHairColorBlue
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 		HitIndicatorIconShow
+hudBuilder.addNodeBlendEffect		7 2
+endrem
+
+
+

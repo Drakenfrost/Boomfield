@@ -1,0 +1,128 @@
+hudBuilder.createSplitNode		VehicleHuds J10PilotHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 44
+hudBuilder.setNodeLogicShowVariable 	OR GuiIndex 45
+hudBuilder.addNodeBlendEffect		7 2
+
+rem -------------- crosshair----------------
+
+hudBuilder.createPictureNode		J10PilotHud J10Cross 380 280 41 41
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\crosshair.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+rem -------------------------------------- Hit Indication----------------------------------------------------
+   
+hudBuilder.createPictureNode 		J10PilotHud J10PilotHitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeColor 		0.486 0.773 0.463 1
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha
+hudBuilder.setNodeShowVariable 		HitIndicatorIconShow
+
+rem -------------- compass/sidebar/horizon ----------------
+
+hudBuilder.createCompassNode 		J10PilotHud J10Compass 3 290 140 220 32 1 0
+hudBuilder.setCompassNodeTexture 	1 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Navigation\compas.tga
+hudBuilder.setCompassNodeTextureSize	576 24
+hudBuilder.setCompassNodeBorder		0 0 0 0
+hudBuilder.setCompassNodeValueVariable	VehicleAngle
+hudBuilder.setCompassNodeOffset		284
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createPictureNode		J10PilotHud J10HeadingArrow 397 147 7 16
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Navigation\compassArrow.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createPictureNode		J10PilotHud J10MissileSideBarLeft 271 172 9 219
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Navigation\sideBar.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+rem hudBuilder.setPictureNodeRotateVariable VehicleBanking
+rem hudBuilder.setPictureNodeCenterPoint	0 0	
+
+hudBuilder.createPictureNode		J10PilotHud J10MissileSideBarRight 520 172 9 219
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Navigation\sideBar.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+rem hudBuilder.setPictureNodeRotateVariable VehicleBanking
+rem hudBuilder.setPictureNodeCenterPoint	0 0
+
+hudBuilder.createPictureNode		J10PilotHud J10MissileHorizon 285 299 231 3
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Navigation\horizon.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+hudBuilder.setNodePosVariable		1 AngleOfAttack
+hudBuilder.setPictureNodeRotateVariable VehicleBanking
+hudBuilder.setPictureNodeCenterPoint 	0 0
+
+hudBuilder.createPictureNode		J10PilotHud J10SpeedBox 230 279 35 31
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Navigation\speedBox.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createTextNode		J10PilotHud J10SpeedValue 219 297 40 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setTextNodeStringVariable	SpeedString
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createPictureNode		J10PilotHud J10AltitudeBox 539 295 35 15
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Navigation\altBox.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createTextNode		J10PilotHud J10AltitudeValue 527 297 40 10
+hudBuilder.setTextNodeStyle		Fonts/vehicleHudFont_6.dif 1
+hudBuilder.setTextNodeStringVariable	AltitudeString
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+rem --------------- heatseeking ---------------------
+
+hudBuilder.createSplitNode		J10PilotHud J10HeatHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 44
+
+hudBuilder.createPictureNode		J10HeatHud J10CrossCircle 301 199 199 203
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\crosshairCircle.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createObjectMarkerNode 		J10HeatHud J10Marker 224 106 350 388
+hudBuilder.setObjectMarkerNodeTexture 		0 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockBoxFriendly.tga
+hudBuilder.setObjectMarkerNodeTexture 		1 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockBox.tga
+hudBuilder.setObjectMarkerNodeTexture 		2 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockBoxLocked.tga
+hudBuilder.setObjectMarkerNodeTexture 		3 Ingame\Vehicles\Icons\Hud\Land\Tunguska\rangeLine.tga
+hudBuilder.setObjectMarkerNodeTextureSize	0 56 56
+hudBuilder.setObjectMarkerNodeTextureSize	1 56 56
+hudBuilder.setObjectMarkerNodeTextureSize	2 56 56
+hudBuilder.setObjectMarkerNodeTextureSize	3 16 256
+hudBuilder.setObjectMarkerNodeObjects 		4
+hudBuilder.setObjectMarkerNodeWeapon 		1
+hudBuilder.setNodeColor		 		0.486 0.773 0.463 1
+
+beginrem
+
+hudBuilder.createPictureNode		J10HeatHud J10MissileCircle 312 412 176 176
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockArea.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+endrem
+rem --------------- bomb ----------------------------
+
+hudBuilder.createSplitNode		J10PilotHud J10BombHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 45
+
+hudBuilder.createObjectMarkerNode 		J10BombHud J10GroundTargetMarker 224 106 350 388
+hudBuilder.setObjectMarkerNodeTexture 		0 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockBoxFriendly.tga
+hudBuilder.setObjectMarkerNodeTexture 		1 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockBox.tga
+hudBuilder.setObjectMarkerNodeTexture 		2 Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\HeatSeeking\lockBoxLocked.tga
+hudBuilder.setObjectMarkerNodeTextureSize	0 56 56
+hudBuilder.setObjectMarkerNodeTextureSize	1 56 56
+hudBuilder.setObjectMarkerNodeTextureSize	2 56 56
+hudBuilder.setObjectMarkerNodeLockOnType	1
+hudBuilder.setObjectMarkerNodeObjects 		4
+hudBuilder.setNodeColor		 		0.486 0.773 0.463 1
+
+hudBuilder.createPictureNode		J10BombHud J10BombCross 380 280 41 41
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\crosshair.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createPictureNode		J10BombHud J10BombMarker 329 370 143 35
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Bombs\bomb_Markerbow.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+
+hudBuilder.createPictureNode		J10BombHud J10BombLine 399 320 3 84
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Air\Attack\Su30\Bombs\bombCrosshair_line.tga
+hudBuilder.setNodeColor		 	0.486 0.773 0.463 1
+hudBuilder.setPictureNodeRotateVariable VehicleBanking
+hudBuilder.setPictureNodeCenterPoint 	0 0

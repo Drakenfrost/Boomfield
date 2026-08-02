@@ -1,0 +1,285 @@
+
+hudBuilder.createTransformNode			IngameHud ItemSelectionHud 658 141 140 420
+hudBuilder.setNodeShowVariable			ShowItemSelect
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeAlphaShowEffect	
+
+rem -----------------------------------------Weapon 7------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot7Active 0 84 140 420
+hudBuilder.setNodeShowVariable			ItemSlot7Active
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot7Active ItemSlot7NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 7
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot7NotSelected PlayerWeaponIcon7BackFaded  0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot7NotSelected PlayerWeaponIcon7NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item7Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot7Active ItemSlot7Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 7
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot7Selected PlayerWeaponIcon7BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+
+hudBuilder.createPictureNode 			ItemSlot7Selected PlayerWeaponIcon7Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item7Icon
+
+rem -----------------------------------------Weapon 6------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot6Active 0 126 140 420
+hudBuilder.setNodeShowVariable			ItemSlot6Active
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot6Active ItemSlot6NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 6
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot6NotSelected PlayerWeaponIcon6BackFaded  0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot6NotSelected PlayerWeaponIcon6NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item6Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot6Active ItemSlot6Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 6
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot6Selected PlayerWeaponIcon6BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+
+hudBuilder.createPictureNode 			ItemSlot6Selected PlayerWeaponIcon6Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item6Icon
+
+rem -----------------------------------------Weapon 5------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot5Active 0 168 140 420
+hudBuilder.setNodeShowVariable			ItemSlot5Active
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot5Active ItemSlot5NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 5
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot5NotSelected PlayerWeaponIcon5BackFaded 0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot5NotSelected PlayerWeaponIcon5NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item5Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot5Active ItemSlot5Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 5
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot5Selected PlayerWeaponIcon5BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+
+hudBuilder.createPictureNode 			ItemSlot5Selected PlayerWeaponIcon5Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item5Icon
+
+rem -----------------------------------------Weapon 4------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot4Active 0 210 140 420
+hudBuilder.setNodeShowVariable			ItemSlot4Active
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot4Active ItemSlot4NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 4
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot4NotSelected PlayerWeaponIcon4BackFaded  0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot4NotSelected PlayerWeaponIcon4NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item4Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot4Active ItemSlot4Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 4
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot4Selected PlayerWeaponIcon4BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+
+hudBuilder.createPictureNode 			ItemSlot4Selected PlayerWeaponIcon4Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item4Icon
+
+rem -----------------------------------------Weapon 3------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot3Active 0 252 140 420
+hudBuilder.setNodeShowVariable			ItemSlot3Active
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot3Active ItemSlot3NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 3
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot3NotSelected PlayerWeaponIcon3BackFaded  0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot3NotSelected PlayerWeaponIcon3NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item3Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot3Active ItemSlot3Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 3
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot3Selected PlayerWeaponIcon3BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+
+hudBuilder.createPictureNode 			ItemSlot3Selected PlayerWeaponIcon3Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item3Icon
+
+rem -----------------------------------------Weapon 2------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot2Active 0 294 140 420
+hudBuilder.setNodeShowVariable			ItemSlot2Active
+
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot2Active ItemSlot2NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 2
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot2NotSelected PlayerWeaponIcon2BackFaded  0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot2NotSelected PlayerWeaponIcon2NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item2Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot2Active ItemSlot2Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 2
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot2Selected PlayerWeaponIcon2BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 2
+
+hudBuilder.createPictureNode 			ItemSlot2Selected PlayerWeaponIcon2Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item2Icon
+
+rem -----------------------------------------Weapon 1------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot1Active 0 336 140 420
+hudBuilder.setNodeShowVariable			ItemSlot1Active
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot1Active ItemSlot1NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 1
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot1NotSelected PlayerWeaponIcon1BackFaded  0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot1NotSelected PlayerWeaponIcon1NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item1Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot1Active ItemSlot1Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 1
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot1Selected PlayerWeaponIcon1BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 1
+
+hudBuilder.createPictureNode 			ItemSlot1Selected PlayerWeaponIcon1Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item1Icon
+
+rem -----------------------------------------Weapon 0------------------------------------------------------------------
+
+hudBuilder.createTransformNode			ItemSelectionHud ItemSlot0Active 0 378 140 420
+hudBuilder.setNodeShowVariable			ItemSlot0Active
+
+rem --------------------------------------------not selected -------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot0Active ItemSlot0NotSelected
+hudBuilder.setNodeLogicShowVariable  		NOT ItemSelectActive 0
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		0 15
+
+hudBuilder.createPictureNode 			ItemSlot0NotSelected PlayerWeaponIcon0BackFaded  0 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 0.4
+
+hudBuilder.createPictureNode 			ItemSlot0NotSelected PlayerWeaponIcon0NotSelected 0 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item0Icon
+hudBuilder.setnodeColor 			1 1 1 0.7
+
+rem --------------------------------------------selected---------------------------------------------------------------
+
+hudBuilder.createSplitNode			ItemSlot0Active ItemSlot0Selected
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 0
+hudBuilder.setNodeInTime 			0.2
+hudBuilder.setNodeOutTime 			0 
+hudBuilder.addNodeMoveShowEffect		3.14 15
+
+hudBuilder.createPictureNode 			ItemSlot0Selected PlayerWeaponIcon0BackActive -20 0 140 40
+hudBuilder.setnodeColor 			0.63529 0.6196 0.494 1
+hudBuilder.setNodeLogicShowVariable  		EQUAL ItemSelectActive 0
+
+hudBuilder.createPictureNode 			ItemSlot0Selected PlayerWeaponIcon0Selected -20 0 140 40
+hudBuilder.setPictureNodeVariableTexture 	Item0Icon
+
+
+

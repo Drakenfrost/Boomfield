@@ -1,0 +1,143 @@
+rem -----------------------------------------Vote map------------------------------------------------------------
+
+hudBuilder.createSplitNode		IngameHud MapsList
+hudBuilder.setNodeShowVariable		LevelsListShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeAlphaShowEffect
+
+rem -------------------------Dummy button making clicking outside the menu 
+
+hudBuilder.createButtonNode 		Scoreboard DummyButtonLevelList 0 0 800 600
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"levelsList.setVoteMapShow 0" 0
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+
+hudBuilder.createPictureNode 		MapsList MapListBar 332 0 188 18
+hudBuilder.setNodeColor 		0.481 0.474 0.388 1
+hudBuilder.setNodeLogicShowVariable 	NOT VoteMapSelected 1
+
+hudBuilder.createTextNode		MapsList MapBarText 337 0 150 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_MAPVOTE
+hudBuilder.setNodeColor 		1 0.792 0.043 1
+hudBuilder.setNodeLogicShowVariable 	NOT VoteMapSelected 1
+
+hudBuilder.createPictureNode 		MapsList MapBarArrowDown 505 6 9 6
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/arrowDown.tga
+hudBuilder.setNodeLogicShowVariable 	NOT VoteMapSelected 1
+
+hudBuilder.createButtonNode 		MapsList MapSelected 500 0 20 20
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"levelsList.setVoteMapShow 1" 0
+
+hudBuilder.createListNode 			MapsList MapList 332 0 188 395 19 1
+hudBuilder.setListNodeData			12
+hudBuilder.setListNodeFont			Fonts/scoreboardFont_8.dif 0
+hudBuilder.setListNodeConCmd			1 "levelsList.singleClick 1"
+hudBuilder.setListNodeSelectColor		1 1 1 0
+hudBuilder.setListNodeBackgroundColor   	0.745 0.729 0.58 1
+hudBuilder.setListNodeBorder 			20 73 3 3
+hudBuilder.setListNodeBorderColor   		0.481 0.474 0.388 1
+hudBuilder.setListNodeScrollbar			10 3
+hudBuilder.setListNodeScrollbarColor		0.486 0.478 0.388 1
+hudBuilder.setListNodeScrollbarBackgroundColor	0.576 0.573 0.451 1
+hudBuilder.setNodeShowVariable 			VoteMapSelected
+rem OR LevelsListShow
+hudBuilder.setNodeInTime 			0.3
+hudBuilder.setNodeOutTime 			0.3
+hudBuilder.addNodeMoveShowEffect		-1.57 376
+
+hudBuilder.createPictureNode 		MapsList MapListDownBar	332 377 188 18
+hudBuilder.setNodeColor 		0.481 0.474 0.388 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createTextNode		MapsList MapBarDownText 340 377 150 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SQUAD_MANAGE_MAPVOTE
+hudBuilder.setNodeColor 		1 0.792 0.043 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createPictureNode 		MapsList MapBarArrowUp 505 383 9 6
+hudBuilder.setPictureNodeTexture 	Ingame/Scoreboard/arrowUp.tga
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createButtonNode 		MapsList MapSelectedDropped 500 377 20 20
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"levelsList.setVoteMapShow 0" 0
+rem hudBuilder.setNodeShowVariable 		VoteMapSelected
+
+hudBuilder.createTextNode		MapsList VoteMapTopText 340 1 166 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 1
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_INITIATE_MAP_VOTE
+hudBuilder.setNodeColor 		1 1 1 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createTextNode		MapsList VotePlayerCountLabel 340 324 150 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_MAP_VOTE_NOOFPLAYERS
+hudBuilder.setNodeColor 		0.82 0.82 0.61 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createTextNode		MapsList VotePlayerCount 490 324 20 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	TotalNoOfPlayers
+hudBuilder.setNodeColor 		0.82 0.82 0.61 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createTextNode		MapsList VoteMapYesCountLabel 340 342 150 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_MAP_VOTE_YESVOTES
+hudBuilder.setNodeColor 		0.82 0.82 0.61 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createTextNode		MapsList VoteMapYesCount 490 342 20 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	YesVotes
+hudBuilder.setNodeColor 		0.82 0.82 0.61 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createTextNode		MapsList VoteMapNoCountLabel 340 360 150 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_MAP_VOTE_NOVOTES
+hudBuilder.setNodeColor 		0.82 0.82 0.61 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376
+
+hudBuilder.createTextNode		MapsList VoteMapNoCount 490 360 20 12
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	NoVotes
+hudBuilder.setNodeColor 		0.82 0.82 0.61 1
+hudBuilder.setNodeShowVariable 		VoteMapSelected
+hudBuilder.setNodeInTime 		0.3
+hudBuilder.setNodeOutTime 		0.3
+hudBuilder.addNodeMoveShowEffect	-1.57 376

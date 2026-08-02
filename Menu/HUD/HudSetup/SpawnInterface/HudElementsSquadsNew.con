@@ -1,0 +1,244 @@
+hudBuilder.createSplitNode		MembersSelectionInfo SquadMembersNew
+
+rem ----------------------------------------Invite list------------------------------------------------------
+
+hudBuilder.createTransformNode		SquadMembersNew SquadInvite 258 91 210 447
+hudBuilder.setNodeShowVariable 		InviteListShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeMoveShowEffect	0 30
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		SquadInvite InviteTopTexture 0 -20 210 20
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/squadmanage_top.tga
+
+hudBuilder.createTextNode		SquadInvite SquadInviteTopLabel	6 -16 200 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_MANAGESQUAD
+hudBuilder.setNodeColor 	      1 1 1 1
+
+hudBuilder.createListNode 		SquadInvite SquadInviteList 0 0 210 445 19 1
+hudBuilder.setListNodeData		8
+hudBuilder.setListNodeFont 		Fonts/squadListFontLocal_8.dif 0
+hudBuilder.setListNodeFont 		Fonts/squadListFont_8.dif 1
+hudBuilder.setListNodeConCmd		1 SquadMenu.singleClickInvite
+hudBuilder.setListNodeConCmd		2 SquadMenu.doubleClickInvite
+hudBuilder.setListNodeConCmd		1 "sound.playSound kitSelect"
+hudBuilder.setListNodeSelectColor	1 1 1 0
+hudBuilder.setListNodeBackgroundColor   	0.745 0.729 0.58 1
+hudBuilder.setListNodeBorder 		3 22 3 3
+hudBuilder.setListNodeBorderColor   0.486 0.478 0.388 1
+hudBuilder.setListNodeScrollbar	 10 3
+hudBuilder.setListNodeScrollbarColor		0.486 0.478 0.388 1
+hudBuilder.setListNodeScrollbarBackgroundColor	0.576 0.573 0.451 1
+
+hudBuilder.createButtonNode 		SquadInvite SquadInviteCancel 3 426 100 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight6.tga
+hudBuilder.setButtonNodeConCmd	"SquadMenu.setShowInviteList 0" 3
+hudBuilder.setButtonNodeConCmd	"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd	"sound.playSound roseOver" 1
+hudBuilder.setNodeColor 	      1 1 1 1
+
+hudBuilder.createTextNode		SquadInvite SquadInviteCancelLabel	3 426 100 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_CANCEL
+hudBuilder.setNodeColor 	      1 0.792 0.043 1
+
+hudBuilder.createButtonNode 		SquadInvite SquadInviteApply 108 426 100 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight6.tga
+hudBuilder.setButtonNodeConCmd	"SquadMenu.applyInviteList" 3
+hudBuilder.setButtonNodeConCmd	"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd	"sound.playSound roseOver" 1
+hudBuilder.setNodeColor 	        1 1 1 1
+
+hudBuilder.createTextNode		SquadInvite SquadInviteApplyLabel 108 426 100 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_APPLY
+hudBuilder.setNodeColor 	      1 0.792 0.043 1
+
+
+
+rem ----------------------------------------End texture------------------------------------------------------
+
+hudBuilder.createPictureNode 		SquadInvite InviteBottomTexture 0 445 210 3
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/respawn_bottom.tga
+
+rem ----------------------------------------Member list------------------------------------------------------
+
+hudBuilder.createListNode 			SquadMembersNew SquadMemberList 10 74 246 462 19 1
+hudBuilder.setListNodeData			5
+hudBuilder.setListNodeFont 			Fonts/squadListFontLocal_8.dif 0
+hudBuilder.setListNodeFont 			Fonts/squadListFont_8.dif 1
+hudBuilder.setListNodeConCmd			1 SquadMenu.singleClickNew
+hudBuilder.setListNodeConCmd			2 SquadMenu.doubleClickNew
+hudBuilder.setListNodeConCmd			1 "sound.playSound kitSelect"
+hudBuilder.setListNodeSelectColor		1 1 1 0
+hudBuilder.setListNodeBackgroundColor   	0.745 0.729 0.58 1
+hudBuilder.setListNodeBorder 			20 22 3 3
+hudBuilder.setListNodeBorderColor   		0.486 0.478 0.388 1
+hudBuilder.setListNodeScrollbar			10 3
+hudBuilder.setListNodeScrollbarColor		0.486 0.478 0.388 1
+hudBuilder.setListNodeScrollbarBackgroundColor	0.576 0.573 0.451 1
+
+rem ----------------------------------------End texture------------------------------------------------------
+
+hudBuilder.createPictureNode 		SquadMembersNew SquadBottomTexture 10 536 246 3
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/respawn_bottom.tga
+
+rem ---------------------------------------Unassigned Info-------------------------------------------------------
+
+hudBuilder.createTextNode		SquadMembersNew NrOfSquads 15 75 115 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeStringVariable	NrOfSquads
+hudBuilder.setNodeColor 	        0.286 0.274 0.219 1
+
+hudBuilder.createTextNode		SquadMembersNew NrOfUnassigned	132 75 120 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 1
+hudBuilder.setTextNodeStringVariable	NrOfUnassigned
+hudBuilder.setNodeColor 	        0.286 0.274 0.219 1
+
+
+
+rem ----------------------------------------Squad create------------------------------------------------------
+
+hudBuilder.createSplitNode		SquadMembersNew SquadCreateStart
+hudBuilder.setNodeLogicShowVariable	NOT SquadCreateShow 1
+
+hudBuilder.createButtonNode 		SquadCreateStart CreateSquadSelect 13 517 118 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight6.tga
+hudBuilder.setButtonNodeConCmd		"SquadMenu.setSquadCreateSelect 1" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+
+hudBuilder.createTextNode		SquadCreateStart SquadCreateSelectLabel 13 517 118 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_CREATESQUAD
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+hudBuilder.createSplitNode		SquadCreateStart SquadManageInfo
+hudBuilder.setNodeShowVariable		IsSquadLeader
+
+hudBuilder.createButtonNode 		SquadManageInfo SquadManage 135 517 118 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight6.tga
+hudBuilder.setButtonNodeConCmd		"SquadMenu.setShowInviteList 1" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeLogicShowVariable 	NOT InviteListShow 1
+
+hudBuilder.createButtonNode 		SquadManageInfo HideManage 135 517 118 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight5.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight6.tga
+hudBuilder.setButtonNodeConCmd		"SquadMenu.setShowInviteList 0" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeShowVariable 		InviteListShow
+
+hudBuilder.createTextNode		SquadManageInfo SquadManageLabel 135 517 118 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_MANAGESQUAD
+hudBuilder.setNodeColor 	      	1 0.792 0.043 1
+
+rem ----------------------------------------Squad create Info------------------------------------------------------
+
+hudBuilder.createSplitNode		SquadMembersNew SquadCreateInfo
+hudBuilder.setNodeShowVariable 		SquadCreateShow
+
+hudBuilder.createPictureNode 		SquadCreateInfo CreateSquadBackground 10 456 246 81
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/createSquad_background.tga
+
+hudBuilder.createPictureNode 		SquadCreateInfo CreateSquadTagSquare 15 458 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	      	0.576 0.573 0.451 1
+
+hudBuilder.createTextNode		SquadCreateInfo CreateSquadTag 15 457 12 15
+hudBuilder.setTextNodeStyle		Fonts/hudFontBold_9.dif 0
+hudBuilder.setTextNodeStringVariable    SquadCreateTagString
+hudBuilder.setNodeColor 	     	0.82 0.82 0.61 1
+
+hudBuilder.createTextNode		SquadCreateInfo SquadCreateHeading 35 457 93 15
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_CREATESQUAD
+hudBuilder.setNodeColor 	      	0.82 0.82 0.61 1
+
+hudBuilder.createTextNode		SquadCreateInfo SquadNameBoxLabel 15 475 100 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_SQUADNAME
+hudBuilder.setNodeColor 	      	0.486 0.478 0.388 1
+
+hudBuilder.createButtonNode 		SquadCreateInfo CreateSquadNameSelect 17 497 210 13
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd		"SquadMenu.setSquadNameSelect" 3
+
+hudBuilder.createEditNode 		SquadCreateInfo CreateSquadNameBox 17 497 210 13
+hudBuilder.setEditNodeFont 		Fonts/squadCreationFont_6.dif 0
+hudBuilder.setEditNodeData 		2
+hudBuilder.setEditNodeString		2
+hudBuilder.setEditNodeMaxLength		10
+hudBuilder.setNodeColor 	     	0.82 0.82 0.61 1
+
+beginrem
+hudBuilder.createTextNode		SquadCreateInfo SquadPasswordBoxLabel 15 488 100 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 2
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_PASSWORD
+hudBuilder.setNodeColor 	      	0.486 0.478 0.388 1
+endrem
+
+hudBuilder.createPictureNode 		SquadCreateInfo CreateLockSquare 234 495 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/iconframe.tga
+hudBuilder.setNodeColor 	      	0.576 0.573 0.451 1
+
+hudBuilder.createPictureNode 		SquadCreateInfo SquadLockedSelect 234 495 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	      	0.82 0.82 0.61 1
+hudBuilder.setNodeShowVariable 		SquadCreateLockedShow
+
+hudBuilder.createPictureNode 		SquadCreateInfo SquadUnLockedSelect 234 495 15 15
+hudBuilder.setPictureNodeTexture 	Ingame/Respawn/lockicon.tga
+hudBuilder.setNodeColor 	      	0.486 0.478 0.388 1
+hudBuilder.setNodeLogicShowVariable   	NOT SquadCreateLockedShow 1
+
+hudBuilder.createButtonNode 		SquadCreateInfo SquadCreateLockToggle 234 495 15 15
+hudBuilder.setButtonNodeTexture 	1 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/GeneralIcons/empty.tga
+hudBuilder.setButtonNodeConCmd	"SquadMenu.squadCreateLockToggle" 3
+hudBuilder.setButtonNodeConCmd	"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd	"sound.playSound roseOver" 1
+hudBuilder.setNodeColor 	      1 1 1 0
+
+hudBuilder.createButtonNode 		SquadCreateInfo SquadCreate 136 517 118 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight3.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight3.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight4.tga
+hudBuilder.setButtonNodeConCmd		"SquadMenu.createSquad" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeColor 	        1 1 1 1
+
+hudBuilder.createTextNode		SquadCreateInfo SquadCreateLabel 136 517 118 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_APPLY
+hudBuilder.setNodeColor 	      1 0.792 0.043 1
+
+hudBuilder.createButtonNode 		SquadCreateInfo SquadCreateCancel 13 517 118 17
+hudBuilder.setButtonNodeTexture 	1 Ingame/Respawn/button_longLight3.tga
+hudBuilder.setButtonNodeTexture 	2 Ingame/Respawn/button_longLight3.tga
+hudBuilder.setButtonNodeTexture 	3 Ingame/Respawn/button_longLight4.tga
+hudBuilder.setButtonNodeConCmd		"SquadMenu.setSquadCreateSelect 0" 3
+hudBuilder.setButtonNodeConCmd		"sound.playSound rosePress" 0
+hudBuilder.setButtonNodeConCmd		"sound.playSound roseOver" 1
+hudBuilder.setNodeColor 	        1 1 1 1
+
+hudBuilder.createTextNode		SquadCreateInfo SquadCreateCancelLabel	13 517 118 17
+hudBuilder.setTextNodeStyle		Fonts/hudFontLocalBold_9.dif 0
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_SPAWN_SQUAD_CANCEL
+hudBuilder.setNodeColor 	      1 0.792 0.043 1

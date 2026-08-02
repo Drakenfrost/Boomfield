@@ -1,0 +1,20 @@
+hudBuilder.createSplitNode		IngameHud KilledInfo
+hudBuilder.setNodeShowVariable 		KilledState
+hudBuilder.setNodeLogicShowVariable 	EQUAL HudState 0
+hudBuilder.setNodeInTime 		0.6
+hudBuilder.setNodeOutTime 		0.2
+
+hudBuilder.createTextNode		KilledInfo KilledMessage 0 200 800 40
+hudBuilder.setTextNodeStyle		Fonts/helpMessageFontLocalBoldOutline_13.dif 0
+hudBuilder.setTextNodeStringVariable	DeathMessage
+hudBuilder.setNodeColor 	        1 1 1 0.8
+
+hudBuilder.createTextNode		KilledInfo SpawnTimeKilledLabel 0 230 480 40
+hudBuilder.setTextNodeStyle		Fonts/helpMessageFontLocalBoldOutline_13.dif 1
+hudBuilder.setTextNodeString		HUD_TEXT_MENU_TIME_TO_RESPAWN
+hudBuilder.setNodeColor 	       	1 1 1 0.8
+
+hudBuilder.createTextNode		KilledInfo SpawnTimeKilled 480 230 320 40
+hudBuilder.setTextNodeStyle		Fonts/helpMessageFontLocalBoldOutline_13.dif 2
+hudBuilder.setTextNodeStringVariable	TimeToSpawnString
+hudBuilder.setNodeColor 	       	1 1 1 0.8

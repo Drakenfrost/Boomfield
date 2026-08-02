@@ -1,0 +1,27 @@
+rem ---------------------------------- Ingame help -------------------------------------
+
+hudBuilder.createPictureNode 		IngameHud IngameHelpBg 260 23 335 87
+hudBuilder.setPictureNodeTexture 	Ingame/Bars/helptextBg.tga
+hudBuilder.setNodeColor 		1 1 1 0.82
+hudBuilder.setNodeShowVariable 		IngameHelpShow
+hudBuilder.setNodeInTime 		1
+hudBuilder.setNodeOutTime 		0.5
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createTextNode		IngameHud IngameHelp 264 38 315 74
+hudBuilder.setTextNodeStyle		Fonts/helpMessageFontLocalBold_8.dif 2
+hudBuilder.setTextNodeStringVariable 	IngameHelpString
+hudBuilder.setNodeColor 		0.686 0.686 0.588 1
+hudBuilder.setNodeShowVariable 		IngameHelpShow
+hudBuilder.setNodeInTime 		0
+hudBuilder.setNodeOutTime 		0.5
+hudBuilder.addNodeAlphaShowEffect	
+
+beginrem
+hudBuilder.createPictureNode 		IngameHud IngameHelpBg 215 35 355 45
+hudBuilder.setNodeColor 		0.322 0.286 0.239 0.76
+hudBuilder.setNodeShowVariable 		IngameHelpShow
+hudBuilder.setNodeInTime 		0
+hudBuilder.setNodeOutTime 		0.5
+hudBuilder.addNodeAlphaShowEffect
+endrem

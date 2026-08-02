@@ -1,0 +1,17 @@
+
+hudBuilder.createSplitNode		VehicleHuds WZ551Hud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 38
+hudBuilder.addNodeBlendEffect		7 2
+
+rem ------------crosshair-------------------------
+
+hudBuilder.createPictureNode		WZ551Hud WZ551Crosshair 338 247 125 120 
+hudBuilder.setPictureNodeTexture 	Ingame\Vehicles\Icons\Hud\Land\WZ551\WZ551_cross.tga
+hudBuilder.setNodeColor		 	0.5725 0.8666 0.2352 0.9
+
+rem -------------------------------------- Hit Indication----------------------------------------------------
+   
+hudBuilder.createPictureNode 		WZ551Hud WZ551HitIndication 384 284 32 32
+hudBuilder.setPictureNodeTexture 	Ingame/CrossHair/vsp_HitIndicator.tga
+hudBuilder.setNodeColor 		0.5725 0.8666 0.2352 1
+hudBuilder.setNodeAlphaVariable     	HitIndicatorIconAlpha

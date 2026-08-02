@@ -1,0 +1,8 @@
+hudBuilder.createSplitNode		IngameHud DefibrillatorHud
+hudBuilder.setNodeLogicShowVariable 	EQUAL GuiIndex 57
+
+rem --------------------------------------------Crosshair----------------------------------------------------------
+
+hudBuilder.createPictureNode 		DefibrillatorHud DefibrillatorCrosshair 388 288 24 24
+hudBuilder.setPictureNodeTexture 	Ingame/Weapons/Icons/Hud/Crosshair/medicCross.tga
+hudBuilder.setNodeRGBVariables		CrossHairColorRed CrossHairColorGreen CrossHairColorBlue

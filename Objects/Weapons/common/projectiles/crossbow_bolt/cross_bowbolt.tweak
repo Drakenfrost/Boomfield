@@ -1,0 +1,14 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe SimpleObject cross_bowbolt
+ObjectTemplate.creator RICK:rickgi
+ObjectTemplate.modifiedByUser "ryanm"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry cross_bowbolt
+ObjectTemplate.setCollisionMesh cross_bowbolt
+ObjectTemplate.mapMaterial 0 lambert1 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+

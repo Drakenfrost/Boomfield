@@ -43,13 +43,17 @@ Boomfield is created and maintained by Ryan Gray (ryanmattgray@gmail.com).
 ### Known Issues
 - You can grapple inside of buildings that don't have an inside.
 - MEC modded to use RPG-7 but the character model still shows the eryx on its back.
+- MEC RPG-7 shell mesh remains in gun after shooting while scoped.
 - M2 browning still plays a feeding animation when out of ammo.
+- Squad bar background in HUD has small line artifact.
 
 ## Modding Guide
 How to change things:
-1. Copy the object's files out of the `Objects_server.zip` folder in the base bf2 or xpack mod folder into the respective folder in your mod.
+1. Copy files out of the archives folder (eg. `Objects_server.zip`) in the base bf2 or xpack mod folder into the respective folder in your mod.
 2. Set readonly to false on the copied files.
 3. Edit the files.
+4. Pack the mod in BF2Editor.
+5. That's it really!
 
 ## How to make Boomfield
 

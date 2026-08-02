@@ -1,0 +1,55 @@
+
+hudBuilder.createSplitNode		IngameHud VoipList
+hudBuilder.setNodeShowVariable		VoipListShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+rem -----------------------------------------Voip List-------------------------------------------------------
+
+hudBuilder.createListNode 			VoipList VoipSquadList 10 395 300 300 12 0
+hudBuilder.setListNodeData			11
+hudBuilder.setListNodeFont 			Fonts/voipListFont_8.dif 0
+
+
+
+rem -------------------------------- Voice over IP icon-------------------------
+
+hudBuilder.createSplitNode		IngameHud VoipIcon
+hudBuilder.setNodeAlphaVariable		MenuBackgroundAlpha
+hudBuilder.setNodeShowVariable		VoiceOverIconShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		VoipIcon VoiceOverBackground 757 180 36 36
+hudBuilder.setPictureNodeTexture 	Ingame/GeneralIcons/Action_Icons/actionIconRoundBackground.tga
+
+hudBuilder.createPictureNode 		VoipIcon VoiceOverTalking 757 180 36 36
+hudBuilder.setPictureNodeTexture 	Ingame/GeneralIcons/Action_Icons/large_voipiconSquad.tga
+hudBuilder.setNodeShowVariable 		VoiceOverTalkIconShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		VoipIcon VoiceOverTalkingDist 757 180 36 36
+hudBuilder.setPictureNodeTexture 	Ingame/GeneralIcons/Action_Icons/large_voipiconDist.tga
+hudBuilder.setNodeShowVariable 		VoiceOverDistIconShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		VoipIcon VoiceOverCommander 757 180 36 36
+hudBuilder.setPictureNodeTexture 	Ingame/GeneralIcons/Action_Icons/large_voipiconCommander.tga
+hudBuilder.setNodeShowVariable 		VoiceOverCommanderIconShow
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+
+hudBuilder.createPictureNode 		VoipIcon VoiceOverMuted 757 180 36 36
+hudBuilder.setPictureNodeTexture 	Ingame/GeneralIcons/Action_Icons/large_voipiconStop.tga
+hudBuilder.setNodeShowVariable 		VoiceOverMuted 	
+hudBuilder.setNodeInTime 		0.1
+hudBuilder.setNodeOutTime 		0.1
+hudBuilder.addNodeAlphaShowEffect
+

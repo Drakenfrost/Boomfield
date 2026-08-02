@@ -1,0 +1,42 @@
+
+hudBuilder.createSplitNode		Global GameInfo
+rem hudBuilder.setNodeLogicShowVariable EQUAL HudState 0
+
+rem --------------------------------- Killed --------------------------------------------------
+
+hudBuilder.createSplitNode		GameInfo Message
+hudBuilder.setNodeLogicShowVariable 	NOT DisconnectMessageActive 1
+hudBuilder.setNodeLogicShowVariable	NOT PauseMessageActive 1
+
+hudBuilder.createSplitNode		Message KilledInfo
+hudBuilder.setNodeShowVariable 	KilledState
+hudBuilder.setNodeLogicShowVariable 	EQUAL HudState 0
+hudBuilder.setNodeInTime 		0.6
+hudBuilder.setNodeOutTime 		0
+
+hudBuilder.createTextNode		KilledInfo KilledMessage 0 200 800 40
+hudBuilder.setTextNodeStyle		Fonts/StandardTextBold_15.dif 0
+hudBuilder.setTextNodeOutLineOffset	1 1
+hudBuilder.setTextNodeStringVariable  DeathMessage
+hudBuilder.setNodeColor 	      1 0.792 0.043 1
+hudBuilder.setTextNodeOutLineOffset 1 1
+
+hudBuilder.createTextNode		KilledInfo SpawnTimeKilled 0 230 800 40
+hudBuilder.setTextNodeStyle		Fonts/StandardTextBold_15.dif 0
+hudBuilder.setTextNodeOutLineOffset	1 1
+hudBuilder.setTextNodeStringVariable  TimeToSpawnString
+hudBuilder.setNodeColor 	      1 0.792 0.043 1
+hudBuilder.setTextNodeOutLineOffset 1 1
+
+rem ---------------------------------- Disconnected ------------------------------------------------
+
+hudBuilder.createTextNode		GameInfo DisconnectMessage 0 200 800 40
+hudBuilder.setTextNodeStyle		Fonts/StandardTextBold_15.dif 0
+hudBuilder.setTextNodeStringVariable  DisconnectMessage
+hudBuilder.setNodeColor 	      1 0.792 0.043 1
+hudBuilder.setTextNodeOutLineOffset 1 1
+
+hudBuilder.setNodeShowVariable 	DisconnectMessageActive
+hudBuilder.setNodeLogicShowVariable 	OR PauseMessageActive 1
+hudBuilder.setNodeInTime 		3
+hudBuilder.setNodeOutTime 		0

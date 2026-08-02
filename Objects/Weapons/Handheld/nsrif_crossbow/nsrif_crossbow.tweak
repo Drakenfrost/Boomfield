@@ -102,7 +102,7 @@ ObjectTemplate.canFireGuiIndex 62
 ObjectTemplate.cannotFireGuiIndex 61
 ObjectTemplate.cannotFireTimer 3.0
 ObjectTemplate.crosshairFireTime 3.0
-ObjectTemplate.velocity 1000
+ObjectTemplate.velocity 360
 ObjectTemplate.itemIndex 7
 ObjectTemplate.delayToUse 1
 
